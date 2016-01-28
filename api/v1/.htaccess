@@ -1,0 +1,18 @@
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^/gestion_stock/api/v1/(.*)$ /gestion_stock/api/v1/index.php [QSA,L]
+
+
+
+#RewriteRule ^gestion_stock/api/v1/(.*)$ %{ENV:BASE}index.php [QSA,L]
+
+
+/gestion_stock/api/v1/index.php
+
+#<rule name="Main rule" stopProcessing="true">
+#	<match url="^(.*)$"  />
+#	<conditions logicalGrouping="MatchAll">
+#		<add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+#    </conditions>
+#	<action type="Rewrite" url="/%{ENV:BASE}index.php"  appendQueryString="true" />
+#</rule>

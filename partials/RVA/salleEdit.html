@@ -1,0 +1,65 @@
+<button type="button" class="close" ng-click="cancel();">
+    <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+</button>
+
+<div class="modal-header">
+    <h3 class="modal-title">{{ title }} [ ID: {{ salle.id_salle }} ]</h3>
+</div>
+
+<div class="modal-body">
+    <form name="salle_form" class="form-horizontal" role="form" novalidate>
+
+        <form-element label="SERVICE" mod="salle">
+            <select id="SelectService" name="service" class="form-control" ng-model="salle.service" required >
+                <option ng-repeat=" s in services " value="{{ s }}" on-finish-render="ngRepeatFinished" > {{ s }} </option>
+            </select>
+            <small class="errorMessage" ng-show="salle_form.service.$dirty && salle_form.service.$invalid"> Service Requies.</small>
+        </form-element>
+
+        <form-element label="DESCRIPTION" mod="salle">
+            <input type="text" class="form-control" name="description_f" placeholder="..." ng-model="salle.description_f" required />
+            <small class="errorMessage" ng-show="salle_form.description_f.$dirty && salle_form.description_f.$invalid"> Description Requies.</small>
+        </form-element>
+
+        <form-element label="BATIMENT" mod="salle">
+            <select id="SelectBatiment" name="id_batiment" class="form-control" ng-model="salle.id_batiment" required >
+                <option ng-repeat=" b in batiments " value="{{ b.id_batiment }}" on-finish-render="ngRepeatFinished" > {{ b.description_f }} </option>
+            </select>
+            <small class="errorMessage" ng-show="salle_form.id_batiment.$dirty && salle_form.id_batiment.$invalid"> Batiment Requies.</small>
+        </form-element>
+
+        <form-element label="NUMERO" mod="salle">
+            <input type="text" name="numero" class="form-control" placeholder="NUMERO" ng-model="salle.numero" required only-numbers/>
+            <small class="errorMessage" ng-show="salle_form.numero.$dirty && salle_form.numero.$invalid"> Numero Requies.</small>
+        </form-element>
+
+        <form-element label="ETAGE" mod="salle">
+            <input type="text" name="etage" class="form-control" placeholder="ETAGE" ng-model="salle.etage" required only-numbers/>
+            <small class="errorMessage" ng-show="salle_form.etage.$dirty && salle_form.etage.$invalid"> Etage Requies.</small>
+        </form-element>
+
+        <form-element label="DATE COMMANDE & LIVRAISON" mod="salle">
+            <textarea class="form-control" name="date_order_delivery" placeholder="..." ng-model="salle.date_order_delivery" >{{salle.date_order_delivery}}</textarea>
+            <small class="errorMessage" ng-show="salle_form.date_order_delivery.$dirty && salle_form.date_order_delivery.$invalid"> Date commande & livraison Requies.</small>
+        </form-element>
+
+        <div class="space"></div>
+        <div class="space-4"></div>
+
+        <div class="modal-footer">
+            <form-element label="">
+                <div class="text-right">
+                    <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                    <button ng-click="saveSalle(salle);"
+                            ng-disabled="salle_form.$invalid || enableUpdate"
+                            class="btn btn-sm btn-primary"
+                            type="submit">
+                        <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                    </button>
+                </div>
+            </form-element>
+        </div>
+
+    </form>
+</div>
+

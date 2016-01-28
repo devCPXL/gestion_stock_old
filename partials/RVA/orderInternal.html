@@ -1,0 +1,49 @@
+<button type="button" class="close" ng-click="cancel();">
+    <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+</button>
+<div class="modal-header">
+    <h3 class="modal-title">{{ title }} </h3>
+</div>
+<div class="modal-body">
+    <form name="orderInternal_form" class="form-horizontal" role="form" novalidate>
+
+        <form-element label="STOCK SALLE  " mod="orderInternal">
+            <select id="SelectStockSalle" name="location" class="SelectStockSalle form-control" ng-model="orderInternal.location" required>
+                <option ng-repeat=" s in salles " value="{{ s.id_salle }}" on-finish-render="ngRepeatFinished" > {{ s.description_f }} </option>
+            </select>
+            <small class="errorMessage" ng-show="orderInternal_form.location.$dirty && orderInternal_form.location.$invalid"> Stock Requies.</small>
+        </form-element>
+
+        <form-element label="DATE " mod="orderInternal">
+            <input type="date" name="date" ng-model="orderInternal.date" placeholder="dd-MM-yyyy" min="2013-01-01" max="2015-12-31" required focus/>
+            <small ng-show="orderInternal_form.date.$dirty && orderInternal_form.date.$invalid" class="help-inline">Date Mvt Requies</small>
+        </form-element>
+
+        <div class="space"></div>
+        <div class="space-4"></div>
+        <div class="modal-footer">
+            <form-element label="">
+                <div class="text-right btnOrderInternal">
+                    <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Fermer</a>
+                    <button ng-click="generateWeeklyOrderFile(orderInternal);"
+                            ng-disabled="orderInternal_form.$invalid || enableUpdate"
+                            class="btn btn-sm btn-primary"
+                            type="submit">
+                        <i class="ace-icon fa fa-check"></i> {{buttonText}}
+                    </button>
+
+                    <!--<a id="btDownloadFile"-->
+                       <!--target="_self"-->
+                       <!--href = "{{linkFile}}"-->
+                       <!--ng-disabled="btDownloadFile"-->
+                       <!--class="btn btn-sm btn-success">-->
+                        <!--<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>-->
+                        <!--<span class="btn-txt">Télécharger</span>-->
+                    <!--</a>-->
+
+                </div>
+            </form-element>
+        </div>
+    </form>
+</div>
+

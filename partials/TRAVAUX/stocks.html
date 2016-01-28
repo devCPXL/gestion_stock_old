@@ -1,0 +1,104 @@
+<style>
+    .container {
+        width: 1350px;
+    }
+</style>
+<nav>
+    <button type="button" class="btn btn-sm btn-warning" ng-click="">
+        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+        <span class="btn-txt">Ajouter Stock Material</span>
+    </button>
+    <button type="button" class="btn btn-sm btn-info" ng-click="openAddMvt();">
+        <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
+        <span class="btn-txt">Ajouter un mouvement</span>
+    </button>
+    <!--<button type="button" class="btn btn-sm btn-info" ng-click="openOrderInternal(c);">-->
+    <!--<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>-->
+    <!--<span class="btn-txt">Préparer Commande Etage</span>-->
+    <!--</button>-->
+    <!--<button type="button" class="btn btn-sm btn-info" ng-click="go('/RVA/FinalizeOrder');">-->
+    <!--<span class="glyphicon glyphicon-save" aria-hidden="true"></span>-->
+    <!--<span class="btn-txt">Finaliser Commande Etage</span>-->
+    <!--</button>-->
+</nav>
+
+<div class="table-responsive">
+    <div class="panel panel-travaux">
+
+        <div class="panel-heading">
+            <span>Gestion Materials &nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <select id="filterLocation" ng-model="filterLocation.name_location"  data-ng-change="changeFilter()" data-style="btn-info" >
+                <option value="">Tous les chantiers</option>
+                <option ng-repeat="l in materials | unique:'name_location' | orderBy:'name_location'" value="{{l.name_location}}" on-finish-render="ngRepeatFinished"  data-icon="glyphicon glyphicon-filter" >
+                    {{l.name_location}}
+                </option>
+            </select>
+            <select id="filterMaterial" ng-model="filterMaterial.nom"  data-ng-change="changeFilter()" data-style="btn-info" >
+                <option value="">Tous les Materials</option>
+                <option ng-repeat="t in materials | unique:'nom' " value="{{t.nom}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >
+                    {{t.nom}}
+                </option>
+            </select>
+            <select id="filterfamily" ng-model="filterfamily.name_family"  data-ng-change="changeFilter()" data-style="btn-info" >
+                <option value="">Tous les familles</option>
+                <option ng-repeat="t in materials | unique:'name_family' " value="{{t.name_family}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >
+                {{t.name_family}}
+                </option>
+            </select>
+
+            <!--<select id="filterFamily" ng-model="filterFamily.description"  data-ng-change="changeFilter()" data-style="btn-info" >-->
+            <!--<option value="">Tous les Famille</option>-->
+            <!--<option ng-repeat="t in materials | unique:'description' " value="{{t.description}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >-->
+            <!--{{t.description}}-->
+            <!--</option>-->
+            <!--</select>-->
+
+
+            <div class="sw-search filter-tool" >
+                <div class="nav-search" id="nav-search">
+                    Filter: <span class="input-icon">
+                        <input placeholder="Filter Liste Outils ..." class="nav-search-input" ng-model="filterLine" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">
+                        <i class="search-icon fa fa-search nav-search-icon"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        <div class="panel-body">
+            <table data-toggle="table" fixed-table-headers="scrollable-area" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
+                <tr ng-show="materials.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>
+                <tr ng-hide="materials.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>
+                <thead>
+                <tr><th ng-repeat="c in columns">{{c.text}}</th></tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="t in materials
+                | filter : filterLocation
+                | filter : filterMaterial
+                | filter : filterfamily
+                "
+                    id="{{t.id_stock}}"
+                    animate-on-change='t.nom + t.mark + t.code_barre'
+                    ng-animate="'animate'" >
+                    <td>{{t.name_location}}</td>
+                    <td>{{t.nom}}</td>
+                    <td>{{t.code_barre}}</td>
+                    <td>{{t.unite}}</td>
+                    <td>{{t.quantite_current}}</td>
+                    <td>{{t.name_family}}</td>
+
+                    <td>
+                        <button type="button" class="btn btn-default fa fa-edit" class="btn" ng-click="openAddTool(t);"></button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-default fa fa-list" class="btn" ng-click="getListMvt(t);"></button>
+                    </td>
+                    <!--<td><button class="btn" ng-class="{Active:'btn-success', Inactive:''}[t.status]" ng-click="changematerialstatus(c);">{{t.status}}</button></td>-->
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

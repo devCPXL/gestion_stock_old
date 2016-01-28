@@ -1,0 +1,49 @@
+
+<nav>
+    <button type="button" class="btn btn-warning btn-sm " ng-click="open(salle);">
+        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+        <span class="btn-txt">Ajouter nouvelle salle</span>
+    </button>
+</nav>
+<div class="table-responsive">
+<div class="panel panel-primary">
+  <div class="panel-heading">Liste des salles
+      <div class="sw-search" >
+            <div class="nav-search" id="nav-search">
+                    Filter: <span class="input-icon">
+                        <input placeholder="Filter Liste salles ..." class="nav-search-input" ng-model="filterSalle" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>
+                        <i class="search-icon fa fa-search nav-search-icon"></i>
+                    </span>
+            </div>
+        </div>
+    </div>
+  <div class="panel-body">
+      <table data-toggle="table" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
+          <tr ng-show="salles.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>
+          <tr ng-hide="salles.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>
+          <thead>
+              <tr><th ng-repeat="c in columns">{{c.text}}</th></tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="c in salles | filter:filterSalle " id="{{c.id_salle}}" animate-on-change='c.dt_update + c.description_batiment + c.description_f + c.numero + c.etage' ng-animate=" 'animate'">
+                  <td>{{c.id_salle}}</td>
+                  <td>{{c.service}}</td>
+                  <td>{{c.description_f}}</td>
+                  <td>{{c.description_batiment}}</td>
+                  <td>{{c.numero}} / {{c.etage}}</td>
+                  <!--<td>{{c.dt_update}}</td>-->
+                  <!--<td>{{c.dt_creation}}</td>-->
+                  <td style="width:100px">
+                      <div class="btn-group">
+                      <button type="button" title="mis à jour Salle" class="btn btn-default fa fa-edit" ng-click="open(c);"></button>
+                      <!--<button type="button" class="btn btn-danger fa fa-trash-o" ng-click="deleteProduct(c);"></button>-->
+                      </div>
+                  </td>
+              </tr>
+
+          </tbody>
+      </table>
+</div>
+</div>
+</div>
+              

@@ -1,0 +1,20 @@
+<nav class="blog-nav" ng-controller="NavCtrl"  ng-show=" includes('RVA') && !isActive('/home') ">
+    <a ng-class="{active: isActive('/RVA/Stocks')}"  class="blog-nav-item" href="#/RVA/Stocks"><i class="glyphicon glyphicon-th-large"></i> Stocks</a>
+    <a ng-class="{active: isActive('/RVA/Articles')}" class="blog-nav-item" href="#/RVA/Articles"><i class="glyphicon glyphicon-barcode"></i> Référence Articles</a>
+    <a ng-class="{active: isActive('/RVA/Suppliers')}"  class="blog-nav-item" href="#/RVA/Suppliers">Fournisseurs</a>
+    <a ng-class="{active: isActive('/RVA/Salles')}"  class="blog-nav-item" href="#/RVA/Salles">Salles <small>( Stocks )</small></a>
+    <a ng-class="{active: isActive('/RVA/Batiments')}"  class="blog-nav-item" href="#/RVA/Batiments">Batiments</a>
+    <a class="blog-nav-item pull-right" data-ng-click="logout()" href=""><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a>
+    <a class="blog-nav-item pull-right" href="#/home">Accueil</a>
+</nav>
+
+<nav class="blog-nav nav-travaux" ng-controller="NavCtrl"  ng-show=" includes('TRAVAUX') && !isActive('/home') ">
+    <a ng-class="{active: isActive('/TRAVAUX/Articles')}" class="blog-nav-item" href="#/TRAVAUX/Articles"><i class="glyphicon glyphicon-barcode"></i> Référence Articles</a>
+    <a ng-class="{active: isActive('/TRAVAUX/Chantiers')}" class="blog-nav-item" href="#/TRAVAUX/Chantiers"><i class="fa fa-flag"></i> Chantiers</a>
+    <a ng-class="{active: isActive('/TRAVAUX/Stocks')}" class="blog-nav-item" href="#/TRAVAUX/Stocks"><i class="glyphicon glyphicon-th-large"></i> Gestion Stocks</a>
+    <a ng-class="{active: isActive('/TRAVAUX/Tools')}" class="blog-nav-item" href="#/TRAVAUX/Tools"><i class="glyphicon glyphicon-th-large"></i> Gestion Outils</a>
+    <a ng-class="{active: isActive('/TRAVAUX/Suppliers')}" class="blog-nav-item" href="#/TRAVAUX/Suppliers"><i class="glyphicon glyphicon-barcode"></i> Fournisseurs</a>
+
+    <a class="blog-nav-item pull-right" data-ng-click="logout()" href=""><i class="glyphicon glyphicon-log-out"></i>Déconnexion</a>
+    <a class="blog-nav-item pull-right" href="#/home">Accueil</a>
+</nav>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<!--<head>-->
+    <!--<base href="/">-->
+<!--</head>-->
+<body ng-cloak="">
+  <title ng-bind="title"></title>
+  <meta name="Description" content="Gestion Stock Web Application">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.min3.2.0.css" type="text/css" >
+  <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="css/bootstrap-select.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap-select.min.css" type="text/css" />
+  <!--<link rel="stylesheet" href="css/bootstrap-select.css.map" type="text/css" />-->
+  <!--<link rel="stylesheet" href="css/bootstrap-table.min.css" type="text/css" />-->
+
+  <link rel="stylesheet" href="css/custom.css"/>
+  <!--<link rel="stylesheet" href="css/style.css"/>-->
+  <link rel="stylesheet" href="css/toaster.css">
+
+  <!--<link rel="stylesheet" href="css/jquery.dataTables.css"/>-->
+  <!--<link rel="stylesheet" href="css/jquery.dataTables.min.css"/>-->
+
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <!--jQuery-File-Upload-->
+
+  <link rel="stylesheet" href="jQuery-File-Upload-9.10.0/css/jquery.fileupload.css">
+
+  <!-- Some Bootstrap Helper Libraries -->
+  <script src="js/jquery.min.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-select.js"></script>
+  <script src="js/bootstrap-table.min.js"></script>
+  <script src="js/underscore.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+  <div class="blog-masthead">
+      <div class="container-fluid" ng-include="'partials/menu.html'"></div>
+    </div>
+
+<div class="container-fluid">
+    <div class="page-content">
+      <div ng-view="" id="ng-view"></div>
+        <toaster-container toaster-options="{'time-out': 5000, 'close-button':true, 'animation-class': 'toast-top-right'}"></toaster-container>
+    </div>
+</div>
+
+  <!-- Libraries -->
+<script src="js/angular.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>-->
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+
+<script src="js/stickytableheaders.js"></script>
+
+  <script src="angular-file-upload-master/examples/console-sham.js"></script>
+  <script src="angular-file-upload-master/angular-file-upload.js"></script>
+
+  <!--<script src="js/jquery.dataTables.js"></script>-->
+  <!--<script src="js/jquery.dataTables.min.js"></script>-->
+
+  <!-- AngularJS-Toaster -->
+  <script src="js/toaster.js"></script>
+
+  <!-- AngularJS custom codes -->
+
+  <script src="app/app.js"></script>
+  <script src="app/data.js"></script>
+  <script src="app/directives.js"></script>
+  <script src="app/Rva/productsCtrl.js"></script>
+  <script src="app/Rva/articlesCtrl.js"></script>
+  <script src="app/Rva/sallesCtrl.js"></script>
+  <script src="app/Rva/batimentsCtrl.js"></script>
+  <script src="app/Rva/suppliersCtrl.js"></script>
+  <script src="app/Rva/stocksCtrl.js"></script>
+  <script src="app/Rva/listMvtCtrl.js"></script>
+  <script src="app/Rva/orderInternalFinalizeCtrl.js"></script>
+  <script src="app/Rva/finalizeOrderCtrl.js"></script>
+
+  <script src="app/familyEditCtrl.js"></script>
+  <script src="app/Travaux/articlesTravauxCtrl.js"></script>
+  <script src="app/Travaux/locationsCtrl.js"></script>
+  <script src="app/Travaux/stocksCtrl.js"></script>
+  <script src="app/Travaux/toolsCtrl.js"></script>
+  <script src="app/Travaux/listMvtTravauxCtrl.js"></script>
+  <script src="app/homeCtrl.js"></script>
+
+<!--jQuery-File-Upload-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<!--<script src="jQuery-File-Upload-9.10.0/js/vendor/jquery.ui.widget.js"></script>-->
+<!--<script src="jQuery-File-Upload-9.10.0/js/jquery.iframe-transport.js"></script>-->
+<!--<script src="jQuery-File-Upload-9.10.0/js/jquery.fileupload.js"></script>-->
+
+</body>
+</html>

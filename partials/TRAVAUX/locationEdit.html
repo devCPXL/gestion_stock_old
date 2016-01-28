@@ -1,0 +1,63 @@
+<button type="button" class="close" ng-click="cancel();">
+    <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+</button>
+
+<div class="modal-header">
+    <h3 class="modal-title">{{ title }} [ ID: {{ location.id_location }} ]</h3>
+</div>
+
+<div class="modal-body">
+    <form name="location_form" class="form-horizontal" role="form" novalidate>
+
+        <form-element label="CORPS DE METIER" mod="location">
+            <input type="text" name="type_location" class="form-control" placeholder="..." ng-model="location.type_location" required />
+            <small class="errorMessage" ng-show="location_form.type_location.$dirty && location_form.type_location.$invalid"> Type Requies.</small>
+        </form-element>
+
+        <form-element label="NOM CHANTIER" mod="location">
+            <input type="text" name="description_f" class="form-control" placeholder="..." ng-model="location.description_f" required />
+            <small class="errorMessage" ng-show="location_form.description_f.$dirty && location_form.description_f.$invalid"> Description Requies.</small>
+        </form-element>
+
+        <form-element label="DATE DEBUT" mod="location">
+            <input type="date" name="start_date" ng-model="location.start_date" placeholder="dd-MM-yyyy" min="2014-01-01" max="2017-12-31" required focus/>
+            <small ng-show="location_form.start_date.$dirty && location_form.start_date.$invalid" class="help-inline">Date Requies</small>
+        </form-element>
+
+        <form-element label="DATE FIN" mod="location">
+            <input type="date" name="end_date" ng-model="location.end_date" placeholder="dd-MM-yyyy" min="2014-01-01" max="2017-12-31" focus/>
+            <small ng-show="location_form.end_date.$dirty && location_form.end_date.$invalid" class="help-inline">Date Requies</small>
+        </form-element>
+
+        <form-element label="AGENT" mod="location">
+            <select id="SelectAgent" name="id_agent" class="SelectAgent form-control selectOption" ng-model="location.id_agent" required >
+                <option ng-repeat=" a in agents " value="{{ a.id_agent }}" on-finish-render="ngRepeatFinished" > {{ a.nom }} {{ a.prenom }}</option>
+            </select>
+            <small class="errorMessage" ng-show="location_form.id_agent.$dirty && location_form.id_agent.$invalid"> Agent Requies.</small>
+        </form-element>
+
+        <form-element label="COMMENTAIRE" mod="location">
+            <textarea class="form-control" name="further_information" placeholder="Comment..." ng-model="location.further_information" required>{{location.further_information}}</textarea>
+            <small class="errorMessage" ng-show="location_form.further_information.$dirty && location_form.further_information.$invalid"> Commentaire Requies.</small>
+        </form-element>
+
+        <div class="space"></div>
+        <div class="space-4"></div>
+
+        <div class="modal-footer">
+            <form-element label="">
+                <div class="text-right">
+                    <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                    <button ng-click="saveLocation(location);"
+                            ng-disabled="location_form.$invalid || enableUpdate"
+                            class="btn btn-sm btn-primary"
+                            type="submit">
+                        <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                    </button>
+                </div>
+            </form-element>
+        </div>
+
+    </form>
+</div>
+

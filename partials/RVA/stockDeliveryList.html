@@ -1,0 +1,71 @@
+<style>
+    .modal-dialog {
+        width: 1400px;
+        margin: 30px auto;
+    }
+    th {
+        text-align: left;
+        vertical-align: middle !important;
+    }
+</style>
+
+<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{ title }}</h3>
+        <h4 class="modal-title">{{ subTitle }}</h4>
+    </div>
+    <div>
+        <span>   Filter : </span>
+        <select id="filterPurchaseOrder" class="filterPurchaseOrder "  ng-model="filterPurchaseOrder.purchase_order" data-style="btn-info" >
+            <option value="">Tous les Bons de Commande</option>
+            <option ng-repeat=" p in movementSupplier | unique: 'purchase_order' " value="{{ p.purchase_order }}" > {{ p.purchase_order }} </option>
+        </select>
+        {{ p.date_mvt }}
+        <select id="filterDateMvt" class="filterDateMvt "  ng-model="filterDateMvt.date_mvt" data-style="btn-info" >
+            <option value="">Dates réception</option>
+            <option ng-repeat=" p in movementSupplier | unique: 'date_mvt' " value="{{ p.date_mvt }}" > {{ p.date_mvt }} </option>
+        </select>
+
+    </div>
+    <div class="modal-body">
+        <div id="scrollable-area">
+            <table id="tableMvt" ng-table="tableParams" data-toggle="table" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
+                <tr ng-show="movementSupplier.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>
+                <tr ng-hide="movementSupplier.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>
+                <thead class="Headerdefault">
+                <tr><th ng-repeat="c in columns" title="{{c.predicate}}">{{c.text}}</th></tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="m in movementSupplier
+                                | filter : filterPurchaseOrder
+                                | filter : filterDateMvt "
+                    id="{{m.id_mvt}}" animate-on-change="" ng-animate=" 'animate'" on-finish-render="ngRepeatFinished">
+
+                    <td class="tdFirst">{{m.id_mvt}}</td>
+                    <td>{{ m.name_supplier }}</td>
+                    <td>{{ m.nom_article }}</td>
+                    <td>{{ m.purchase_order }}</td>
+                    <td class="dateMvt">{{ m.date_order }}</td>
+                    <td class="dateMvt">{{ m.date_mvt }}</td>
+                    <td>{{ m.quantite }}</td>
+                    <td>{{ m.price == null ? '' : (m.price + '€') }}</td>
+                    <td>{{ m.pack_carton }}</td>
+                    <td>{{ m.pack_carton == null ? '' : (m.quantite / m.pack_carton) }}</td>
+                    <td>{{m.further_information}}</td>
+                </tr>
+                <!--<tr class="tdFooterCalculate">-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td class="greenColor">Total Entrée: {{ getTotals().totalIn }}</td>-->
+                    <!--<td class="redColor">Total Sortie: {{ getTotals().totalOut }}</td>-->
+                    <!--<td class="blueColor">Total: {{ getTotals().total }}</td>-->
+                <!--</tr>-->
+                </tbody>
+            </table>
+        </div>
+    </div>

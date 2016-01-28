@@ -1,0 +1,100 @@
+<style>
+    .container {
+        width: 1350px;
+    }
+</style>
+<!--<h4 class="blog-post-title">Articles</h4>-->
+<!--<hr/>-->
+
+<div class="table-responsive">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Liste des Mouvements pour le {{desiredLocation.salleDescription}} : {{desiredLocation.nom_article}} : QTE : {{desiredLocation.quantite_current}}
+            <div class="sw-search" >
+                <div class="nav-search" id="nav-search">
+                    Filter: <span class="input-icon">
+                        <input placeholder="Filter Liste mouvements ..." class="nav-search-input" ng-model="filterMovement" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>
+                        <i class="search-icon fa fa-search nav-search-icon"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <h4>Dates Inventaires</h4>
+                    <div class="list-group">
+                        <a ng-class="{active: $index == selectedIndex}" ng-repeat="i in datesInventory" ng-click="changeInventoryList($index)" class="list-group-item link-item"> {{i.date_mvt}}</a>
+                        <!--<a href="#" class="list-group-item">Vestibulum at eros</a>-->
+                    </div>
+                </div>
+                <div class="col-md-10">
+
+                    <!--<nav class="navContainer">-->
+                        <!--<ul class="pagination">-->
+                            <!--<!--<li class=""><a ng-click="changeInventoryListPrevious()" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>-->
+                            <!--<!--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>-->
+                            <!--<li ng-repeat="i in datesInventory" class=""><a ng-class="{active: $index == selectedIndex}" ng-click="changeInventoryList($index)" class="list-group-item"> {{i.date_mvt}} <span class="sr-only">(current)</span></a></li>-->
+                            <!--<li ng-repeat="i in datesInventory" class=""><a ng-class="{active: $index == selectedIndex}" ng-click="changeInventoryList($index)" class="list-group-item"> {{i.date_mvt}} <span class="sr-only">(current)</span></a></li>-->
+                            <!--<li ng-repeat="i in datesInventory" class=""><a ng-class="{active: $index == selectedIndex}" ng-click="changeInventoryList($index)" class="list-group-item"> {{i.date_mvt}} <span class="sr-only">(current)</span></a></li>-->
+                            <!--<li ng-repeat="i in datesInventory" class=""><a ng-class="{active: $index == selectedIndex}" ng-click="changeInventoryList($index)" class="list-group-item"> {{i.date_mvt}} <span class="sr-only">(current)</span></a></li>-->
+
+                            <!--<!--<li class=""><a ng-click="changeInventoryListNext()" aria-label="Next"><span aria-hidden="true">»</span></a></li>-->
+                        <!--</ul>-->
+                    <!--</nav>-->
+                    <div id="scrollable-area">
+                        <table id="tableMvt" ng-table="tableParams" fixed-table-headers="scrollable-area" data-toggle="table" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
+                            <tr ng-show="movements.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>
+                            <tr ng-hide="movements.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>
+                            <thead class="Headerdefault">
+                            <tr><th ng-repeat="c in columns">{{c.text}}</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="m in movements | filter:filterMovement" id="{{m.id_mvt}}" animate-on-change="" ng-animate=" 'animate'" on-finish-render="ngRepeatFinished">
+                                <td class="tdFirst">{{m.id_mvt}}</td>
+                                <td class="dateMvt">{{ m.date_mvt | date : 'dd-MM-yyyy'}}</td>
+                                <td>{{m.nameStock_from}} {{m.name}} {{m.nameStock_from == null && m.type_mvt != 'DELIVERY' ? desiredLocation.salleDescription : ''}}</td>
+                                <td>{{m.nameStock_to}} {{m.nameStock_to_s}} {{m.nameStock_to == null && m.type_mvt != 'DELIVERY' ? desiredLocation.salleDescription : ''}}</td>
+                                <td ng-class="
+                                {
+                                    redColor: desiredLocation.id_stock == m.from_id_stock && desiredLocation.id_stock != m.to_id_stock,
+                                    greenColor: desiredLocation.id_stock == m.to_id_stock && desiredLocation.id_stock != m.from_id_stock,
+                                    blueColor: m.type_mvt == 'INVENTORY' || m.type_mvt == 'INIT_INVENTORY' || m.type_mvt == 'INVENTORY_CONSUMPTION'
+                                    }" ng-b>
+                                    {{desiredLocation.id_stock == m.to_id_stock && desiredLocation.id_stock != m.from_id_stock ? "+" : desiredLocation.id_stock == m.from_id_stock && desiredLocation.id_stock != m.to_id_stock ? "-" : ""}}
+                                    {{m.quantite}}
+                                </td>
+                                <td ng-class="
+                                {
+                                    redColor: desiredLocation.id_stock == m.from_id_stock && desiredLocation.id_stock != m.to_id_stock,
+                                    greenColor: desiredLocation.id_stock == m.to_id_stock && desiredLocation.id_stock != m.from_id_stock,
+                                    blueColor: m.type_mvt == 'INVENTORY' || m.type_mvt == 'INIT_INVENTORY' || m.type_mvt == 'INVENTORY_CONSUMPTION'
+                                    }">
+                                    <!--{{desiredLocation.id_stock == m.to_id_stock && desiredLocation.id_stock != m.from_id_stock && m.type_mvt != 'DELIVERY' ? "Entrée" : desiredLocation.id_stock == m.from_id_stock && desiredLocation.id_stock != m.to_id_stock ? "Sortie" : ""}}-->
+                                    <!--{{m.type_mvt == 'INVENTORY' ? 'Inventaire' : m.type_mvt == 'INIT_INVENTORY' ? 'Init Inventaire' : m.type_mvt == 'INVENTORY_CONSUMPTION' ? 'Inventaire Cons' : ''}}-->
+                                    <!--{{m.type_mvt == 'DELIVERY' ? 'Reception' : '' }}-->
+
+                                    {{m.type_mvt_fr}}
+                                </td>
+                                <td class="dateMvt">{{m.dt_creation}}</td>
+                                <td>{{m.further_information}}</td>
+                            </tr>
+                            <tr class="tdFooterCalculate">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="greenColor">Total Entrée: {{ getTotals().totalIn }}</td>
+                                <td class="redColor">Total Sortie: {{ getTotals().totalOut }}</td>
+                                <td class="blueColor">Total: {{ getTotals().total }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

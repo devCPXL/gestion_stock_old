@@ -1,0 +1,37 @@
+<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{ title }} [ ID: {{ batiment.id_batiment }} ]</h3>
+    </div>
+    <div class="modal-body">
+        <form name="batiment_form" class="form-horizontal" role="form" novalidate>
+
+            <form-element label="CODE" mod="batiment">
+                <input type="text" class="form-control" name="nom" placeholder="CODE" ng-model="batiment.nom" required focus/>
+                <small ng-show="batiment_form.nom.$dirty && batiment_form.nom.$invalid" class="help-inline">Code Requies</small>
+            </form-element>
+
+            <form-element label="DESCRIPTION" mod="batiment">
+                <textarea class="form-control" name="description" placeholder="DESCRIPTION" ng-model="batiment.description_f" required>{{batiment.description_f}}</textarea>
+                <small ng-show="batiment_form.description_f.$dirty && batiment_form.description_f.$invalid" class="help-inline">Description Requies</small>
+            </form-element>
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                        <button ng-click="saveBatiment(batiment);"
+                                ng-disabled="batiment_form.$invalid || enableUpdate"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
+

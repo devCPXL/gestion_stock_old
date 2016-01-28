@@ -1,0 +1,46 @@
+
+<nav>
+    <button type="button" class="btn btn-warning btn-sm " ng-click="open(batiment);">
+        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+        <span class="btn-txt">Ajouter Nouveau batiment</span>
+    </button>
+</nav>
+<div class="table-responsive">
+<div class="panel panel-primary">
+  <div class="panel-heading">Liste des batiments
+      <div class="sw-search" >
+            <div class="nav-search" id="nav-search">
+                    Filter: <span class="input-icon">
+                        <input placeholder="Filter Liste batiments ..." class="nav-search-input" ng-model="filterBatiment" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>
+                        <i class="search-icon fa fa-search nav-search-icon"></i>
+                    </span>
+            </div>
+        </div>
+    </div>
+  <div class="panel-body">
+      <table data-toggle="table" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
+          <tr ng-show="batiments.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>
+          <tr ng-hide="batiments.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>
+          <thead>
+              <tr><th ng-repeat="c in columns">{{c.text}}</th></tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="b in batiments | filter:filterBatiment | orderBy:'id_batiment'" id="{{b.id_batiment}}" animate-on-change='b.nom + b.description_f + b.dt_update ' ng-animate=" 'animate'">
+                  <td>{{b.id_batiment}}</td>
+                  <td>{{b.nom}}</td>
+                  <td>{{b.description_f}}</td>
+                  <td>{{b.dt_update}}</td>
+                  <td>{{b.dt_creation}}</td>
+                  <td style="width:100px">
+                      <div class="btn-group">
+                      <button type="button" class="btn btn-default fa fa-edit" ng-click="open(b);"></button>
+                      <!--<button type="button" class="btn btn-danger fa fa-trash-o" ng-click="deleteProduct(c);"></button>-->
+                      </div>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+</div>
+</div>
+</div>
+              

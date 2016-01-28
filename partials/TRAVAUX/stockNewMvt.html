@@ -1,0 +1,66 @@
+<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{ title }}</h3>
+    </div>
+    <div class="modal-body">
+        <form name="stockMvt_form" class="form-horizontal" role="form" novalidate>
+
+            <form-element label="STOCK" mod="stockMvt">
+                <select id="SelectStock" name="id_location" class="SelectStock form-control" ng-model="stockMvt.id_location" ng-change="changeLocationStock(stockMvt.id_location)" required>
+                    <option ng-repeat=" l in locations | orderBy: 'id_location'" value="{{ l.id_location }}" on-finish-render="ngRepeatFinished" >
+                        {{ l.description_f }} </option>
+                </select>
+                <small class="errorMessage" ng-show="stockMvt_form.id_location.$dirty && stockMvt_form.id_location.$invalid"> Stock Requies.</small>
+            </form-element>
+
+            <form-element label="DE STOCK ARTICLE " mod="stockMvt">
+                <select id="SelectStockArticle" name="id_article" class="SelectStockArticle form-control" ng-model="stockMvt.stockArticle" ng-change="changeStockArticle(stockMvt.stockArticle)" required>
+                    <option ng-repeat=" a in stocksArticle | orderBy : 'family'" value="{{ a }}" ng-disabled="a.quantite_current == 0" on-finish-render="ngRepeatFinished" >
+                        {{ a.family }} {{ a.nom }} {{a.mark}}</option>
+                </select>
+                <small class="errorMessage" ng-show="stockMvt_form.stockArticle.$dirty && stockMvt_form.stockArticle.$invalid">Stock Article Requies.</small>
+            </form-element>
+
+            <form-element label="QUANTITE " mod="stockMvt" class="inputNumber">
+                <input type="number" ng-model="stockMvt.quantite" placeholder="1 - {{ quantiteMax }}" name="quantite" min="1" max=" {{ quantiteMax }} " class="form-control" integer required/>
+                <small ng-show="stockMvt_form.description_f.$dirty && stockMvt_form.description_f.$invalid" class="help-inline">QUANTITE Requies</small>
+            </form-element>
+
+            <form-element label="DATE MOUVEMENT" mod="stockMvt">
+                <input type="date" name="date_mvt" ng-model="stockMvt.date_mvt" placeholder="dd-MM-yyyy" min="2013-01-01" max="2015-12-31" required focus/>
+                <small ng-show="stockMvt_form.date_mvt.$dirty && stockMvt_form.date_mvt.$invalid" class="help-inline">Date Mouvement Requies</small>
+            </form-element>
+
+            <form-element label="A STOCK ARTICLE " mod="stockMvt">
+                <select id="SelectStockArticleTo" name="to_stockArticle" class="SelectStockArticle form-control" ng-model="stockMvt.to_stockArticle" required>
+                    <option ng-repeat=" a in to_stocksArticle " value="{{ a }}" on-finish-render="ngRepeatFinished" >
+                        {{ a.quantite_current }} - {{a.locationDescription}} - {{ a.nom_article }} </option>
+                </select>
+                <small class="errorMessage" ng-show="stockMvt_form.to_stockArticle.$dirty && stockMvt_form.to_stockArticle.$invalid"> STOCK Article Requies.</small>
+            </form-element>
+
+            <form-element label="PLUS D'INFORMATIONS" mod="stockMvt">
+                <textarea class="form-control" name="further_information" placeholder="PLUS D'INFORMATIONS" ng-model="stockMvt.further_information"></textarea>
+            </form-element>
+
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                        <button ng-click="saveStockMvt(stockMvt);"
+                                ng-disabled="stockMvt_form.$invalid || enableUpdate"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
+

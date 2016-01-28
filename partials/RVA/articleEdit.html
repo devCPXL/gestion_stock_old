@@ -1,0 +1,76 @@
+<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{title}} [ ID: {{ article.id_article }} ]</h3>
+    </div>
+    <div class="modal-body">
+        <form name="article_form" class="form-horizontal" role="form" novalidate>
+            <form-element label="NOM" mod="article">
+                <input type="text" class="form-control" name="nom" placeholder="..." ng-model="article.nom" required />
+
+                <small ng-show="article_form.nom.$dirty && article_form.nom.$invalid" class="help-inline">Nom Requie</small>
+            </form-element>
+            <form-element label="DESCRIPTION" mod="article">
+            <textarea class="form-control" name="description" placeholder="..." ng-model="article.description_f">{{article.description_f}}</textarea>
+            </form-element>
+            <form-element label="REFERENCE" mod="article">
+                <input type="text" name="code_barre" class="form-control" placeholder="..." ng-model="article.code_barre" required />
+                <small class="help-inline errorMessage" ng-show="article_form.code_barre.$dirty && article_form.code_barre.$invalid" > Reference Requie.</small>
+            </form-element>
+
+           <!--<form-element label="QUANTITE" mod="article">-->
+                <!--<input type="text" name="quantite" class="form-control" placeholder="QUANTITE" ng-model="article.quantite" required only-numbers/>-->
+                <!--<small class="errorMessage" ng-show="article_form.quantite.$dirty && article_form.quantite.$invalid"> Quantité Requie.</small>-->
+            <!--</form-element>-->
+
+            <form-element label="UNITE" mod="article">
+                <input type="text" name="unite" class="form-control" placeholder="..." ng-model="article.unite"/>
+                <small class="errorMessage" ng-show="article_form.unite.$dirty && article_form.unite.$invalid"> Unite Requie.</small>
+            </form-element>
+
+            <form-element label="TVA" mod="article">
+                <div class="input-group">
+                    <input type="text" name="vat" class="form-control" placeholder="0.0" ng-model="article.vat" only-numbers required/>
+                    <span class="input-group-addon">%</span>
+                </div>
+                <small class="errorMessage" ng-show="article_form.vat.$dirty && article_form.vat.$invalid"> TVA Requie.</small>
+            </form-element>
+
+            <form-element label="FAMILLE" mod="article">
+                <select id="SelectFamily" name="id_family" class="SelectFamily form-control selectOption" ng-model="article.id_family" required >
+                    <option ng-repeat=" f in familys " value="{{ f.id_family }}" on-finish-render="ngRepeatFinished" > {{ f.description }} </option>
+                </select>
+                <button type="button" class="btn btn-default fa fa-edit" title="Editer Type" ng-click="openFamilyForm(article.id_family);"></button>
+                <button type="button" class="btn btn-default fa fa-plus-circle" title="Ajouter nouveau Type" ng-click="openFamilyForm();"></button>
+                <small class="errorMessage" ng-show="article_form.id_family.$dirty && article_form.id_family.$invalid"> Type Requie.</small>
+            </form-element>
+
+            <form-element label="FOURNISSEURS" mod="article">
+                <select id="SelectSupplier" name="id_suppliers" class="SelectSupplier form-control" ng-model="article.id_suppliers" multiple data-max-options="6" required>
+                    <option ng-repeat=" s in suppliers " value="{{ s.id_supplier }}"  on-finish-render="ngRepeatFinished" > {{ s.name }} </option>
+                </select>
+                <small class="errorMessage" ng-show="article_form.id_suppliers.$dirty && article_form.id_suppliers.$invalid"> Fournisseurs Requie.</small>
+            </form-element>
+            <form-element label="ORDER" mod="article">
+                <input type="number" class="form-control" ng-model="article.order_article"  placeholder="..." name="order_article" min="0" max="999" integer />
+            </form-element>
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                        <button ng-click="saveArticle(article);"
+                                ng-disabled="article_form.$invalid || enableUpdate"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
+

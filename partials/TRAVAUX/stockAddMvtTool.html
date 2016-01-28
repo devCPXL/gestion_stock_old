@@ -1,0 +1,63 @@
+<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{ title }}</h3>
+    </div>
+    <div class="modal-body">
+        <form name="toolMvt_form" class="form-horizontal" role="form" novalidate>
+
+            <form-element label="CHANTIER/MAGASIN {{ toolMvt.id_location }} " mod="toolMvt">
+                <select id="SelectLocation" name="id_salle" class="SelectLocation form-control" ng-model="toolMvt.id_location" ng-change="changeLocation(toolMvt.id_location)" required>
+                    <option ng-repeat=" l in locations | orderBy:'description_f' " value="{{ l.id_location }}" data-ng-disabled="l.id_location == toolMvt.id_location_to" on-finish-render="ngRepeatFinished" > {{ l.description_f }} </option>
+                </select>
+                <small class="errorMessage" ng-show="toolMvt_form.id_location.$dirty && toolMvt_form.id_location.$invalid"> Chantier Requies.</small>
+            </form-element>
+
+            <form-element label="OUTIL" mod="toolMvt">
+                <select id="SelectStockArticle" name="id_article" class="SelectStockArticle form-control" ng-model="toolMvt.stockArticle" ng-change="changeStockArticle(toolMvt.stockArticle)" data-live-search="true" required>
+                    <option ng-repeat=" a in stocksArticle | orderBy:'nom_article' | orderBy:'-quantite_current' " value="{{ a }}" ng-disabled="a.quantite_current == 0" on-finish-render="ngRepeatFinished" > {{ a.quantite_current }} - {{ a.nom_article }}</option>
+                </select>
+                <small class="errorMessage" ng-show="toolMvt_form.stockArticle.$dirty && toolMvt_form.stockArticle.$invalid">Stock Article Requies.</small>
+            </form-element>
+
+            <form-element label="QUANTITE " mod="toolMvt" class="inputNumber">
+                <input type="number" ng-model="toolMvt.quantite" placeholder="1 - {{ quantiteMax }}" name="quantite" min="1" max="{{quantiteMax}}" class="form-control" integer required/>
+                <small ng-show="toolMvt_form.description_f.$dirty && toolMvt_form.description_f.$invalid" class="help-inline">QUANTITE Requies</small>
+            </form-element>
+
+            <form-element label="DATE MOUVEMENT" mod="toolMvt">
+                <input type="date" name="date_mvt" ng-model="toolMvt.date_mvt" placeholder="dd-MM-yyyy" min="2013-01-01" max="2016-12-31" required focus/>
+                <small ng-show="toolMvt_form.date_mvt.$dirty && toolMvt_form.date_mvt.$invalid" class="help-inline">Date Mouvement Requies</small>
+            </form-element>
+
+            <form-element label="A STOCK ARTICLE" mod="toolMvt">
+                <select id="SelectLocation_to" name="id_location_to" class="SelectLocation_to form-control" ng-model="toolMvt.id_location_to" required>
+                    <option ng-repeat=" a in locations_to | orderBy:'description_f' " value="{{ a.id_location }}" data-ng-disabled="a.id_location == toolMvt.id_location" on-finish-render="ngRepeatFinished" >{{ a.description_f }}</option>
+                </select>
+                <small class="errorMessage" ng-show="toolMvt_form.to_stockArticle.$dirty && toolMvt_form.to_stockArticle.$invalid"> STOCK Article Requies.</small>
+            </form-element>
+
+            <form-element label="PLUS D'INFORMATIONS" mod="toolMvt">
+                <textarea class="form-control" name="further_information" placeholder="PLUS D'INFORMATIONS" ng-model="toolMvt.further_information"></textarea>
+            </form-element>
+
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                        <button ng-click="savetoolMvt(toolMvt);"
+                                ng-disabled="toolMvt_form.$invalid || enableUpdate"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
+

@@ -1,0 +1,128 @@
+<style>
+    /*.container {*/
+        /*width: 1350px;*/
+    /*}*/
+</style>
+<nav>
+    <button type="button" class="btn btn-sm btn-warning" ng-click="openStockAdd();">
+        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+        <span class="btn-txt">Ajouter Nouveau Stock</span>
+    </button>
+    <button type="button" class="btn btn-sm btn-success" ng-click="openStockEditAddMvt(c);">
+        <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
+        <span class="btn-txt">Ajouter un mouvement</span>
+    </button>
+    <button type="button" class="btn btn-sm btn-info" ng-click="openOrderInternal(c);">
+        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+        <span class="btn-txt">Préparer Commande Etage</span>
+    </button>
+    <button type="button" class="btn btn-sm btn-danger" ng-click="go('/RVA/FinalizeOrder');">
+        <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
+        <span class="btn-txt">Finaliser Commande Etage</span>
+    </button>
+    <button type="button" class="btn btn-sm btn-warning" ng-click="openDeliveryList();">
+        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+        <span class="btn-txt"> Liste Reception</span>
+    </button>
+    <button type="button" class="btn btn-sm btn-info" ng-click="openStockStatus();">
+        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+        <span class="btn-txt"> Etat du stock</span>
+    </button>
+</nav>
+
+<div class="table-responsive">
+<div class="panel panel-primary">
+
+    <div class="panel-heading">
+        <span>Liste des Stocks &nbsp;&nbsp;</span>
+
+        <select id="filterSalle" class="filterSalle "  ng-model="filterSalle.salleDescription" data-ng-change="changeFilter()" data-style="btn-info" >
+            <option value=''>Tous les Salles</option>
+            <option ng-repeat=" salle in stocks | unique:'salleDescription' " value="{{salle.salleDescription}}" >
+                {{salle.salleDescription}}
+            </option>
+        </select>
+        <select id="filterFamily" class="filterFamily "  ng-model="filterFamily.nameFamily" data-ng-change="changeFilter()" data-style="btn-info" >
+            <option value="">Tous les familles</option>
+            <option ng-repeat=" s in stocks | unique:'nameFamily'" value="{{s.nameFamily}}" >
+                {{s.nameFamily}}
+            </option>
+        </select>
+
+        <select id="filterArticle" class="filterArticle "  ng-model="filterArticle.nom_article" data-ng-change="changeFilter()" data-live-search="false" data-style="btn-info" >
+            <option value="">Tous les Articles</option>
+            <option ng-repeat=" s in stocks | unique: 'nom_article' | orderBy:'nom_article' " value="{{ s.nom_article }}" > {{ s.nom_article }} </option>
+        </select>
+        <!--<select id="filterStatus" class="filterStatus "  ng-model="filterStatus.status" data-ng-change="changeFilter()" data-live-search="false" data-style="btn-info" >-->
+            <!--<option value="">Active & Inactive</option>-->
+            <!--<option ng-repeat=" s in stocks | unique: 'status' " value="{{ s.status }}" on-finish-render="ngRepeatFinished" > {{ s.status }} </option>-->
+        <!--</select>-->
+        <div class="sw-search filter-stock" >
+            <div class="nav-search" id="nav-search">
+                    Filter: <span class="input-icon">
+                        <input placeholder="Filter Liste stocks ..." class="nav-search-input" ng-model="filterStock" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">
+                        <i class="search-icon fa fa-search nav-search-icon"></i>
+                    </span>
+            </div>
+        </div>
+    </div>
+  <div class="panel-body">
+      <table data-toggle="table" fixed-table-headers="scrollable-area" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
+          <tr ng-show="stocks.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>
+          <tr ng-hide="stocks.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>
+          <thead>
+              <tr><th ng-repeat="c in columns" class="{{c.class}}">{{c.text}}</th></tr>
+          </thead>
+          <tbody>
+
+              <tr ng-repeat="c in stocks
+                            | filter : filterStock
+                            | filter : filterArticle
+                            | filter : filterSalle
+                            | filter : filterFamily
+                            "
+                  id="{{c.id_stock}}" animate-on-change='c.stock_min + c.stock_alert' ng-animate=" 'animate'"
+                  ng-class="{hr:'info'}[c.type]"
+                  data-ng-disabled="c.status == 'Inactive' " class="resizeInputNumber" on-finish-render="ngRepeatFinished">
+                  <!--<td>{{c.id_stock}}</td>-->
+                  <td class="hidden-xs">{{ c.salleDescription }}</td>
+                  <td>{{ c.type == 'hr' ? c.nameFamily : c.nom_article}}</td>
+                  <td>{{c.unite}}</td>
+                  <td>{{c.ref_article}}</td>
+                  <td>{{ c.type == 'hr' ? '' : c.nameFamily}}</td>
+                  <!--<td>{{c.label_f}}</td>-->
+                  <td number-converter ng-model="c.quantite_current" ng-class="{alertQuantite: c.quantite_current <= c.stock_alert, minQuantite: c.quantite_current <= c.stock_min}" >{{c.quantite_current}}</td>
+                  <td>
+                      <input type="number" ng-model="c.stock_min" ng-model-options="{ updateOn: 'blur' }" data-ng-show="c.type != 'hr' " data-ng-disabled="c.status == 'Inactive' " ng-blur="changeStockMin(c)" name="stock_min" min="0" max="99" class="form-control" integer />
+                  </td>
+                  <!--<td><input type="number" ng-model="c.stock_alert" ng-model-options="{ updateOn: 'blur' }" ng-blur="changeStockAlert(c)" name="stock_alert" min="0" max="99" class="form-control" integer /></td>-->
+
+                  <td>
+                      <div class="btn-group" data-ng-show="c.type != 'hr' " >
+                          <button type="button" title="Liste mouvements" class="btn btn-default fa fa-list" data-ng-disabled="c.status == 'Inactive' " ng-click="getListMvt(c);"></button>
+                      </div>
+                  </td>
+                  <td>
+                      <div class="btn-group" data-ng-show="c.type != 'hr' ">
+                          <button type="button" data-ng-disabled="c.status == 'Inactive' " title="mouvement Inventaire" class="btn btn-default fa fa-history" ng-click="openStockEdit(c, 'INVENTORY')" ></button>
+                      </div>
+                  </td>
+                  <!--<td><div class="btn-group"><button type="button" title="Modifier Stock Alert & Minimum" class="btn btn-default fa fa-edit" ng-click="openStockEdit(c, 'UPDATESTOCK');"></button></div></td>-->
+                  <td>
+                      <button type="button" title="Ajouter une reception" class="btn btn-default fa fa-plus" class="btn" ng-click="openStockDelivery(c)" data-ng-disabled="c.status == 'Inactive' " data-ng-show="c.id_location == '4'"></button>
+                      <button type="button" title="List reception" class="btn btn-default fa fa-list" class="btn" ng-click="openStockDeliveryList(c)" data-ng-disabled="c.status == 'Inactive' " data-ng-show="c.id_location == '4'"></button>
+                      <!--<button class="btn" ng-class="{Available:'btn-success', Not_Available:''}[c.availability]" ng-click="changeStockAvailability(c);">-->
+                          <!--<span ng-class="{Available:'glyphicon-ok', Not_Available:'glyphicon-remove'}[c.availability]" class="glyphicon" ></span>-->
+                      <!--</button>-->
+                  </td>
+                  <td>
+                      <button data-ng-show="c.type != 'hr' " class="btn" ng-class="{Active:'btn-success', Inactive:''}[c.status]" ng-click="changeStockStatus(c);">{{c.status}}</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+
+</div>
+</div>
+</div>
+

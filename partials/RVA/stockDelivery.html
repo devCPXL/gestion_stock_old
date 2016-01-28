@@ -1,0 +1,72 @@
+<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{ title }}</h3>
+        <h4 class="modal-title">{{ subTitle }}</h4>
+    </div>
+    <div class="modal-body">
+        <form name="DeliveryStock_form" class="form-horizontal" role="form" novalidate>
+
+            <form-element label="STOCK FOURNISSEURE " mod="DeliveryStock">
+                <select id="SelectStockSupplier" name="id_stock" class="form-control" ng-model="DeliveryStock.stockArticle" required>
+                    <option ng-repeat=" s in stocksSuppliers " value="{{ s }}" on-finish-render="ngRepeatFinished" > {{ s.name }} - {{ stock.nom_article }}</option>
+                </select>
+                <small class="errorMessage" ng-show="DeliveryStock_form.id_stock.$dirty && DeliveryStock_form.id_stock.$invalid">STOCK FOURNISSEURE Requies.</small>
+            </form-element>
+
+            <form-element label="DATE COMMANDE" mod="DeliveryStock">
+                <input type="date" name="date_order" ng-model="DeliveryStock.date_order" placeholder="dd-MM-yyyy" min="2013-01-01" max="2017-12-31" required focus/>
+                <small ng-show="DeliveryStock_form.date_order.$dirty && DeliveryStock_form.date_order.$invalid" class="help-inline">Date Commande Requies</small>
+            </form-element>
+
+            <form-element label="DATE RECEPTION" mod="DeliveryStock">
+                <input type="date" name="date_mvt" ng-model="DeliveryStock.date_mvt" placeholder="dd-MM-yyyy" min="2014-01-01" max="2017-12-31" required focus/>
+                <small ng-show="DeliveryStock_form.date_mvt.$dirty && DeliveryStock_form.date_mvt.$invalid" class="help-inline">Date Reception Requies</small>
+            </form-element>
+
+            <form-element label="TOTAL CARTON" mod="DeliveryStock" class="inputNumber">
+                <input type="number" ng-model="DeliveryStock.quantite" placeholder="1 - 999" name="quantite" min="1" max="999" class="form-control" integer required/>
+                <small ng-show="DeliveryStock_form.quantite.$dirty && DeliveryStock_form.quantite.$invalid" class="help-inline">Total carton Requies</small>
+            </form-element>
+
+            <form-element label="UNITE PAR CARTON" mod="DeliveryStock" class="inputNumber">
+                <input type="number" ng-model="DeliveryStock.pack_carton" placeholder="1 - 999" name="pack_carton" min="1" max="999" class="form-control" integer required/>
+                <small ng-show="DeliveryStock_form.pack_carton.$dirty && DeliveryStock_form.pack_carton.$invalid" class="help-inline">Paquet par carton Requies</small>
+            </form-element>
+
+            <form-element label="PRIX HT" mod="DeliveryStock">
+                <div class="input-group">
+                    <input type="text" ng-model="DeliveryStock.price" placeholder="00.00" name="price" class="form-control" only-numbers required/>
+                    <span class="input-group-addon">€</span>
+                    <small ng-show="DeliveryStock_form.price.$dirty && DeliveryStock_form.price.$invalid" class="help-inline">Prix HT Requies</small>
+                </div>
+                <small ng-show="DeliveryStock_form.price.$dirty && DeliveryStock_form.price.$invalid" class="help-inline">Bon de commande Requies</small>
+            </form-element>
+
+            <form-element label="NUMERO BON DE COMMANDE" mod="DeliveryStock">
+                <input type="text" ng-model="DeliveryStock.purchase_order" placeholder="..." name="purchase_order" class="form-control" required/>
+                <small ng-show="DeliveryStock_form.purchase_order.$dirty && DeliveryStock_form.purchase_order.$invalid" class="help-inline">Bon de commande Requies</small>
+            </form-element>
+
+            <form-element label="PLUS D'INFORMATIONS" mod="DeliveryStock">
+                <textarea class="form-control" name="further_information" placeholder="..." ng-model="DeliveryStock.further_information"></textarea>
+            </form-element>
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                        <button ng-click="saveDeliveryStock(DeliveryStock);"
+                                ng-disabled="DeliveryStock_form.$invalid || enableUpdate"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>

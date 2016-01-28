@@ -1,0 +1,53 @@
+<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{ title }}</h3>
+    </div>
+    <div class="modal-body">
+        <form name="newStock_form" class="form-horizontal" role="form" novalidate>
+
+            <form-element label="SALLE  {{ newStock.id_location }}" mod="newStock">
+                <select id="SelectSalle" name="id_location" class="form-control" ng-model="newStock.id_location"
+                        ng-change="changeSalleStock(newStock.id_location)" required>
+                    <option ng-repeat=" s in salles " value="{{ s.id_salle }}" on-finish-render="ngRepeatFinished" > {{ s.description_f }} </option>
+                </select>
+                <small class="errorMessage" ng-show="newStock_form.id_salle.$dirty && newStock_form.id_salle.$invalid"> Salle Requies.</small>
+            </form-element>
+
+            <form-element label="ARTICLE {{ newStock.id_article }}" mod="newStock">
+                <select id="SelectArticle" name="id_article" class="form-control" ng-model="newStock.id_article" data-live-search="true" required>
+                    <option ng-repeat=" a in articles " value="{{ a.id_article }}" on-finish-render="ngRepeatFinished" >{{ a.nom }}</option>
+                </select>
+                <small class="errorMessage" ng-show="newStock_form.stockArticle.$dirty && newStock_form.stockArticle.$invalid">Stock Article Requies.</small>
+            </form-element>
+
+            <form-element label="STOCK MIN" mod="newStock" class="inputNumber">
+            <input type="number" ng-model="newStock.stock_min" placeholder="0 - 99" name="stock_min" min="0" max="99" class="form-control" integer required/>
+            <small ng-show="newStock_form.stock_min.$dirty && newStock_form.stock_min.$invalid" class="help-inline">STOCK MIN Requies</small>
+            </form-element>
+
+            <form-element label="STOCK ALERT" mod="newStock" class="inputNumber">
+            <input type="number" ng-model="newStock.stock_alert" placeholder="0 - 99" name="stock_alert" min="0" max="99" class="form-control" integer required/>
+            <small ng-show="newStock_form.stock_alert.$dirty && newStock_form.stock_alert.$invalid" class="help-inline">STOCK ALERT Requies</small>
+            </form-element>
+
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                        <button ng-click="saveNewStock(newStock);"
+                                ng-disabled="newStock_form.$invalid || enableUpdate"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
+

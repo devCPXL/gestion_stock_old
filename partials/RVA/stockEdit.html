@@ -1,0 +1,56 @@
+<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{ title }}</h3>
+        <h4 class="modal-title">{{ subTitle }}</h4>
+    </div>
+    <div class="modal-body">
+        <form name="stockMvt_form" class="form-horizontal" role="form" novalidate>
+
+            <div ng-show="displayFormINV">
+                <form-element label="DATE INVENTAIRE" mod="stockMvt">
+                    <input type="date" name="date_mvt" ng-model="stockMvt.date_mvt" placeholder="" min="2013-01-01" max="2016-12-31" required focus/>
+                    <small ng-show="stockMvt_form.date_mvt.$dirty && stockMvt_form.date_mvt.$invalid" class="help-inline">Date mouvement Requies</small>
+                </form-element>
+
+                <form-element label="QUANTITE" mod="stockMvt" ng-init="max = stockMvt.quantite">
+                    <input type="number" ng-model="stockMvt.quantite" placeholder="" name="quantite" min="0" max="{{}}" class="form-control" integer required/>
+                    <small ng-show="stockMvt_form.quantite.$dirty && stockMvt_form.quantite.$invalid" class="help-inline">Quantite Requies</small>
+                    <small ng-show="stockMvt_form.quantite.$dirty && stockMvt_form.quantite.$error.max" class="help-inline"> : l'inventaire ne peut pas dépasser la quantité actuelle.</small>
+                </form-element>
+
+                <form-element label="PLUS D'INFORMATIONS" mod="stockMvt">
+                    <textarea class="form-control" name="further_information" placeholder="..." ng-model="stockMvt.further_information"></textarea>
+                </form-element>
+            </div>
+
+            <!--<div ng-show="displayFormUpdateStock">-->
+                <!--<form-element label="STOCK MIN" mod="stockMvt">-->
+                    <!--<input type="number" ng-model="stockMvt.stock_min" placeholder="0 - 999" name="stock_min" min="0" max="999" class="form-control" integer required/>-->
+                    <!--<small ng-show="stockMvt_form.stock_min.$dirty && stockMvt_form.stock_min.$invalid" class="help-inline">Description Requies</small>-->
+                <!--</form-element>-->
+
+                <!--<form-element label="STOCK ALERT" mod="stockMvt">-->
+                    <!--<input type="number" ng-model="stockMvt.stock_alert" placeholder="0 - 999" name="stock_alert" min="0" max="999" class="form-control" integer required/>-->
+                    <!--<small ng-show="stockMvt_form.stock_alert.$dirty && stockMvt_form.stock_alert.$invalid" class="help-inline">Description Requies</small>-->
+                <!--</form-element>-->
+            <!--</div>-->
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                        <button ng-click="saveStockMvt(stockMvt);"
+                                ng-disabled="stockMvt_form.$invalid || enableUpdate"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
+

@@ -1,0 +1,146 @@
+<div class="modal_supplier">
+<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{ title }} [ ID: {{ supplier.id_supplier }} ]</h3>
+    </div>
+    <div class="modal-body">
+        <form name="supplier_form" class="form-horizontal supplier_form" role="form" novalidate>
+
+            <form-element label="NOM" mod="supplier">
+                <input type="text" class="form-control" name="name" placeholder="" ng-model="supplier.name" required focus/>
+                <small ng-show="supplier_form.nom.$dirty && supplier_form.nom.$invalid" class="help-inline">Nom Requies</small>
+            </form-element>
+
+            <form-element label="E-MAIL" mod="supplier">
+                <input name="mail"  ng-model="supplier.mail" type="email" class="form-control" placeholder="" required/>
+                <small ng-show="supplier_form.mail.$dirty && supplier_form.mail.$error.required" class="help-inline">Email Requies</small>
+                <small ng-show="supplier_form.mail.$error.email" class="help-inline">Email non valide.</small>
+            </form-element>
+
+            <form-element label="LANGUE" mod="supplier">
+                <!--<select id="language" name="language" class="form-control" ng-model="supplier.language" required >-->
+                    <!--<option value="Fr" selected>Français</option>-->
+                    <!--<option value="Nl" >Néerlandais</option>-->
+                    <!--<option value="En" >English</option>-->
+                <!--</select>-->
+
+                <input type="text" class="form-control" name="language" placeholder="" ng-model="supplier.language" required />
+                <small ng-show="supplier_form.language.$dirty && supplier_form.language.$invalid" class="help-inline">Langue Requies</small>
+
+                <!--<input type="text" class="form-control" name="language" placeholder="LANGUE" ng-model="supplier.language" required focus/>-->
+                <!--<small ng-show="supplier_form.language.$dirty && supplier_form.language.$invalid" class="help-inline">Langue Requies</small>-->
+            </form-element>
+
+            <form-element label="TEL" mod="supplier">
+                <input type="text" class="form-control" name="tel" placeholder="" ng-model="supplier.tel" />
+                <!--<small ng-show="supplier_form.tel.$dirty && supplier_form.tel.$invalid" class="help-inline">Nom Requies</small>-->
+            </form-element>
+
+            <form-element label="FAX" mod="supplier">
+                <input type="text" class="form-control" name="fax" placeholder="" ng-model="supplier.fax" />
+                <!--<small ng-show="supplier_form.fax.$dirty && supplier_form.fax.$invalid" class="help-inline">Nom Requies</small>-->
+            </form-element>
+
+            <form-element label="MOBILE" mod="supplier">
+                <input type="text" class="form-control" name="Mobile" placeholder="" ng-model="supplier.Mobile" />
+                <!--<small ng-show="supplier_form.Mobile.$dirty && supplier_form.Mobile.$invalid" class="help-inline">Nom Requies</small>-->
+            </form-element>
+
+            <form-element label="RESPONSABLE" mod="supplier">
+                <input type="text" class="form-control" name="responsible" placeholder="" ng-model="supplier.responsible" />
+                <!--<small ng-show="supplier_form.responsible.$dirty && supplier_form.responsible.$invalid" class="help-inline">Nom Requies</small>-->
+            </form-element>
+
+            <form-element label="N° CLIENT" mod="supplier">
+                <input type="text" class="form-control" name="client_number" placeholder="" ng-model="supplier.client_number" />
+                <!--<small ng-show="supplier_form.responsible.$dirty && supplier_form.responsible.$invalid" class="help-inline">Nom Requies</small>-->
+            </form-element>
+
+            <hr />
+
+            <form-element label="RUE" mod="supplier">
+                <input type="text" class="form-control" name="street" placeholder="" ng-model="supplier.street" required/>
+                <small ng-show="supplier_form.street.$dirty && supplier_form.street.$invalid" class="help-inline">Rue Requies</small>
+            </form-element>
+
+            <form-element label="CODE POSTAL" mod="supplier">
+                <input type="text" class="form-control" name="zip_code" placeholder="" ng-model="supplier.zip_code" required/>
+                <small ng-show="supplier_form.zip_code.$dirty && supplier_form.zip_code.$invalid" class="help-inline">Code postal Requies</small>
+            </form-element>
+
+            <form-element label="VILLE" mod="supplier">
+                <input type="text" class="form-control" name="city" placeholder="" ng-model="supplier.city" required/>
+                <small ng-show="supplier_form.city.$dirty && supplier_form.city.$invalid" class="help-inline">Ville Requies</small>
+            </form-element>
+
+            <form-element label="PAYS" mod="supplier">
+                <input type="text" class="form-control" name="country" placeholder="" ng-model="supplier.country" required/>
+                <small ng-show="supplier_form.country.$dirty && supplier_form.country.$invalid" class="help-inline">Pays Requies</small>
+            </form-element>
+
+            <hr />
+
+            <form-element label="NOM CONTACT" mod="supplier">
+                <input type="text" class="form-control" name="contact_name" placeholder="" ng-model="supplier.contact_name" required/>
+                <small ng-show="supplier_form.contact_name.$dirty && supplier_form.contact_name.$invalid" class="help-inline">Nom contact Requies</small>
+            </form-element>
+
+            <form-element label="FONCTION CANTACT" mod="supplier">
+                <input type="text" class="form-control" name="contact_function" placeholder="" ng-model="supplier.contact_function"/>
+                <!--<small ng-show="supplier_form.contact_function.$dirty && supplier_form.contact_function.$invalid" class="help-inline">Nom Requies</small>-->
+            </form-element>
+
+            <form-element label="TEL CONTACT" mod="supplier">
+                <input type="text" class="form-control" name="contact_tel" placeholder="" ng-model="supplier.contact_tel" required/>
+                <small ng-show="supplier_form.contact_tel.$dirty && supplier_form.contact_tel.$invalid" class="help-inline">Tel contact Requies</small>
+            </form-element>
+
+            <form-element label="FAX CONTACT" mod="supplier">
+                <input type="text" class="form-control" name="contact_Fax" placeholder="" ng-model="supplier.contact_Fax" />
+                <!--<small ng-show="supplier_form.contact_Fax.$dirty && supplier_form.contact_Fax.$invalid" class="help-inline">Nom Requies</small>-->
+            </form-element>
+
+            <form-element label="MAIL CONTACT" mod="supplier">
+                <input type="email" class="form-control" name="contact_mail" placeholder="" ng-model="supplier.contact_mail" required/>
+                <small ng-show="supplier_form.contact_mail.$dirty && supplier_form.contact_mail.$error.required" class="help-inline">Email Requies</small>
+                <small ng-show="supplier_form.contact_mail.$error.email" class="help-inline">Email non valide.</small>
+            </form-element>
+
+            <!--<hr />-->
+
+            <form-element label="MODE DE PAIEMENT" mod="supplier">
+                <input type="text" class="form-control" name="payment_method" placeholder="" ng-model="supplier.payment_method" />
+                <!--<small ng-show="supplier_form.payment_method.$dirty && supplier_form.payment_method.$invalid" class="help-inline">Nom Requies</small>-->
+            </form-element>
+
+            <form-element label="COMPTE BANCAIRE" mod="supplier">
+                <input type="text" class="form-control" name="bank_account" placeholder="" ng-model="supplier.bank_account"/>
+                <!--<small ng-show="supplier_form.bank_account.$dirty && supplier_form.bank_account.$invalid" class="help-inline">Nom Requies</small>-->
+            </form-element>
+
+            <form-element label="INFORMATION COMPLÉMENTAIRE" mod="supplier">
+                <textarea class="form-control" name="further_information" placeholder="" ng-model="supplier.further_information">{{supplier.further_information}}</textarea>
+                <!--<small ng-show="supplier_form.further_information.$dirty && supplier_form.further_information.$invalid" class="help-inline">Description Requies</small>-->
+            </form-element>
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                        <button ng-click="saveSupplier(supplier);"
+                                ng-disabled="supplier_form.$invalid || enableUpdate"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
+
+</div>

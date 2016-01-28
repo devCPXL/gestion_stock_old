@@ -1,0 +1,78 @@
+<style>
+    .container {
+        width: 1350px;
+    }
+</style>
+<!--<h4 class="blog-post-title">Articles</h4>-->
+<!--<hr/>-->
+<!--<nav>-->
+    <!--<button type="button" class="btn btn-danger fa fa-plus" ng-click="open(article);">-->
+        <!--<span class="btn-txt">New Button</span>-->
+    <!--</button>-->
+<!--</nav>-->
+
+<div class="table-responsive">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <select id="filterSalle" class="filterSalle"  ng-model="filterSalle.id_salle" data-ng-change="changeSalleStock(filterSalle.id_salle)" data-style="btn-info" >
+                <!--<option value="">Tout les Salles</option>-->
+                <option data-icon="glyphicon glyphicon-filter" ng-repeat=" salle in salles " value="{{salle.id_salle}}" on-finish-render="ngRepeatFinished" >
+                    {{salle.description_f}}
+                </option>
+            </select>
+            <label>Choisir une date : </label>
+            <input type="date" id="date_finalize_mvt" name="date_mvt" ng-model="date_mvt" placeholder="" min="2013-01-01" max="2015-12-31" required focus/>
+
+        </div>
+        <form name="stocksEtage_form" class="form-horizontal" role="form" novalidate>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="scrollable-area">
+
+                            <table id="tableMvt" ng-table="tableParams" fixed-table-headers="scrollable-area" data-toggle="table" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
+
+                                <tr ng-show="rows.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>
+                                <tr ng-hide="rows.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>
+                                <thead class="Headerdefault">
+                                <tr><th ng-repeat="c in columns">{{c.text}}</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="r in rows " id="{{r.id_mvt}}" class="resizeInputNumber " animate-on-change="status" ng-animate=" 'animate'" on-finish-render="ngRepeatFinished">
+                                        <td class="firstTD">{{r.from_id_stock}} | {{r.id_stock}}</td>
+                                        <td>{{r.description_f}} __ {{r.nom_article}}</td>
+                                        <td>{{r.unite}}</td>
+                                        <td>{{r.ref}}</td>
+                                        <td>{{r.quantite_current}}</td>
+                                        <!--<td>{{r.stock_min}}</td>-->
+                                        <td>
+                                                <input type="number" ng-model="r.stock_etage" ng-change = "changeStockInput(r)" name="stock_etage" min="0" max="{{}}" class="form-control" integer only-numbers required/>
+                                        </td>
+                                        <!--<td>{{r.stockOrder}}</td>-->
+                                        <td>
+                                                <input type="number" ng-model="r.recue" name="recue" min="0" max="{{r.quantite_current_paramedical}}" number-converter class="form-control" integer only-numbers required/>
+                                        </td>
+                                        <td>{{r.quantite_current_paramedical - r.recue }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-sm" go-click="/RVA/Stocks"><i class="ace-icon fa fa-reply"></i>Retour</a>
+                        <button type="button"
+                                class="btn btn-primary"
+                                type="submit"
+                                ng-click="save()"
+                                ng-disabled="stocksEtage_form.$invalid || enableUpdate">
+                            <span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
+                            <span class="btn-txt">Enregistrer les Commandes</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>

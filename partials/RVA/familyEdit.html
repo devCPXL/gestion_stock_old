@@ -1,0 +1,37 @@
+<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{title}} [ ID: {{ family.id_family }} ]</h3>
+    </div>
+    <div class="modal-body">
+        <form name="family_form" class="form-horizontal" role="form" novalidate>
+
+            <form-element label="CODE" mod="family">
+                <input type="text" class="form-control" name="code" placeholder="CODE" ng-model="family.code" required focus/>
+                <small ng-show="family_form.code.$dirty && family_form.code.$invalid" class="help-inline">Code Requies</small>
+            </form-element>
+
+            <form-element label="DESCRIPTION" mod="family">
+                <input type="text" class="form-control" name="description" placeholder="DESCRIPTION" ng-model="family.description" required />
+                <small class="help-inline errorMessage" ng-show="family_form.description.$dirty && family_form.description.$invalid" > Description Requies.</small>
+            </form-element>
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Annuler</a>
+                        <button ng-click="saveFamily(family);"
+                                ng-disabled="family_form.$invalid || enableUpdate"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
+
