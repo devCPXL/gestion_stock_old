@@ -1,0 +1,1871 @@
+[33mcommit 90d352af4fc32513b43b94997e1660ec9bff53cc[m
+Author: ekiemma <ekiemma@gmail.com>
+Date:   Mon Feb 8 10:49:27 2016 +0100
+
+    form inventory, listMouvements
+
+[1mdiff --git a/.idea/deployment.xml b/.idea/deployment.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0099299[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/deployment.xml[m
+[36m@@ -0,0 +1,119 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="PublishConfigData">[m
+[32m+[m[32m    <serverData>[m
+[32m+[m[32m      <paths name="AngularCodeCustomerManagerApp">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="AuthenticationApp">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="CPASWEB">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="Gestion Stock">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="GestionStock">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="GestionStockFolder">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="Gestion_Stock">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="ProjectGestionStock">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="Server">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="_GestionStock">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="blog28">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="blog28/">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="gestion_stock">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="myServerLocalhost">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="php_framework_059">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m      <paths name="product-manager">[m
+[32m+[m[32m        <serverdata>[m
+[32m+[m[32m          <mappings>[m
+[32m+[m[32m            <mapping local="$PROJECT_DIR$" web="/" />[m
+[32m+[m[32m          </mappings>[m
+[32m+[m[32m        </serverdata>[m
+[32m+[m[32m      </paths>[m
+[32m+[m[32m    </serverData>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/encodings.xml b/.idea/encodings.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..97626ba[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/encodings.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="Encoding">[m
+[32m+[m[32m    <file url="PROJECT" charset="UTF-8" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/gestion_stock.iml b/.idea/gestion_stock.iml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3e96af0[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/gestion_stock.iml[m
+[36m@@ -0,0 +1,13 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<module type="WEB_MODULE" version="4">[m
+[32m+[m[32m  <component name="NewModuleRootManager">[m
+[32m+[m[32m    <content url="file://$MODULE_DIR$">[m
+[32m+[m[32m      <excludeFolder url="file://$MODULE_DIR$/angular-file-upload-master" />[m
+[32m+[m[32m      <excludeFolder url="file://$MODULE_DIR$/angularjs-pdf-master" />[m
+[32m+[m[32m      <excludeFolder url="file://$MODULE_DIR$/api/libs" />[m
+[32m+[m[32m      <excludeFolder url="file://$MODULE_DIR$/jQuery-File-Upload-9.10.0" />[m
+[32m+[m[32m    </content>[m
+[32m+[m[32m    <orderEntry type="inheritedJdk" />[m
+[32m+[m[32m    <orderEntry type="sourceFolder" forTests="false" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</module>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/modules.xml b/.idea/modules.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2376f93[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/modules.xml[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="ProjectModuleManager">[m
+[32m+[m[32m    <modules>[m
+[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/.idea/gestion_stock.iml" filepath="$PROJECT_DIR$/.idea/gestion_stock.iml" />[m
+[32m+[m[32m    </modules>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/vcs.xml b/.idea/vcs.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..94a25f7[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/vcs.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="VcsDirectoryMappings">[m
+[32m+[m[32m    <mapping directory="$PROJECT_DIR$" vcs="Git" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/workspace.xml b/.idea/workspace.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..39e26ef[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/workspace.xml[m
+[36m@@ -0,0 +1,851 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="ChangeListManager">[m
+[32m+[m[32m    <list default="true" id="2f7402a0-cac1-44b2-a969-4161f31cdf41" name="Default" comment="" />[m
+[32m+[m[32m    <ignored path="gestion_stock.iws" />[m
+[32m+[m[32m    <ignored path=".idea/workspace.xml" />[m
+[32m+[m[32m    <ignored path=".idea/dataSources.local.xml" />[m
+[32m+[m[32m    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />[m
+[32m+[m[32m    <option name="TRACKING_ENABLED" value="true" />[m
+[32m+[m[32m    <option name="SHOW_DIALOG" value="false" />[m
+[32m+[m[32m    <option name="HIGHLIGHT_CONFLICTS" value="true" />[m
+[32m+[m[32m    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />[m
+[32m+[m[32m    <option name="LAST_RESOLUTION" value="IGNORE" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />[m
+[32m+[m[32m  <component name="CreatePatchCommitExecutor">[m
+[32m+[m[32m    <option name="PATCH_PATH" value="" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="DatabaseView">[m
+[32m+[m[32m    <option name="SHOW_TOOLBAR" value="true" />[m
+[32m+[m[32m    <option name="FLATTEN" value="false" />[m
+[32m+[m[32m    <option name="GROUP_BY_TYPE" value="true" />[m
+[32m+[m[32m    <option name="SORT_CHILDREN" value="false" />[m
+[32m+[m[32m    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />[m
+[32m+[m[32m  <component name="FavoritesManager">[m
+[32m+[m[32m    <favorites_list name="gestion_stock" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="FileEditorManager">[m
+[32m+[m[32m    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">[m
+[32m+[m[32m      <file leaf-file-name="stocksCtrl.js" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/app/Travaux/stocksCtrl.js">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m              <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />[m
+[32m+[m[32m              <folding />[m
+[32m+[m[32m            </state>[m
+[32m+[m[32m          </provider>[m
+[32m+[m[32m        </entry>[m
+[32m+[m[32m      </file>[m
+[32m+[m[32m      <file leaf-file-name="stocks.html" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/partials/RVA/stocks.html">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m              <caret line="106" column="119" selection-start-line="106" selection-start-column="91" selection-end-line="106" selection-end-column="119" />[m
+[32m+[m[32m              <folding />[m
+[32m+[m[32m            </state>[m
+[32m+[m[32m          </provider>[m
+[32m+[m[32m        </entry>[m
+[32m+[m[32m      </file>[m
+[32m+[m[32m      <file leaf-file-name="stocksCtrl.js" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/app/Rva/stocksCtrl.js">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m              <caret line="387" column="32" selection-start-line="387" selection-start-column="16" selection-end-line="387" selection-end-column="32" />[m
+[32m+[m[32m              <folding />[m
+[32m+[m[32m            </state>[m
+[32m+[m[32m          </provider>[m
+[32m+[m[32m        </entry>[m
+[32m+[m[32m      </file>[m
+[32m+[m[32m      <file leaf-file-name="stocks.html" pinned="false" current-in-tab="true">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/partials/TRAVAUX/stocks.html">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="2.2867258">[m
+[32m+[m[32m              <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />[m
+[32m+[m[32m              <folding />[m
+[32m+[m[32m            </state>[m
+[32m+[m[32m          </provider>[m
+[32m+[m[32m        </entry>[m
+[32m+[m[32m      </file>[m
+[32m+[m[32m      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/app/app.js">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m              <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />[m
+[32m+[m[32m              <folding />[m
+[32m+[m[32m            </state>[m
+[32m+[m[32m          </provider>[m
+[32m+[m[32m        </entry>[m
+[32m+[m[32m      </file>[m
+[32m+[m[32m      <file leaf-file-name="articlesCtrl.js" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/app/Rva/articlesCtrl.js">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m              <caret line="197" column="33" selection-start-line="197" selection-start-column="33" selection-end-line="197" selection-end-column="33" />[m
+[32m+[m[32m              <folding />[m
+[32m+[m[32m            </state>[m
+[32m+[m[32m          </provider>[m
+[32m+[m[32m        </entry>[m
+[32m+[m[32m      </file>[m
+[32m+[m[32m    </leaf>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="FindManager">[m
+[32m+[m[32m    <FindUsagesManager>[m
+[32m+[m[32m      <setting name="OPEN_NEW_TAB" value="true" />[m
+[32m+[m[32m    </FindUsagesManager>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="Git.Settings">[m
+[32m+[m[32m    <option name="ROOT_SYNC" value="DONT_SYNC" />[m
+[32m+[m[32m    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />[m
+[32m+[m[32m    <option name="WARN_ABOUT_CRLF" value="false" />[m
+[32m+[m[32m    <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="IdeDocumentHistory">[m
+[32m+[m[32m    <option name="CHANGED_PATHS">[m
+[32m+[m[32m      <list>[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/partials/TRAVAUX/tools.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/partials/TRAVAUX/stockAddMvtTool.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/api/v1/travaux/tools.php" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/app/Travaux/articlesTravauxCtrl.js" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/app/app.js" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/app/Travaux/toolsCtrl.js" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/app/Travaux/listMvtTravauxCtrl.js" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/app/Travaux/stocksCtrl.js" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/partials/TRAVAUX/stocks.html" />[m
+[32m+[m[32m      </list>[m
+[32m+[m[32m    </option>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="JsBowerSettings">[m
+[32m+[m[32m    <exe-path />[m
+[32m+[m[32m    <config-path />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="JsBuildToolGruntFileManager" detection-done="true" />[m
+[32m+[m[32m  <component name="JsBuildToolPackageJson" detection-done="true" />[m
+[32m+[m[32m  <component name="JsGulpfileManager">[m
+[32m+[m[32m    <detection-done>true</detection-done>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="PhpServers">[m
+[32m+[m[32m    <servers />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />[m
+[32m+[m[32m  <component name="ProjectFrameBounds">[m
+[32m+[m[32m    <option name="y" value="1" />[m
+[32m+[m[32m    <option name="width" value="1440" />[m
+[32m+[m[32m    <option name="height" value="751" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ProjectLevelVcsManager" settingsEditedManually="false">[m
+[32m+[m[32m    <OptionsSetting value="true" id="Add" />[m
+[32m+[m[32m    <OptionsSetting value="true" id="Remove" />[m
+[32m+[m[32m    <OptionsSetting value="true" id="Checkout" />[m
+[32m+[m[32m    <OptionsSetting value="true" id="Update" />[m
+[32m+[m[32m    <OptionsSetting value="true" id="Status" />[m
+[32m+[m[32m    <OptionsSetting value="true" id="Edit" />[m
+[32m+[m[32m    <ConfirmationsSetting value="0" id="Add" />[m
+[32m+[m[32m    <ConfirmationsSetting value="0" id="Remove" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ProjectReloadState">[m
+[32m+[m[32m    <option name="STATE" value="0" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ProjectView">[m
+[32m+[m[32m    <navigator currentView="ProjectPane" proportions="" version="1">[m
+[32m+[m[32m      <flattenPackages />[m
+[32m+[m[32m      <showMembers />[m
+[32m+[m[32m      <showModules />[m
+[32m+[m[32m      <showLibraryContents />[m
+[32m+[m[32m      <hideEmptyPackages />[m
+[32m+[m[32m      <abbreviatePackageNames />[m
+[32m+[m[32m      <autoscrollToSource />[m
+[32m+[m[32m      <autoscrollFromSource />[m
+[32m+[m[32m      <sortByType />[m
+[32m+[m[32m      <manualOrder />[m
+[32m+[m[32m      <foldersAlwaysOnTop value="true" />[m
+[32m+[m[32m    </navigator>[m
+[32m+[m[32m    <panes>[m
+[32m+[m[32m      <pane id="ProjectPane">[m
+[32m+[m[32m        <subPane>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="partials" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="partials" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="TRAVAUX" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="partials" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="RVA" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="app" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="app" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="Travaux" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="app" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="Rva" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="api" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="v1" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="api" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="v1" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="travaux" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="gestion_stock" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="api" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+[32m+[m[32m        </subPane>[m
+[32m+[m[32m      </pane>[m
+[32m+[m[32m      <pane id="Scope">[m
+[32m+[m[32m        <subPane subId="Project Files" />[m
+[32m+[m[32m      </pane>[m
+[32m+[m[32m      <pane id="Scratches" />[m
+[32m+[m[32m    </panes>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="PropertiesComponent">[m
+[32m+[m[32m    <property name="options.lastSelected" value="org.jetbrains.plugins.terminal.TerminalOptionsConfigurable" />[m
+[32m+[m[32m    <property name="options.splitter.main.proportions" value="0.3" />[m
+[32m+[m[32m    <property name="options.splitter.details.proportions" value="0.2" />[m
+[32m+[m[32m    <property name="WebServerToolWindowFactoryState" value="true" />[m
+[32m+[m[32m    <property name="DefaultHtmlFileTemplate" value="Html5" />[m
+[32m+[m[32m    <property name="last_opened_file_path" value="C:/wamp/www/intranet_v2" />[m
+[32m+[m[32m    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />[m
+[32m+[m[32m    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />[m
+[32m+[m[32m    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />[m
+[32m+[m[32m    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />[m
+[32m+[m[32m    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />[m
+[32m+[m[32m    <property name="settings.editor.selected.configurable" value="preferences.keymap" />[m
+[32m+[m[32m    <property name="settings.editor.splitter.proportion" value="0.2" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="RecentsManager">[m
+[32m+[m[32m    <key name="MoveFile.RECENT_KEYS">[m
+[32m+[m[32m      <recent name="W:\www\gestion_stock\partials" />[m
+[32m+[m[32m      <recent name="W:\www\gestion_stock\api\libs\FPDF" />[m
+[32m+[m[32m    </key>[m
+[32m+[m[32m    <key name="CopyFile.RECENT_KEYS">[m
+[32m+[m[32m      <recent name="W:\www\gestion_stock\partials\RVA" />[m
+[32m+[m[32m      <recent name="W:\www\gestion_stock\partials\TRAVAUX" />[m
+[32m+[m[32m      <recent name="W:\www\gestion_stock\app\Travaux" />[m
+[32m+[m[32m    </key>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="RunManager">[m
+[32m+[m[32m    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">[m
+[32m+[m[32m      <method />[m
+[32m+[m[32m    </configuration>[m
+[32m+[m[32m    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">[m
+[32m+[m[32m      <TestRunner />[m
+[32m+[m[32m      <method />[m
+[32m+[m[32m    </configuration>[m
+[32m+[m[32m    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">[m
+[32m+[m[32m      <BehatRunner />[m
+[32m+[m[32m      <method />[m
+[32m+[m[32m    </configuration>[m
+[32m+[m[32m    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">[m
+[32m+[m[32m      <method />[m
+[32m+[m[32m    </configuration>[m
+[32m+[m[32m    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="f6147cf7-7b96-45f9-9b4f-a5d6303b52d9" server_name="gestion_stock">[m
+[32m+[m[32m      <method />[m
+[32m+[m[32m    </configuration>[m
+[32m+[m[32m    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">[m
+[32m+[m[32m      <node-options />[m
+[32m+[m[32m      <gulpfile />[m
+[32m+[m[32m      <tasks />[m
+[32m+[m[32m      <arguments />[m
+[32m+[m[32m      <envs />[m
+[32m+[m[32m      <method />[m
+[32m+[m[32m    </configuration>[m
+[32m+[m[32m    <configuration default="true" type="js.build_tools.npm" factoryName="npm">[m
+[32m+[m[32m      <command value="run-script" />[m
+[32m+[m[32m      <scripts />[m
+[32m+[m[32m      <envs />[m
+[32m+[m[32m      <method />[m
+[32m+[m[32m    </configuration>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ShelveChangesManager" show_recycled="false" />[m
+[32m+[m[32m  <component name="SvnConfiguration">[m
+[32m+[m[32m    <configuration />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="TaskManager">[m
+[32m+[m[32m    <task active="true" id="Default" summary="Default task">[m
+[32m+[m[32m      <changelist id="2f7402a0-cac1-44b2-a969-4161f31cdf41" name="Default" comment="" />[m
+[32m+[m[32m      <created>1439890808234</created>[m
+[32m+[m[32m      <option name="number" value="Default" />[m
+[32m+[m[32m      <updated>1439890808234</updated>[m
+[32m+[m[32m    </task>[m
+[32m+[m[32m    <servers />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="TodoView" selected-index="1" />[m
+[32m+[m[32m  <component name="ToolWindowManager">[m
+[32m+[m[32m    <frame x="0" y="1" width="1440" height="751" extended-state="0" />[m
+[32m+[m[32m    <editor active="false" />[m
+[32m+[m[32m    <layout>[m
+[32m+[m[32m      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994187" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19057971" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />[m
+[32m+[m[32m      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994187" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1789855" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24927326" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />[m
+[32m+[m[32m      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20665742" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m    </layout>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="Vcs.Log.UiProperties">[m
+[32m+[m[32m    <option name="RECENTLY_FILTERED_USER_GROUPS">[m
+[32m+[m[32m      <collection />[m
+[32m+[m[32m    </option>[m
+[32m+[m[32m    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">[m
+[32m+[m[32m      <collection />[m
+[32m+[m[32m    </option>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="VcsContentAnnotationSettings">[m
+[32m+[m[32m    <option name="myLimit" value="2678400000" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="XDebuggerManager">[m
+[32m+[m[32m    <breakpoint-manager>[m
+[32m+[m[32m      <breakpoints>[m
+[32m+[m[32m        <line-breakpoint enabled="true" type="php">[m
+[32m+[m[32m          <url>file://$PROJECT_DIR$/api/v1/index.php</url>[m
+[32m+[m[32m          <line>17</line>[m
+[32m+[m[32m          <option name="timeStamp" value="6" />[m
+[32m+[m[32m        </line-breakpoint>[m
+[32m+[m[32m      </breakpoints>[m
+[32m+[m[32m      <option name="time" value="7" />[m
+[32m+[m[32m    </breakpoint-manager>[m
+[32m+[m[32m    <watches-manager />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="editorHistoryManager">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/libs/Slim/Http/Request.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.34638554">[m
+[32m+[m[32m          <caret line="327" column="20" selection-start-line="327" selection-start-column="20" selection-end-line="327" selection-end-column="20" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/stockDelivery.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/articles.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.38403615">[m
+[32m+[m[32m          <caret line="15" column="111" selection-start-line="15" selection-start-column="104" selection-end-line="15" selection-end-column="111" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/stockDeliveryList.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.5376506">[m
+[32m+[m[32m          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/movementList.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-0.33283132">[m
+[32m+[m[32m          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/orderInternal.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-6.576923">[m
+[32m+[m[32m          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/salleEdit.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.71686745">[m
+[32m+[m[32m          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/Rva/sallesCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="1.4041297">[m
+[32m+[m[32m          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/Rva/orderInternalFinalizeCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/index.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-0.84782606">[m
+[32m+[m[32m          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/homeCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/home.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/menu.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/rva/familys.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/rva/locations.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.21304348">[m
+[32m+[m[32m          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/rva/suppliers.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.15072463">[m
+[32m+[m[32m          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/travaux/locations.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/listArticleXls.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-0.9910045">[m
+[32m+[m[32m          <caret line="50" column="64" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="64" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/test_lecture_xls.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.031484257">[m
+[32m+[m[32m          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/test.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/TRAVAUX/stockNewMvt.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/stockEditAddMvt.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/stockAdd.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.4587706">[m
+[32m+[m[32m          <caret line="18" column="113" selection-start-line="18" selection-start-column="113" selection-end-line="18" selection-end-column="136" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/Travaux/locationsCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.73593074">[m
+[32m+[m[32m          <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/travaux/stocks.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.84753364">[m
+[32m+[m[32m          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/.gitignore">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/.gitattributes">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/rva/batiments.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.6098655">[m
+[32m+[m[32m          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/config.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-4.576923">[m
+[32m+[m[32m          <caret line="7" column="15" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="15" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/dbHelper.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-15.038462">[m
+[32m+[m[32m          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/productEdit.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.57012194">[m
+[32m+[m[32m          <caret line="22" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/data.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.80719423">[m
+[32m+[m[32m          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/familyEditCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-0.29640287">[m
+[32m+[m[32m          <caret line="10" column="11" selection-start-line="7" selection-start-column="8" selection-end-line="10" selection-end-column="11" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/stockEdit.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-22.23077">[m
+[32m+[m[32m          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/formDate.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.33133432">[m
+[32m+[m[32m          <caret line="13" column="44" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="44" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/rva/articles.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="1.9115442">[m
+[32m+[m[32m          <caret line="80" column="44" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="44" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/TRAVAUX/tools.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/TRAVAUX/stockAddMvtTool.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.66266865">[m
+[32m+[m[32m          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/index.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="858" column="21" selection-start-line="858" selection-start-column="21" selection-end-line="858" selection-end-column="21" />[m
+[32m+[m[32m          <folding>[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="2623:4687" placeholder="SELECT AGENT..cpas_agents..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="5751:6703" placeholder="select g_sto..gestion_stock..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="7032:7658" placeholder="select g_sto..gestion_stock..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="7972:8499" placeholder="select g_sto..gestion_stock..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="8909:9643" placeholder="select g_sto..gestion_stock..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="15676:17144" placeholder="SELECT gsm.i..gestion_stock_mvt_x..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="17480:19021" placeholder="SELECT gsm.i..gestion_stock_mvt_x..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="19295:20278" placeholder="SELECT gsm.i..gestion_stock_mvt_x..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="20674:21515" placeholder="select g_sto..gestion_stock..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="26311:27534" placeholder="select g_sto..gestion_stock..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="28915:29462" placeholder="SELECT ga.no..gestion_stock..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="29922:29984" placeholder="SELECT * FRO..gestion_salle..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="31321:32045" placeholder="SELECT ga.no..gestion_stock..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="32746:32771" placeholder="SELECT * FRO..measuremnts..." />[m
+[32m+[m[32m            <marker date="1454079550142" expanded="true" signature="33149:33240" placeholder="SELECT * FRO..measuremnts..." />[m
+[32m+[m[32m          </folding>[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/api/v1/travaux/tools.php">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="57" column="74" selection-start-line="57" selection-start-column="74" selection-end-line="57" selection-end-column="74" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/Travaux/articlesTravauxCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.1446541">[m
+[32m+[m[32m          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/Rva/listMvtCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.44496855">[m
+[32m+[m[32m          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/angularjs-pdf-master/example/js/lib/pdf.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.33333334">[m
+[32m+[m[32m          <caret line="1928" column="7" selection-start-line="1928" selection-start-column="7" selection-end-line="1928" selection-end-column="7" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/Travaux/toolsCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="129" column="44" selection-start-line="129" selection-start-column="44" selection-end-line="129" selection-end-column="44" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/Travaux/listMvtTravauxCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="1.5699856">[m
+[32m+[m[32m          <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/Rva/articlesCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="197" column="33" selection-start-line="197" selection-start-column="33" selection-end-line="197" selection-end-column="33" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/app.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/Rva/stocksCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="387" column="32" selection-start-line="387" selection-start-column="16" selection-end-line="387" selection-end-column="32" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/app/Travaux/stocksCtrl.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/RVA/stocks.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0">[m
+[32m+[m[32m          <caret line="106" column="119" selection-start-line="106" selection-start-column="91" selection-end-line="106" selection-end-column="119" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/partials/TRAVAUX/stocks.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="2.2867258">[m
+[32m+[m[32m          <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/api/v1/config.php b/api/v1/config.php[m
+[1mindex 68b76b9..c41cf92 100644[m
+[1m--- a/api/v1/config.php[m
+[1m+++ b/api/v1/config.php[m
+[36m@@ -6,6 +6,6 @@[m [mdefine('DB_USERNAME', 'root');[m
+ define('DB_PASSWORD', 'root');[m
+ define('DB_HOST', 'cpasxldb');[m
+ define('DB_NAME', 'cpas_dev');[m
+[31m-define('DB_NAME_TEST', 'cpas_test');[m
+[32m+[m[32mdefine('DB_NAME_TEST', 'test');[m
+ [m
+ ?>[m
+[1mdiff --git a/api/v1/dbHelper.php b/api/v1/dbHelper.php[m
+[1mindex 9742f13..4490d27 100644[m
+[1m--- a/api/v1/dbHelper.php[m
+[1m+++ b/api/v1/dbHelper.php[m
+[36m@@ -5,6 +5,10 @@[m [mclass dbHelper {[m
+     private $db;[m
+     private $db_test;[m
+     private $err;[m
+[32m+[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * @param $db_name[m
+[32m+[m[32m     */[m
+     function __construct($db_name) {[m
+         $dsn = 'mysql:host='.DB_HOST.';dbname='.$db_name.';charset=utf8';[m
+         try {[m
+[36m@@ -14,9 +18,24 @@[m [mclass dbHelper {[m
+             $response["status"] = "error";[m
+             $response["message"] = 'Connection failed: ' . $e->getMessage();[m
+             $response["data"] = null;[m
+[31m-            //echoResponse(200, $response);[m
+[31m-            exit;[m
+[32m+[m[32m            echoResponse(200, $response);[m
+[32m+[m[32m//            exit;[m
+         }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m//            $dsn1 = 'mysql:host=10.102.98.69;dbname=test;charset=utf8';[m
+[32m+[m[32m//        try {[m
+[32m+[m[32m//            $this->db_test = new PDO($dsn1, 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));[m
+[32m+[m[32m//            $this->db_test->exec("set names utf8");[m
+[32m+[m[32m//        } catch (PDOException $e) {[m
+[32m+[m[32m//            $response["status"] = "error";[m
+[32m+[m[32m//            $response["message"] = 'Connection failed: ' . $e->getMessage();[m
+[32m+[m[32m//            $response["data"] = null;[m
+[32m+[m[32m//            echoResponse(200, $response);[m
+[32m+[m[32m//            //exit;[m
+[32m+[m[32m//        }[m
+[32m+[m
+[32m+[m
+     }[m
+     function select($table, $columns, $where){[m
+         try{[m
+[1mdiff --git a/api/v1/index.php b/api/v1/index.php[m
+[1mindex efb9bda..0e0d1c9 100644[m
+[1m--- a/api/v1/index.php[m
+[1m+++ b/api/v1/index.php[m
+[36m@@ -16,7 +16,7 @@[m [mdefine("ID_MAGASIN_TRAVAUX", 7);[m
+ $app = new Slim();[m
+ //$app = \Slim\Slim::getInstance();[m
+ $db = new dbHelper(DB_NAME);[m
+[31m-$db_test = new dbHelper(DB_NAME_TEST);[m
+[32m+[m[32m//$db_test = new dbHelper(DB_NAME_TEST);[m
+ [m
+ [m
+ /**[m
+[36m@@ -844,6 +844,29 @@[m [mfunction getGenerateWeeklyOrderFilePDF($location) {[m
+ };[m
+ [m
+ [m
+[32m+[m[32m$app->get('/measuremnts', 'getMeasuremnts');[m
+[32m+[m[32mfunction getMeasuremnts()[m
+[32m+[m[32m{[m
+[32m+[m[32m    global $db;[m
+[32m+[m[32m    $rows = $db->selectComplex("SELECT * FROM measuremnts");[m
+[32m+[m[32m    echoResponse(200, $rows);[m
+[32m+[m[32m//    echo "coco";[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m$app->put('/measuremnts', 'putMeasuremnts');[m
+[32m+[m[32mfunction putMeasuremnts()[m
+[32m+[m[32m{[m
+[32m+[m[32m    global $app, $db;[m
+[32m+[m[32m    $data = json_decode($app->request()->getBody());[m
+[32m+[m
+[32m+[m[32m//    $mm_start = DateTime::createFromFormat('Y-m-d', $data->mm_start);[m
+[32m+[m[32m//    $mm_end = DateTime::createFromFormat('Y-m-d', $data->mm_end);[m
+[32m+[m
+[32m+[m[32m    $rows = $db->selectComplex("SELECT * FROM measuremnts WHERE mm_start >= '$data->mm_start' AND mm_end <= '$data->mm_end'");[m
+[32m+[m[32m    echoResponse(200, $rows);[m
+[32m+[m[32m//    echo "coco";[m
+[32m+[m[32m}[m
+[32m+[m
+ //===================================================================================//[m
+ function echoResponse($status_code, $response) {[m
+     global $app;[m
+[1mdiff --git a/api/v1/travaux/tools.php b/api/v1/travaux/tools.php[m
+[1mindex 5ed7197..fa041ff 100644[m
+[1m--- a/api/v1/travaux/tools.php[m
+[1m+++ b/api/v1/travaux/tools.php[m
+[36m@@ -55,7 +55,7 @@[m [mfunction postToolMvt(){[m
+     $oneRow = $db->selectComplex("SELECT * FROM gestion_stock[m
+                                   WHERE id_location = ".$data->id_location_to."[m
+                                   AND id_article = ".$data->stockArticle->gs_id_article."[m
+[31m-                                  AND type_stock = 'TOOL'[m
+[32m+[m[32m                                  AND type_stock = '".$data->type_stock."'[m
+                                   ");[m
+ [m
+     $to_stockArticle = new stdClass();[m
+[36m@@ -66,7 +66,7 @@[m [mfunction postToolMvt(){[m
+         $data1->id_service          = TRAVAUX_SERVICE;[m
+         $data1->id_article          = $data->stockArticle->gs_id_article;[m
+         $data1->id_location         = $data->id_location_to;[m
+[31m-        $data1->type_stock          = "TOOL";[m
+[32m+[m[32m        $data1->type_stock          = $data->type_stock;[m
+         $data1->status              = 'Active';[m
+         $data1->stock_min           = 1;[m
+         $data1->stock_alert         = 1;[m
+[1mdiff --git a/app/Travaux/articlesTravauxCtrl.js b/app/Travaux/articlesTravauxCtrl.js[m
+[1mindex f201f9d..1017ccc 100644[m
+[1m--- a/app/Travaux/articlesTravauxCtrl.js[m
+[1m+++ b/app/Travaux/articlesTravauxCtrl.js[m
+[36m@@ -1,14 +1,14 @@[m
+[31m-app.controller('articlesTravauxCtrl', function ($scope, $modal, $filter, Data) {[m
+[32m+[m[32mapp.controller('articlesTravauxCtrl', function ($rootScope, $scope, $modal, $filter, Data) {[m
+     $scope.article = {};[m
+     $scope.familyFilter = [];[m
+ [m
+     $scope.loadData = function(){[m
+ [m
+[31m-        Data.get('familys/'+id_serviceTravaux).then(function(data){[m
+[32m+[m[32m        Data.get('familys/'+$rootScope.id_service).then(function(data){[m
+             $scope.familys = data.data;[m
+         });[m
+ [m
+[31m-        Data.get('articles/'+id_serviceTravaux).then(function(data){[m
+[32m+[m[32m        Data.get('articles/'+$rootScope.id_service).then(function(data){[m
+             $scope.articles = data.data;[m
+         });[m
+ [m
+[36m@@ -86,7 +86,7 @@[m [mapp.controller('articlesTravauxCtrl', function ($scope, $modal, $filter, Data) {[m
+ });[m
+ [m
+ [m
+[31m-app.controller('articleTravauxEditCtrl', function ($scope, $route, $modal, $modalInstance, item, Data, stockMagasin) {[m
+[32m+[m[32mapp.controller('articleTravauxEditCtrl', function ($rootScope, $scope, $route, $modal, $modalInstance, item, Data, stockMagasin) {[m
+     var id_suppliers = [];[m
+ [m
+     if (typeof item === "undefined") {[m
+[36m@@ -100,26 +100,26 @@[m [mapp.controller('articleTravauxEditCtrl', function ($scope, $route, $modal, $moda[m
+     console.log(item);[m
+ [m
+     $scope.loadData = function () {[m
+[31m-        //Data.get('familys/'+id_serviceTravaux).then(function(data){[m
+[32m+[m[32m        //Data.get('familys/'+$rootScope.id_service).then(function(data){[m
+         //    $scope.familys = data.data;[m
+         //    if(!item.id_article > 0)[m
+         //        $scope.article.id_family = $scope.familys[0].id_family;[m
+         //});[m
+ [m
+         if(stockMagasin){[m
+[31m-            Data.get('familysTools/'+id_serviceTravaux).then(function(data){[m
+[32m+[m[32m            Data.get('familysTools/'+$rootScope.id_service).then(function(data){[m
+                 $scope.familys = data.data;[m
+                 if(!item.id_article > 0)[m
+                     $scope.article.id_family = $scope.familys[0].id_family;[m
+             });[m
+         }else[m
+[31m-            Data.get('familys/'+id_serviceTravaux).then(function(data){[m
+[32m+[m[32m            Data.get('familys/'+$rootScope.id_service).then(function(data){[m
+                 $scope.familys = data.data;[m
+                 if(!item.id_article > 0)[m
+                     $scope.article.id_family = $scope.familys[0].id_family;[m
+             });[m
+ [m
+[31m-        Data.get('suppliers/'+id_serviceTravaux).then(function(data){[m
+[32m+[m[32m        Data.get('suppliers/'+$rootScope.id_service).then(function(data){[m
+             $scope.suppliers = data.data;[m
+         });[m
+     };[m
+[36m@@ -181,7 +181,7 @@[m [mapp.controller('articleTravauxEditCtrl', function ($scope, $route, $modal, $moda[m
+             });[m
+             console.log("after : " + article.id_suppliers);[m
+             article.stockMagasin = stockMagasin; // For manage tools to create stock to the Article[m
+[31m-            article.id_service = id_serviceTravaux; // define which service[m
+[32m+[m[32m            article.id_service = $rootScope.id_service; // define which service[m
+             console.log(article);[m
+ [m
+             Data.put('articles/'+article.id_article, article).then(function (result) {[m
+[36m@@ -196,7 +196,7 @@[m [mapp.controller('articleTravauxEditCtrl', function ($scope, $route, $modal, $moda[m
+             });[m
+         }else{[m
+             article.status = 'Active';[m
+[31m-            article.id_service = id_serviceTravaux; // define which service[m
+[32m+[m[32m            article.id_service = $rootScope.id_service; // define which service[m
+             article.stockMagasin = stockMagasin; // For manage tools to create stock to the Article[m
+             Data.post('articles', article).then(function (result) {[m
+                 if(result.status != 'error'){[m
+[36m@@ -221,14 +221,14 @@[m [mapp.controller('articleTravauxEditCtrl', function ($scope, $route, $modal, $moda[m
+                     return p;[m
+                 },[m
+                 id_service: function(){[m
+[31m-                    return id_serviceTravaux;[m
+[32m+[m[32m                    return $rootScope.id_service;[m
+                 }[m
+             }[m
+         });[m
+         modalInstance.result.then(function(selectedObject) {[m
+             $scope.familys = {};[m
+             //-- Reload scope familys[m
+[31m-            Data.get('familys/'+id_serviceTravaux).then(function(data){[m
+[32m+[m[32m            Data.get('familys/'+$rootScope.id_service).then(function(data){[m
+                 $scope.familys = data.data;[m
+             });[m
+ [m
+[1mdiff --git a/app/Travaux/listMvtTravauxCtrl.js b/app/Travaux/listMvtTravauxCtrl.js[m
+[1mindex d11502b..6870599 100644[m
+[1m--- a/app/Travaux/listMvtTravauxCtrl.js[m
+[1m+++ b/app/Travaux/listMvtTravauxCtrl.js[m
+[36m@@ -14,57 +14,59 @@[m [mapp.controller('listMvtTravauxCtrl', function ($scope, $route, $rootScope, $rout[m
+     $scope.total = 0;[m
+ [m
+     Data.get('movementsStock/'+id).then(function (data){[m
+[31m-        //$scope.movements= data.data;[m
+[31m-        $scope.movements = jsonNumericCheck.d(data.data);[m
+[32m+[m[32m        //if(data.data.length > 0){[m
+[32m+[m[32m            //$scope.movements= data.data;[m
+[32m+[m[32m            $scope.movements = jsonNumericCheck.d(data.data);[m
+ [m
+[31m-        for (var key in $scope.movements) {[m
+[31m-            if($scope.movements.hasOwnProperty(key)){[m
+[32m+[m[32m            for (var key in $scope.movements) {[m
+[32m+[m[32m                if($scope.movements.hasOwnProperty(key)){[m
+ [m
+[31m-                var obj = $scope.movements[key];[m
+[31m-                switch(obj.type_mvt) {[m
+[31m-                    case 'INIT_INVENTORY':[m
+[31m-                        obj.type_mvt_fr = 'Init Inventaire';[m
+[31m-                        break;[m
+[31m-                    case 'INVENTORY':[m
+[31m-                        obj.type_mvt_fr = 'Inventaire';[m
+[31m-                        break;[m
+[31m-                    case 'INVENTORY_CONSUMPTION':[m
+[31m-                        obj.type_mvt_fr = 'Inventaire Cons';[m
+[31m-                        break;[m
+[31m-                    case 'DELIVERY':[m
+[31m-                        obj.type_mvt_fr = 'Reception';[m
+[31m-                        break;[m
+[31m-                    case 'INTERNAL':[m
+[31m-                        obj.type_mvt_fr = id == obj.from_id_stock ? 'Sortie' : 'Entrée'  ;[m
+[31m-                        break;[m
+[31m-                    default:[m
+[31m-                        obj.type_mvt_fr = '';[m
+[32m+[m[32m                    var obj = $scope.movements[key];[m
+[32m+[m[32m                    switch(obj.type_mvt) {[m
+[32m+[m[32m                        case 'INIT_INVENTORY':[m
+[32m+[m[32m                            obj.type_mvt_fr = 'Init Inventaire';[m
+[32m+[m[32m                            break;[m
+[32m+[m[32m                        case 'INVENTORY':[m
+[32m+[m[32m                            obj.type_mvt_fr = 'Inventaire';[m
+[32m+[m[32m                            break;[m
+[32m+[m[32m                        case 'INVENTORY_CONSUMPTION':[m
+[32m+[m[32m                            obj.type_mvt_fr = 'Inventaire Cons';[m
+[32m+[m[32m                            break;[m
+[32m+[m[32m                        case 'DELIVERY':[m
+[32m+[m[32m                            obj.type_mvt_fr = 'Reception';[m
+[32m+[m[32m                            break;[m
+[32m+[m[32m                        case 'INTERNAL':[m
+[32m+[m[32m                            obj.type_mvt_fr = id == obj.from_id_stock ? 'Sortie' : 'Entrée'  ;[m
+[32m+[m[32m                            break;[m
+[32m+[m[32m                        default:[m
+[32m+[m[32m                            obj.type_mvt_fr = '';[m
+[32m+[m[32m                    }[m
+[32m+[m[32m                    if(obj.type_mvt == 'INVENTORY' || obj.type_mvt == 'INIT_INVENTORY' ){[m
+[32m+[m[32m                        if(v)inventories.push(inventory);[m
+[32m+[m[32m                        inventory = [];[m
+[32m+[m[32m                        //datesInventory.push(obj); // enabled[m
+[32m+[m[32m                        v = true;[m
+[32m+[m[32m                    }[m
+[32m+[m[32m                    inventory.push(obj);[m
+                 }[m
+[31m-                if(obj.type_mvt == 'INVENTORY' || obj.type_mvt == 'INIT_INVENTORY' ){[m
+[31m-                    if(v)inventories.push(inventory);[m
+[31m-                    inventory = [];[m
+[31m-                    //datesInventory.push(obj); // enabled[m
+[31m-                    v = true;[m
+[31m-                }[m
+[31m-                inventory.push(obj);[m
+             }[m
+[31m-        }[m
+[31m-        inventories.push(inventory);[m
+[32m+[m[32m            inventories.push(inventory);[m
+ [m
+ [m
+[31m-        if(inventories.length > 1){[m
+[31m-            var objAll = {};[m
+[31m-            objAll.date_mvt = "Tous les mouvements";[m
+[31m-            datesInventory.push(objAll);[m
+[31m-            inventories.push($scope.movements);[m
+[31m-        }[m
+[32m+[m[32m            if(inventories.length > 1){[m
+[32m+[m[32m                var objAll = {};[m
+[32m+[m[32m                objAll.date_mvt = "Tous les mouvements";[m
+[32m+[m[32m                datesInventory.push(objAll);[m
+[32m+[m[32m                inventories.push($scope.movements);[m
+[32m+[m[32m            }[m
+ [m
+[31m-        $scope.datesInventory = datesInventory;[m
+[31m-        console.log(datesInventory);[m
+[31m-        console.log(inventories);[m
+[31m-        console.log(inventory);[m
+[31m-        //$scope.movements = inventories[0]; // enabled[m
+[31m-        $scope.selectedIndex = 0;[m
+[32m+[m[32m            $scope.datesInventory = datesInventory;[m
+[32m+[m[32m            console.log(datesInventory);[m
+[32m+[m[32m            console.log(inventories);[m
+[32m+[m[32m            console.log(inventory);[m
+[32m+[m[32m            //$scope.movements = inventories[0]; // enabled[m
+[32m+[m[32m            $scope.selectedIndex = 0;[m
+[32m+[m[32m        //}[m
+     });[m
+ [m
+     $scope.changeInventoryList = function($index){[m
+[1mdiff --git a/app/Travaux/stocksCtrl.js b/app/Travaux/stocksCtrl.js[m
+[1mindex 3723e61..dbe6dca 100644[m
+[1m--- a/app/Travaux/stocksCtrl.js[m
+[1m+++ b/app/Travaux/stocksCtrl.js[m
+[36m@@ -6,14 +6,11 @@[m [mapp.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte[m
+         Data.get('stocksMaterials/gs.id_location').then(function(data){[m
+             $scope.materials = jsonNumericCheck.d(data.data);[m
+         });[m
+[31m-[m
+[31m-[m
+     };[m
+ [m
+     $scope.loadData();[m
+ [m
+[31m-[m
+[31m-    $scope.changeStockStatus = function(stock){[m
+[32m+[m[32m    $scope.changeMaterialStatus = function(stock){[m
+         stock.status = (stock.status=="Active" ? "Inactive" : "Active");[m
+         Data.put("stocks/"+stock.id_stock,{status:stock.status});[m
+     };[m
+[36m@@ -26,23 +23,23 @@[m [mapp.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte[m
+     $scope.openAddMvt = function (p, size) {[m
+         var modalInstance = $modal.open({[m
+           templateUrl: 'partials/TRAVAUX/stockAddMvtTool.html',[m
+[31m-          controller: 'newMvtCtrl',[m
+[32m+[m[32m          controller: 'addMvtCtrl',[m
+           size: size,[m
+           resolve: {[m
+[31m-            item: function () {[m
+[32m+[m[32m            type_stock: function () {[m
+               return p;[m
+             }[m
+           }[m
+         });[m
+         modalInstance.result.then(function() {[m
+[31m-            $scope.loadStocks();[m
+[32m+[m[32m            $scope.loadData();[m
+         });[m
+     };[m
+ [m
+[31m-    $scope.openStockEdit = function (p,size) {[m
+[32m+[m[32m    $scope.openAddInventory = function (p,size) {[m
+         var modalInstance = $modal.open({[m
+             templateUrl: 'partials/RVA/stockEdit.html',[m
+[31m-            controller: 'stockEditCtrl',[m
+[32m+[m[32m            controller: 'stockRvaEditCtrl',[m
+             size: size,[m
+             resolve: {[m
+                 item: function () {[m
+[36m@@ -51,7 +48,7 @@[m [mapp.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte[m
+             }[m
+         });[m
+         modalInstance.result.then(function() {[m
+[31m-            $scope.loadStocks();[m
+[32m+[m[32m            $scope.loadData();[m
+         });[m
+     };[m
+ [m
+[36m@@ -111,9 +108,9 @@[m [mapp.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte[m
+         myService.set(stock);[m
+         var n = str.indexOf("#");[m
+         var host = str.substring(0, n);[m
+[31m-        var name_article = stock.nom_article.replace(" ", "_");[m
+[32m+[m[32m        var name_article = stock.nom.replace(/ /g, '_');[m
+         $window.stock = stock;[m
+[31m-        $window.open(host+'#/RVA/Stock/'+name_article+'/'+stock.id_stock, '_blank');[m
+[32m+[m[32m        $window.open(host+'#/TRAVAUX/Stock/'+stock.id_stock, '_blank');[m
+     };[m
+ [m
+     $scope.openOrderInternal = function(p,size){[m
+[36m@@ -176,24 +173,18 @@[m [mapp.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte[m
+         {text:"FAMILLE",predicate:"FAMILLE"},[m
+         {text:"ACTION",predicate:"ACTION"},[m
+         {text:"LISTE",predicate:"LISTE"},[m
+[31m-        //{text:"STATUS",predicate:"STATUS"}[m
+[32m+[m[32m        {text:"STATUS",predicate:"STATUS"}[m
+     ];[m
+ [m
+ });[m
+ [m
+[31m-[m
+[31m-app.controller('newMvtCtrl', function ($scope, $route, $modal, $modalInstance, item, Data, toaster) {[m
+[31m-[m
+[32m+[m[32mapp.controller('addMvtCtrl', function ($scope, $route, $modal, $modalInstance, type_stock, Data, toaster) {[m
+     $scope.title = 'Ajouter mouvement';[m
+     $scope.buttonText = 'Ajouter';[m
+     $scope.toolMvt = {};[m
+     $scope.cancel = function () {[m
+         $modalInstance.dismiss('Close');[m
+     };[m
+[31m-    var original = item;[m
+[31m-    $scope.isClean = function() {[m
+[31m-        return angular.equals(original, $scope.article);[m
+[31m-    };[m
+ [m
+     $scope.loadData = function () {[m
+         Data.get('locations').then(function(data){[m
+[36m@@ -205,14 +196,12 @@[m [mapp.controller('newMvtCtrl', function ($scope, $route, $modal, $modalInstance, i[m
+ [m
+     $scope.changeLocation = function(id_location){[m
+         $scope.locations_to = $scope.locations;[m
+[31m-        //$scope.toolMvt.id_location_to = [''];[m
+[31m-        //$('#SelectLocation_to').selectpicker();[m
+[31m-        //$('#SelectLocation_to').selectpicker('refresh');[m
+[31m-        Data.get('stocksLocation/MATERIAL/'+id_location).then(function(data){[m
+[32m+[m
+[32m+[m[32m        Data.get('stocksLocation/'+type_stock+'/'+id_location).then(function(data){[m
+             if(data.data.length > 0){[m
+                 $scope.stocksArticle = data.data;[m
+[31m-                var first_id_article = JSON.stringify($scope.stocksArticle[0]);[m
+[31m-                $scope.toolMvt.stockArticle = first_id_article;[m
+[32m+[m[32m                //var first_id_article = JSON.stringify($scope.stocksArticle[0]);[m
+[32m+[m[32m                //$scope.toolMvt.stockArticle = first_id_article;[m
+                 //$scope.changeStockArticle(first_id_article);[m
+             }else{[m
+                 $scope.stocksArticle = [];[m
+[36m@@ -231,14 +220,15 @@[m [mapp.controller('newMvtCtrl', function ($scope, $route, $modal, $modalInstance, i[m
+         //$('#SelectLocation, #SelectStockArticle, #SelectLocation_to').selectpicker();[m
+         //$('#SelectLocation, #SelectStockArticle, #SelectLocation_to').selectpicker('refresh');[m
+ [m
+[31m-        $('#SelectStockArticle').selectpicker();[m
+[31m-        $('#SelectStockArticle').selectpicker('refresh');[m
+[32m+[m[32m        //$('#SelectStockArticle').selectpicker();[m
+[32m+[m[32m        //$('#SelectStockArticle').selectpicker('refresh');[m
+ [m
+     });[m
+ [m
+     $scope.savetoolMvt = function(toolMvt){[m
+         toolMvt.stockArticle = JSON.parse(toolMvt.stockArticle);[m
+         toolMvt.type_mvt = 'INTERNAL';[m
+[32m+[m[32m        toolMvt.type_stock = type_stock;[m
+         console.log(toolMvt);[m
+ [m
+         Data.post('ToolMvt',toolMvt).then(function(result){[m
+[36m@@ -246,6 +236,7 @@[m [mapp.controller('newMvtCtrl', function ($scope, $route, $modal, $modalInstance, i[m
+                 console.log(result)[m
+                 $modalInstance.close();[m
+                 toaster.pop('success', "succés", '<ul><li>Ajout effectué avec succés</li></ul>', 5000, 'trustedHtml');[m
+[32m+[m
+             }else{[m
+                 console.log(result);[m
+                 $modalInstance.close();[m
+[36m@@ -253,63 +244,7 @@[m [mapp.controller('newMvtCtrl', function ($scope, $route, $modal, $modalInstance, i[m
+             }[m
+         });[m
+     };[m
+[31m-});[m
+ [m
+[31m-app.controller('stockEditCtrl', function ($scope, $route, $filter, $modalInstance, item, Data, toaster) {[m
+[31m-[m
+[31m-    console.log(item);[m
+[31m-[m
+[31m-    //if(item.type_form == 'INVENTORY'){[m
+[31m-    $scope.displayFormINV = true;[m
+[31m-    $scope.title = 'Inventaire';[m
+[31m-    $scope.subTitle = item.nom_article;[m
+[31m-    $scope.buttonText = 'Ajouter Inventaire'[m
+[31m-    //}[m
+[31m-    //else if(item.type_form == 'UPDATESTOCK'){[m
+[31m-    //    $scope.displayFormUpdateStock = true;[m
+[31m-    //    $scope.title = 'Mise à jour Stock Min & Alert';[m
+[31m-    //    $scope.buttonText = 'Mise à jour Stock'[m
+[31m-    //}[m
+[31m-[m
+[31m-    //displayFormINV[m
+[31m-    //displayFormUpdateStock[m
+[31m-[m
+[31m-    var DateNow = $filter("date")(Date.now(), 'yyyy-MM-dd');[m
+[31m-    $scope.stockMvt = {[m
+[31m-        date_mvt : DateNow,[m
+[31m-        quantite : item.quantite_current,[m
+[31m-        stock_min : item.stock_min,[m
+[31m-        stock_alert : item.stock_alert[m
+[31m-    };[m
+[31m-[m
+[31m-    $scope.cancel = function () {[m
+[31m-        $modalInstance.dismiss('Close');[m
+[31m-    };[m
+[31m-    var original = item;[m
+[31m-    $scope.isClean = function() {[m
+[31m-        return angular.equals(original, $scope.stock);[m
+[31m-    };[m
+[31m-[m
+[31m-    $scope.saveStockMvt = function(stockMvt){[m
+[31m-        stockMvt.uid = $scope.uid;[m
+[31m-        stockMvt.stockArticle = item;[m
+[31m-        stockMvt.to_stockArticle = item;[m
+[31m-        stockMvt.type_mvt = 'INVENTORY';[m
+[31m-[m
+[31m-        console.log(stockMvt);[m
+[31m-        Data.post('StockMvt', stockMvt).then(function (result) {[m
+[31m-            if(result.status != 'error'){[m
+[31m-                console.log(result)[m
+[31m-                toaster.pop('success', "succés", '<ul><li>Mouvement Inventaire effectué avec succés</li></ul>', 5000, 'trustedHtml');[m
+[31m-                $modalInstance.close();[m
+[31m-[m
+[31m-            }else{[m
+[31m-                console.log(result);[m
+[31m-                toaster.pop('error', "Erreur", '<ul><li>Erreur pendant l \'Ajout du Mouvement Inventaire</li></ul>', null, 'trustedHtml');[m
+[31m-                $modalInstance.close();[m
+[31m-            }[m
+[31m-        });[m
+[31m-    };[m
+ });[m
+ [m
+ [m
+[1mdiff --git a/app/Travaux/toolsCtrl.js b/app/Travaux/toolsCtrl.js[m
+[1mindex 9848a50..b9f1e09 100644[m
+[1m--- a/app/Travaux/toolsCtrl.js[m
+[1m+++ b/app/Travaux/toolsCtrl.js[m
+[36m@@ -59,18 +59,18 @@[m [mapp.controller('toolsCtrl', function ($scope, $rootScope, $modal, $filter, Data,[m
+             // ============= After 1500ms LoadData ========= //[m
+             //setTimeout(function() { $scope.loadData(); }, 1500);[m
+ [m
+[31m-            $scope.loadData()[m
+[32m+[m[32m            $scope.loadData();[m
+ [m
+             //$scope.filterArticle.nom_article = selectedObject;[m
+         });[m
+     };[m
+[31m-    $scope.openMvtTool = function(p,size) {[m
+[32m+[m[32m    $scope.openAddMvt = function(p,size) {[m
+         var modalInstance = $modal.open({[m
+             templateUrl: 'partials/TRAVAUX/stockAddMvtTool.html',[m
+[31m-            controller: 'stockAddMvtToolCtrl',[m
+[32m+[m[32m            controller: 'addMvtCtrl',[m
+             size: size,[m
+             resolve: {[m
+[31m-                item: function () {[m
+[32m+[m[32m                type_stock: function () {[m
+                     return p;[m
+                 }[m
+             }[m
+[36m@@ -89,7 +89,7 @@[m [mapp.controller('toolsCtrl', function ($scope, $rootScope, $modal, $filter, Data,[m
+         var host = str.substring(0, n);[m
+         var name_article = stock.nom.replace(" ", "_");[m
+         $window.stock = stock;[m
+[31m-        $window.open(host+'#/TRAVAUX/Stock/'+name_article+'/'+stock.id_stock, '_blank');[m
+[32m+[m[32m        $window.open(host+'#/TRAVAUX/Stock/'+stock.id_stock, '_blank');[m
+     };[m
+ [m
+     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent){[m
+[36m@@ -131,77 +131,3 @@[m [mapp.controller('toolsCtrl', function ($scope, $rootScope, $modal, $filter, Data,[m
+     ];[m
+ [m
+ });[m
+[31m-[m
+[31m-app.controller('stockAddMvtToolCtrl', function ($scope, $route, $modal, $modalInstance, item, Data, toaster) {[m
+[31m-[m
+[31m-    $scope.title = 'Ajouter mouvement';[m
+[31m-    $scope.buttonText = 'Ajouter';[m
+[31m-    $scope.toolMvt = {};[m
+[31m-    $scope.cancel = function () {[m
+[31m-        $modalInstance.dismiss('Close');[m
+[31m-    };[m
+[31m-    var original = item;[m
+[31m-    $scope.isClean = function() {[m
+[31m-        return angular.equals(original, $scope.article);[m
+[31m-    };[m
+[31m-[m
+[31m-    $scope.loadData = function () {[m
+[31m-        Data.get('locations').then(function(data){[m
+[31m-            $scope.locations = data.data;[m
+[31m-            //$scope.toolMvt.id_location = $scope.locations[0].id_location;[m
+[31m-        });[m
+[31m-    };[m
+[31m-    $scope.loadData();[m
+[31m-[m
+[31m-    $scope.changeLocation = function(id_location){[m
+[31m-        $scope.locations_to = $scope.locations;[m
+[31m-        //$scope.toolMvt.id_location_to = [''];[m
+[31m-        //$('#SelectLocation_to').selectpicker();[m
+[31m-        //$('#SelectLocation_to').selectpicker('refresh');[m
+[31m-        Data.get('stocksLocation/TOOL/'+id_location).then(function(data){[m
+[31m-            if(data.data.length > 0){[m
+[31m-                $scope.stocksArticle = data.data;[m
+[31m-                var first_id_article = JSON.stringify($scope.stocksArticle[0]);[m
+[31m-                $scope.toolMvt.stockArticle = first_id_article;[m
+[31m-                //$scope.changeStockArticle(first_id_article);[m
+[31m-            }else{[m
+[31m-                $scope.stocksArticle = [];[m
+[31m-                //$scope.to_stocksArticle = [''];[m
+[31m-            }[m
+[31m-        });[m
+[31m-        //console.log($scope.toolMvt);[m
+[31m-    };[m
+[31m-[m
+[31m-    $scope.changeStockArticle = function(stockArticle){[m
+[31m-        var stockArticle = JSON.parse(stockArticle);[m
+[31m-        $scope.quantiteMax = stockArticle.quantite_current;[m
+[31m-    };[m
+[31m-[m
+[31m-    $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent){[m
+[31m-        //$('#SelectLocation, #SelectStockArticle, #SelectLocation_to').selectpicker();[m
+[31m-        //$('#SelectLocation, #SelectStockArticle, #SelectLocation_to').selectpicker('refresh');[m
+[31m-[m
+[31m-        $('#SelectStockArticle').selectpicker();[m
+[31m-        $('#SelectStockArticle').selectpicker('refresh');[m
+[31m-[m
+[31m-    });[m
+[31m-[m
+[31m-    $scope.savetoolMvt = function(toolMvt){[m
+[31m-        toolMvt.stockArticle = JSON.parse(toolMvt.stockArticle);[m
+[31m-        toolMvt.type_mvt = 'INTERNAL';[m
+[31m-        console.log(toolMvt);[m
+[31m-[m
+[31m-        Data.post('ToolMvt',toolMvt).then(function(result){[m
+[31m-            if(result.status != 'error'){[m
+[31m-                console.log(result)[m
+[31m-                $modalInstance.close();[m
+[31m-                toaster.pop('success', "succés", '<ul><li>Ajout effectué avec succés</li></ul>', 5000, 'trustedHtml');[m
+[31m-            }else{[m
+[31m-                console.log(result);[m
+[31m-                $modalInstance.close();[m
+[31m-                toaster.pop('error', "Erreur", '<ul><li>Erreur pendant l \'Ajout du mouvement</li></ul>', null, 'trustedHtml');[m
+[31m-            }[m
+[31m-        });[m
+[31m-    };[m
+[31m-[m
+[31m-});[m
+[1mdiff --git a/app/app.js b/app/app.js[m
+[1mindex 3bb82f7..0740ff5 100644[m
+[1m--- a/app/app.js[m
+[1m+++ b/app/app.js[m
+[36m@@ -93,11 +93,16 @@[m [mapp.config(['$routeProvider','$locationProvider',[m
+             templateUrl: 'partials/TRAVAUX/Tools.html',[m
+             controller: 'toolsCtrl'[m
+         })[m
+[31m-        .when('/TRAVAUX/Stock/:type/:id', {[m
+[32m+[m[32m        .when('/TRAVAUX/Stock/:id', {[m
+             title: 'Liste de Mouvements',[m
+             templateUrl: 'partials/TRAVAUX/movementList.html',[m
+             controller: 'listMvtTravauxCtrl'[m
+         })[m
+[32m+[m[32m        .when('/measuremnt', {[m
+[32m+[m[32m            title: 'formDate',[m
+[32m+[m[32m            templateUrl: 'partials/formDate.html',[m
+[32m+[m[32m            controller: 'formDateCtrl'[m
+[32m+[m[32m        })[m
+         .when('/RVA/readXlsx', {[m
+             title: 'readXlsx',[m
+             templateUrl: 'partials/readXlsx.php'[m
+[36m@@ -237,3 +242,28 @@[m [mapp.filter('unique', function() {[m
+         return output;[m
+     };[m
+ });[m
+[32m+[m
+[32m+[m[32mapp.controller('formDateCtrl', function($scope, $location, Data) {[m
+[32m+[m[32m    console.log('formDateCtrl');[m
+[32m+[m[32m    $scope.measuremnt = {};[m
+[32m+[m[32m    Data.get('measuremnts').then(function(data){[m
+[32m+[m[32m        $scope.measuremnts = data.data;[m
+[32m+[m[32m        console.log(data.data);[m
+[32m+[m[32m    });[m
+[32m+[m
+[32m+[m[32m    $scope.savemeasuremnt = function(measuremnt){[m
+[32m+[m[32m        console.log(measuremnt);[m
+[32m+[m[32m        Data.put('measuremnts',measuremnt).then(function(data){[m
+[32m+[m[32m            $scope.measuremnts = data.data;[m
+[32m+[m[32m        });[m
+[32m+[m[32m    };[m
+[32m+[m
+[32m+[m[32m    $scope.columns = [[m
+[32m+[m[32m        {text:"stn",predicate:"stn",sortable:true},[m
+[32m+[m[32m        {text:"mml1",predicate:"mml1",sortable:true},[m
+[32m+[m[32m        {text:"mml2",predicate:"mml2 ",sortable:true},[m
+[32m+[m[32m        {text:"mm_start",predicate:"mm_start",sortable:true},[m
+[32m+[m[32m        {text:"mm_end",predicate:"mm_end",sortable:true}[m
+[32m+[m[32m    ];[m
+[32m+[m
+[32m+[m[32m});[m
+\ No newline at end of file[m
+[1mdiff --git a/partials/TRAVAUX/stockAddMvtTool.html b/partials/TRAVAUX/stockAddMvtTool.html[m
+[1mindex 403963e..48236f8 100644[m
+[1m--- a/partials/TRAVAUX/stockAddMvtTool.html[m
+[1m+++ b/partials/TRAVAUX/stockAddMvtTool.html[m
+[36m@@ -15,7 +15,7 @@[m
+             </form-element>[m
+ [m
+             <form-element label="OUTIL" mod="toolMvt">[m
+[31m-                <select id="SelectStockArticle" name="id_article" class="SelectStockArticle form-control" ng-model="toolMvt.stockArticle" ng-change="changeStockArticle(toolMvt.stockArticle)" data-live-search="true" required>[m
+[32m+[m[32m                <select id="SelectStockArticle" name="id_article" class="SelectStockArticle form-control" ng-model="toolMvt.stockArticle" ng-change="changeStockArticle(toolMvt.stockArticle)" required>[m
+                     <option ng-repeat=" a in stocksArticle | orderBy:'nom_article' | orderBy:'-quantite_current' " value="{{ a }}" ng-disabled="a.quantite_current == 0" on-finish-render="ngRepeatFinished" > {{ a.quantite_current }} - {{ a.nom_article }}</option>[m
+                 </select>[m
+                 <small class="errorMessage" ng-show="toolMvt_form.stockArticle.$dirty && toolMvt_form.stockArticle.$invalid">Stock Article Requies.</small>[m
+[1mdiff --git a/partials/TRAVAUX/stocks.html b/partials/TRAVAUX/stocks.html[m
+[1mindex 5835b8d..833a2be 100644[m
+[1m--- a/partials/TRAVAUX/stocks.html[m
+[1m+++ b/partials/TRAVAUX/stocks.html[m
+[36m@@ -8,7 +8,7 @@[m
+         <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>[m
+         <span class="btn-txt">Ajouter Stock Material</span>[m
+     </button>[m
+[31m-    <button type="button" class="btn btn-sm btn-info" ng-click="openAddMvt();">[m
+[32m+[m[32m    <button type="button" class="btn btn-sm btn-info" ng-click="openAddMvt('MATERIAL');">[m
+         <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>[m
+         <span class="btn-txt">Ajouter un mouvement</span>[m
+     </button>[m
+[36m@@ -89,12 +89,12 @@[m
+                     <td>{{t.name_family}}</td>[m
+ [m
+                     <td>[m
+[31m-                        <button type="button" class="btn btn-default fa fa-edit" class="btn" ng-click="openAddTool(t);"></button>[m
+[32m+[m[32m                        <button type="button" class="btn btn-default fa fa-history" title="Ajouter Inventaire" class="btn" ng-click="openAddInventory(t);"></button>[m
+                     </td>[m
+                     <td>[m
+                         <button type="button" class="btn btn-default fa fa-list" class="btn" ng-click="getListMvt(t);"></button>[m
+                     </td>[m
+[31m-                    <!--<td><button class="btn" ng-class="{Active:'btn-success', Inactive:''}[t.status]" ng-click="changematerialstatus(c);">{{t.status}}</button></td>-->[m
+[32m+[m[32m                    <td><button class="btn" ng-class="{Active:'btn-success', Inactive:''}[t.status]" ng-click="changeMaterialStatus(t);">{{t.status}}</button></td>[m
+                 </tr>[m
+                 </tbody>[m
+             </table>[m
+[1mdiff --git a/partials/TRAVAUX/tools.html b/partials/TRAVAUX/tools.html[m
+[1mindex ad2d770..e34c0ea 100644[m
+[1m--- a/partials/TRAVAUX/tools.html[m
+[1m+++ b/partials/TRAVAUX/tools.html[m
+[36m@@ -8,7 +8,7 @@[m
+         <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>[m
+         <span class="btn-txt">Ajouter Nouveau Outil</span>[m
+     </button>[m
+[31m-    <button type="button" class="btn btn-sm btn-info" ng-click="openMvtTool(c);">[m
+[32m+[m[32m    <button type="button" class="btn btn-sm btn-info" ng-click="openAddMvt('TOOL');">[m
+         <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>[m
+         <span class="btn-txt">Ajouter un mouvement</span>[m
+     </button>[m
+[1mdiff --git a/partials/formDate.html b/partials/formDate.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ac2d5d8[m
+[1m--- /dev/null[m
+[1m+++ b/partials/formDate.html[m
+[36m@@ -0,0 +1,63 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html>[m
+[32m+[m[32m<head lang="en">[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <title></title>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m<div class="modal-header">[m
+[32m+[m[32m    <h3 class="modal-title">measuremnt</h3>[m
+[32m+[m[32m</div>[m
+[32m+[m[32m<div class="modal-body">[m
+[32m+[m[32m    <form name="measuremnt_form" class="form-horizontal" role="form" novalidate>[m
+[32m+[m
+[32m+[m[32m        <form-element label="START DATE" mod="measuremnt">[m
+[32m+[m[32m            <input type="date" class="form-control" name="mm_start" placeholder="START DATE" ng-model="measuremnt.mm_start" focus/>[m
+[32m+[m[32m        </form-element>[m
+[32m+[m
+[32m+[m[32m        <form-element label="END DATE" mod="measuremnt">[m
+[32m+[m[32m            <input type="date" class="form-control" name="mm_end" placeholder="END DATE" ng-model="measuremnt.mm_end" focus/>[m
+[32m+[m[32m        </form-element>[m
+[32m+[m[41m                [m
+[32m+[m[32m        <div class="space"></div>[m
+[32m+[m[32m        <div class="space-4"></div>[m
+[32m+[m[32m        <div class="modal-footer">[m
+[32m+[m[32m            <form-element label="">[m
+[32m+[m[32m                <div class="text-right">[m
+[32m+[m[32m                    <!--<a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Cancel</a>-->[m
+[32m+[m[32m                    <button ng-click="savemeasuremnt(measuremnt);"[m
+[32m+[m[32m                            ng-disabled="measuremnt_form.$invalid || enableUpdate"[m
+[32m+[m[32m                            class="btn btn-sm btn-primary"[m
+[32m+[m[32m                            type="submit">[m
+[32m+[m[32m                        <i class="ace-icon fa fa-check"></i>OK[m
+[32m+[m[32m                    </button>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </form-element>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </form>[m
+[32m+[m[32m</div>[m
+[32m+[m
+[32m+[m[32m<div class="panel-body">[m
+[32m+[m[32m    <table data-toggle="table" fixed-table-headers="scrollable-area" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >[m
+[32m+[m[32m        <tr ng-show="measuremnts.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>[m
+[32m+[m[32m        <tr ng-hide="measuremnts.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>[m
+[32m+[m[32m        <thead>[m
+[32m+[m[32m        <tr><th ng-repeat="c in columns" class="{{c.class}}">{{c.text}}</th></tr>[m
+[32m+[m[32m        </thead>[m
+[32m+[m[32m        <tbody>[m
+[32m+[m
+[32m+[m[32m        <tr ng-repeat="c in measuremnts" >[m
+[32m+[m[32m            <td>{{ c.stn }}</td>[m
+[32m+[m[32m            <td>{{ c.mml1 }}</td>[m
+[32m+[m[32m            <td>{{ c.mml2 }}</td>[m
+[32m+[m[32m            <td>{{ c.mm_start }}</td>[m
+[32m+[m[32m            <td>{{ c.mm_end }}</td>[m
+[32m+[m[32m        </tr>[m
+[32m+[m[32m        </tbody>[m
+[32m+[m[32m    </table>[m
+[32m+[m
+[32m+[m[32m</div>[m
+[32m+[m
+[32m+[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
