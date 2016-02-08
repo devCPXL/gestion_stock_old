@@ -59,18 +59,18 @@ app.controller('toolsCtrl', function ($scope, $rootScope, $modal, $filter, Data,
             // ============= After 1500ms LoadData ========= //
             //setTimeout(function() { $scope.loadData(); }, 1500);
 
-            $scope.loadData()
+            $scope.loadData();
 
             //$scope.filterArticle.nom_article = selectedObject;
         });
     };
-    $scope.openMvtTool = function(p,size) {
+    $scope.openAddMvt = function(p,size) {
         var modalInstance = $modal.open({
             templateUrl: 'partials/TRAVAUX/stockAddMvtTool.html',
-            controller: 'stockAddMvtToolCtrl',
+            controller: 'addMvtCtrl',
             size: size,
             resolve: {
-                item: function () {
+                type_stock: function () {
                     return p;
                 }
             }
@@ -89,7 +89,7 @@ app.controller('toolsCtrl', function ($scope, $rootScope, $modal, $filter, Data,
         var host = str.substring(0, n);
         var name_article = stock.nom.replace(" ", "_");
         $window.stock = stock;
-        $window.open(host+'#/TRAVAUX/Stock/'+name_article+'/'+stock.id_stock, '_blank');
+        $window.open(host+'#/TRAVAUX/Stock/'+stock.id_stock, '_blank');
     };
 
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent){
@@ -129,79 +129,5 @@ app.controller('toolsCtrl', function ($scope, $rootScope, $modal, $filter, Data,
         {text:"LISTE",predicate:"LISTE"},
         //{text:"STATUS",predicate:"STATUS"}
     ];
-
-});
-
-app.controller('stockAddMvtToolCtrl', function ($scope, $route, $modal, $modalInstance, item, Data, toaster) {
-
-    $scope.title = 'Ajouter mouvement';
-    $scope.buttonText = 'Ajouter';
-    $scope.toolMvt = {};
-    $scope.cancel = function () {
-        $modalInstance.dismiss('Close');
-    };
-    var original = item;
-    $scope.isClean = function() {
-        return angular.equals(original, $scope.article);
-    };
-
-    $scope.loadData = function () {
-        Data.get('locations').then(function(data){
-            $scope.locations = data.data;
-            //$scope.toolMvt.id_location = $scope.locations[0].id_location;
-        });
-    };
-    $scope.loadData();
-
-    $scope.changeLocation = function(id_location){
-        $scope.locations_to = $scope.locations;
-        //$scope.toolMvt.id_location_to = [''];
-        //$('#SelectLocation_to').selectpicker();
-        //$('#SelectLocation_to').selectpicker('refresh');
-        Data.get('stocksLocation/TOOL/'+id_location).then(function(data){
-            if(data.data.length > 0){
-                $scope.stocksArticle = data.data;
-                var first_id_article = JSON.stringify($scope.stocksArticle[0]);
-                $scope.toolMvt.stockArticle = first_id_article;
-                //$scope.changeStockArticle(first_id_article);
-            }else{
-                $scope.stocksArticle = [];
-                //$scope.to_stocksArticle = [''];
-            }
-        });
-        //console.log($scope.toolMvt);
-    };
-
-    $scope.changeStockArticle = function(stockArticle){
-        var stockArticle = JSON.parse(stockArticle);
-        $scope.quantiteMax = stockArticle.quantite_current;
-    };
-
-    $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent){
-        //$('#SelectLocation, #SelectStockArticle, #SelectLocation_to').selectpicker();
-        //$('#SelectLocation, #SelectStockArticle, #SelectLocation_to').selectpicker('refresh');
-
-        $('#SelectStockArticle').selectpicker();
-        $('#SelectStockArticle').selectpicker('refresh');
-
-    });
-
-    $scope.savetoolMvt = function(toolMvt){
-        toolMvt.stockArticle = JSON.parse(toolMvt.stockArticle);
-        toolMvt.type_mvt = 'INTERNAL';
-        console.log(toolMvt);
-
-        Data.post('ToolMvt',toolMvt).then(function(result){
-            if(result.status != 'error'){
-                console.log(result)
-                $modalInstance.close();
-                toaster.pop('success', "succés", '<ul><li>Ajout effectué avec succés</li></ul>', 5000, 'trustedHtml');
-            }else{
-                console.log(result);
-                $modalInstance.close();
-                toaster.pop('error', "Erreur", '<ul><li>Erreur pendant l \'Ajout du mouvement</li></ul>', null, 'trustedHtml');
-            }
-        });
-    };
 
 });

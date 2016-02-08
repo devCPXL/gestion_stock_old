@@ -5,6 +5,10 @@ class dbHelper {
     private $db;
     private $db_test;
     private $err;
+
+    /**
+     * @param $db_name
+     */
     function __construct($db_name) {
         $dsn = 'mysql:host='.DB_HOST.';dbname='.$db_name.';charset=utf8';
         try {
@@ -14,9 +18,24 @@ class dbHelper {
             $response["status"] = "error";
             $response["message"] = 'Connection failed: ' . $e->getMessage();
             $response["data"] = null;
-            //echoResponse(200, $response);
-            exit;
+            echoResponse(200, $response);
+//            exit;
         }
+
+
+//            $dsn1 = 'mysql:host=10.102.98.69;dbname=test;charset=utf8';
+//        try {
+//            $this->db_test = new PDO($dsn1, 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+//            $this->db_test->exec("set names utf8");
+//        } catch (PDOException $e) {
+//            $response["status"] = "error";
+//            $response["message"] = 'Connection failed: ' . $e->getMessage();
+//            $response["data"] = null;
+//            echoResponse(200, $response);
+//            //exit;
+//        }
+
+
     }
     function select($table, $columns, $where){
         try{

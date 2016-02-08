@@ -55,7 +55,7 @@ function postToolMvt(){
     $oneRow = $db->selectComplex("SELECT * FROM gestion_stock
                                   WHERE id_location = ".$data->id_location_to."
                                   AND id_article = ".$data->stockArticle->gs_id_article."
-                                  AND type_stock = 'TOOL'
+                                  AND type_stock = '".$data->type_stock."'
                                   ");
 
     $to_stockArticle = new stdClass();
@@ -66,7 +66,7 @@ function postToolMvt(){
         $data1->id_service          = TRAVAUX_SERVICE;
         $data1->id_article          = $data->stockArticle->gs_id_article;
         $data1->id_location         = $data->id_location_to;
-        $data1->type_stock          = "TOOL";
+        $data1->type_stock          = $data->type_stock;
         $data1->status              = 'Active';
         $data1->stock_min           = 1;
         $data1->stock_alert         = 1;

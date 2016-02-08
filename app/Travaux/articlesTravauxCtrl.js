@@ -1,14 +1,14 @@
-app.controller('articlesTravauxCtrl', function ($scope, $modal, $filter, Data) {
+app.controller('articlesTravauxCtrl', function ($rootScope, $scope, $modal, $filter, Data) {
     $scope.article = {};
     $scope.familyFilter = [];
 
     $scope.loadData = function(){
 
-        Data.get('familys/'+id_serviceTravaux).then(function(data){
+        Data.get('familys/'+$rootScope.id_service).then(function(data){
             $scope.familys = data.data;
         });
 
-        Data.get('articles/'+id_serviceTravaux).then(function(data){
+        Data.get('articles/'+$rootScope.id_service).then(function(data){
             $scope.articles = data.data;
         });
 
@@ -86,7 +86,7 @@ app.controller('articlesTravauxCtrl', function ($scope, $modal, $filter, Data) {
 });
 
 
-app.controller('articleTravauxEditCtrl', function ($scope, $route, $modal, $modalInstance, item, Data, stockMagasin) {
+app.controller('articleTravauxEditCtrl', function ($rootScope, $scope, $route, $modal, $modalInstance, item, Data, stockMagasin) {
     var id_suppliers = [];
 
     if (typeof item === "undefined") {
@@ -100,26 +100,26 @@ app.controller('articleTravauxEditCtrl', function ($scope, $route, $modal, $moda
     console.log(item);
 
     $scope.loadData = function () {
-        //Data.get('familys/'+id_serviceTravaux).then(function(data){
+        //Data.get('familys/'+$rootScope.id_service).then(function(data){
         //    $scope.familys = data.data;
         //    if(!item.id_article > 0)
         //        $scope.article.id_family = $scope.familys[0].id_family;
         //});
 
         if(stockMagasin){
-            Data.get('familysTools/'+id_serviceTravaux).then(function(data){
+            Data.get('familysTools/'+$rootScope.id_service).then(function(data){
                 $scope.familys = data.data;
                 if(!item.id_article > 0)
                     $scope.article.id_family = $scope.familys[0].id_family;
             });
         }else
-            Data.get('familys/'+id_serviceTravaux).then(function(data){
+            Data.get('familys/'+$rootScope.id_service).then(function(data){
                 $scope.familys = data.data;
                 if(!item.id_article > 0)
                     $scope.article.id_family = $scope.familys[0].id_family;
             });
 
-        Data.get('suppliers/'+id_serviceTravaux).then(function(data){
+        Data.get('suppliers/'+$rootScope.id_service).then(function(data){
             $scope.suppliers = data.data;
         });
     };
@@ -181,7 +181,7 @@ app.controller('articleTravauxEditCtrl', function ($scope, $route, $modal, $moda
             });
             console.log("after : " + article.id_suppliers);
             article.stockMagasin = stockMagasin; // For manage tools to create stock to the Article
-            article.id_service = id_serviceTravaux; // define which service
+            article.id_service = $rootScope.id_service; // define which service
             console.log(article);
 
             Data.put('articles/'+article.id_article, article).then(function (result) {
@@ -196,7 +196,7 @@ app.controller('articleTravauxEditCtrl', function ($scope, $route, $modal, $moda
             });
         }else{
             article.status = 'Active';
-            article.id_service = id_serviceTravaux; // define which service
+            article.id_service = $rootScope.id_service; // define which service
             article.stockMagasin = stockMagasin; // For manage tools to create stock to the Article
             Data.post('articles', article).then(function (result) {
                 if(result.status != 'error'){
@@ -221,14 +221,14 @@ app.controller('articleTravauxEditCtrl', function ($scope, $route, $modal, $moda
                     return p;
                 },
                 id_service: function(){
-                    return id_serviceTravaux;
+                    return $rootScope.id_service;
                 }
             }
         });
         modalInstance.result.then(function(selectedObject) {
             $scope.familys = {};
             //-- Reload scope familys
-            Data.get('familys/'+id_serviceTravaux).then(function(data){
+            Data.get('familys/'+$rootScope.id_service).then(function(data){
                 $scope.familys = data.data;
             });
 

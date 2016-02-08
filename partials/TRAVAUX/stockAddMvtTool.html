@@ -15,7 +15,7 @@
             </form-element>
 
             <form-element label="OUTIL" mod="toolMvt">
-                <select id="SelectStockArticle" name="id_article" class="SelectStockArticle form-control" ng-model="toolMvt.stockArticle" ng-change="changeStockArticle(toolMvt.stockArticle)" data-live-search="true" required>
+                <select id="SelectStockArticle" name="id_article" class="SelectStockArticle form-control" ng-model="toolMvt.stockArticle" ng-change="changeStockArticle(toolMvt.stockArticle)" required>
                     <option ng-repeat=" a in stocksArticle | orderBy:'nom_article' | orderBy:'-quantite_current' " value="{{ a }}" ng-disabled="a.quantite_current == 0" on-finish-render="ngRepeatFinished" > {{ a.quantite_current }} - {{ a.nom_article }}</option>
                 </select>
                 <small class="errorMessage" ng-show="toolMvt_form.stockArticle.$dirty && toolMvt_form.stockArticle.$invalid">Stock Article Requies.</small>

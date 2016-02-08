@@ -93,10 +93,15 @@ app.config(['$routeProvider','$locationProvider',
             templateUrl: 'partials/TRAVAUX/Tools.html',
             controller: 'toolsCtrl'
         })
-        .when('/TRAVAUX/Stock/:type/:id', {
+        .when('/TRAVAUX/Stock/:id', {
             title: 'Liste de Mouvements',
             templateUrl: 'partials/TRAVAUX/movementList.html',
             controller: 'listMvtTravauxCtrl'
+        })
+        .when('/measuremnt', {
+            title: 'formDate',
+            templateUrl: 'partials/formDate.html',
+            controller: 'formDateCtrl'
         })
         .when('/RVA/readXlsx', {
             title: 'readXlsx',
@@ -236,4 +241,29 @@ app.filter('unique', function() {
 
         return output;
     };
+});
+
+app.controller('formDateCtrl', function($scope, $location, Data) {
+    console.log('formDateCtrl');
+    $scope.measuremnt = {};
+    Data.get('measuremnts').then(function(data){
+        $scope.measuremnts = data.data;
+        console.log(data.data);
+    });
+
+    $scope.savemeasuremnt = function(measuremnt){
+        console.log(measuremnt);
+        Data.put('measuremnts',measuremnt).then(function(data){
+            $scope.measuremnts = data.data;
+        });
+    };
+
+    $scope.columns = [
+        {text:"stn",predicate:"stn",sortable:true},
+        {text:"mml1",predicate:"mml1",sortable:true},
+        {text:"mml2",predicate:"mml2 ",sortable:true},
+        {text:"mm_start",predicate:"mm_start",sortable:true},
+        {text:"mm_end",predicate:"mm_end",sortable:true}
+    ];
+
 });

@@ -16,7 +16,7 @@ define("ID_MAGASIN_TRAVAUX", 7);
 $app = new Slim();
 //$app = \Slim\Slim::getInstance();
 $db = new dbHelper(DB_NAME);
-$db_test = new dbHelper(DB_NAME_TEST);
+//$db_test = new dbHelper(DB_NAME_TEST);
 
 
 /**
@@ -843,6 +843,29 @@ function getGenerateWeeklyOrderFilePDF($location) {
 //    echoResponse(200, );
 };
 
+
+$app->get('/measuremnts', 'getMeasuremnts');
+function getMeasuremnts()
+{
+    global $db;
+    $rows = $db->selectComplex("SELECT * FROM measuremnts");
+    echoResponse(200, $rows);
+//    echo "coco";
+}
+
+$app->put('/measuremnts', 'putMeasuremnts');
+function putMeasuremnts()
+{
+    global $app, $db;
+    $data = json_decode($app->request()->getBody());
+
+//    $mm_start = DateTime::createFromFormat('Y-m-d', $data->mm_start);
+//    $mm_end = DateTime::createFromFormat('Y-m-d', $data->mm_end);
+
+    $rows = $db->selectComplex("SELECT * FROM measuremnts WHERE mm_start >= '$data->mm_start' AND mm_end <= '$data->mm_end'");
+    echoResponse(200, $rows);
+//    echo "coco";
+}
 
 //===================================================================================//
 function echoResponse($status_code, $response) {

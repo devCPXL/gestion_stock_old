@@ -8,7 +8,7 @@
         <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
         <span class="btn-txt">Ajouter Stock Material</span>
     </button>
-    <button type="button" class="btn btn-sm btn-info" ng-click="openAddMvt();">
+    <button type="button" class="btn btn-sm btn-info" ng-click="openAddMvt('MATERIAL');">
         <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
         <span class="btn-txt">Ajouter un mouvement</span>
     </button>
@@ -89,12 +89,12 @@
                     <td>{{t.name_family}}</td>
 
                     <td>
-                        <button type="button" class="btn btn-default fa fa-edit" class="btn" ng-click="openAddTool(t);"></button>
+                        <button type="button" class="btn btn-default fa fa-history" title="Ajouter Inventaire" class="btn" ng-click="openAddInventory(t);"></button>
                     </td>
                     <td>
                         <button type="button" class="btn btn-default fa fa-list" class="btn" ng-click="getListMvt(t);"></button>
                     </td>
-                    <!--<td><button class="btn" ng-class="{Active:'btn-success', Inactive:''}[t.status]" ng-click="changematerialstatus(c);">{{t.status}}</button></td>-->
+                    <td><button class="btn" ng-class="{Active:'btn-success', Inactive:''}[t.status]" ng-click="changeMaterialStatus(t);">{{t.status}}</button></td>
                 </tr>
                 </tbody>
             </table>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="modal-header">
+    <h3 class="modal-title">measuremnt</h3>
+</div>
+<div class="modal-body">
+    <form name="measuremnt_form" class="form-horizontal" role="form" novalidate>
+
+        <form-element label="START DATE" mod="measuremnt">
+            <input type="date" class="form-control" name="mm_start" placeholder="START DATE" ng-model="measuremnt.mm_start" focus/>
+        </form-element>
+
+        <form-element label="END DATE" mod="measuremnt">
+            <input type="date" class="form-control" name="mm_end" placeholder="END DATE" ng-model="measuremnt.mm_end" focus/>
+        </form-element>
+                
+        <div class="space"></div>
+        <div class="space-4"></div>
+        <div class="modal-footer">
+            <form-element label="">
+                <div class="text-right">
+                    <!--<a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Cancel</a>-->
+                    <button ng-click="savemeasuremnt(measuremnt);"
+                            ng-disabled="measuremnt_form.$invalid || enableUpdate"
+                            class="btn btn-sm btn-primary"
+                            type="submit">
+                        <i class="ace-icon fa fa-check"></i>OK
+                    </button>
+                </div>
+            </form-element>
+        </div>
+    </form>
+</div>
+
+<div class="panel-body">
+    <table data-toggle="table" fixed-table-headers="scrollable-area" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
+        <tr ng-show="measuremnts.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>
+        <tr ng-hide="measuremnts.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>
+        <thead>
+        <tr><th ng-repeat="c in columns" class="{{c.class}}">{{c.text}}</th></tr>
+        </thead>
+        <tbody>
+
+        <tr ng-repeat="c in measuremnts" >
+            <td>{{ c.stn }}</td>
+            <td>{{ c.mml1 }}</td>
+            <td>{{ c.mml2 }}</td>
+            <td>{{ c.mm_start }}</td>
+            <td>{{ c.mm_end }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+</body>
+</html>

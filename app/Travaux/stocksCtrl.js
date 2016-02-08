@@ -6,14 +6,11 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
         Data.get('stocksMaterials/gs.id_location').then(function(data){
             $scope.materials = jsonNumericCheck.d(data.data);
         });
-
-
     };
 
     $scope.loadData();
 
-
-    $scope.changeStockStatus = function(stock){
+    $scope.changeMaterialStatus = function(stock){
         stock.status = (stock.status=="Active" ? "Inactive" : "Active");
         Data.put("stocks/"+stock.id_stock,{status:stock.status});
     };
@@ -26,23 +23,23 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
     $scope.openAddMvt = function (p, size) {
         var modalInstance = $modal.open({
           templateUrl: 'partials/TRAVAUX/stockAddMvtTool.html',
-          controller: 'newMvtCtrl',
+          controller: 'addMvtCtrl',
           size: size,
           resolve: {
-            item: function () {
+            type_stock: function () {
               return p;
             }
           }
         });
         modalInstance.result.then(function() {
-            $scope.loadStocks();
+            $scope.loadData();
         });
     };
 
-    $scope.openStockEdit = function (p,size) {
+    $scope.openAddInventory = function (p,size) {
         var modalInstance = $modal.open({
             templateUrl: 'partials/RVA/stockEdit.html',
-            controller: 'stockEditCtrl',
+            controller: 'stockRvaEditCtrl',
             size: size,
             resolve: {
                 item: function () {
@@ -51,7 +48,7 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
             }
         });
         modalInstance.result.then(function() {
-            $scope.loadStocks();
+            $scope.loadData();
         });
     };
 
@@ -111,9 +108,9 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
         myService.set(stock);
         var n = str.indexOf("#");
         var host = str.substring(0, n);
-        var name_article = stock.nom_article.replace(" ", "_");
+        var name_article = stock.nom.replace(/ /g, '_');
         $window.stock = stock;
-        $window.open(host+'#/RVA/Stock/'+name_article+'/'+stock.id_stock, '_blank');
+        $window.open(host+'#/TRAVAUX/Stock/'+stock.id_stock, '_blank');
     };
 
     $scope.openOrderInternal = function(p,size){
@@ -176,23 +173,17 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
         {text:"FAMILLE",predicate:"FAMILLE"},
         {text:"ACTION",predicate:"ACTION"},
         {text:"LISTE",predicate:"LISTE"},
-        //{text:"STATUS",predicate:"STATUS"}
+        {text:"STATUS",predicate:"STATUS"}
     ];
 
 });
 
-
-app.controller('newMvtCtrl', function ($scope, $route, $modal, $modalInstance, item, Data, toaster) {
-
+app.controller('addMvtCtrl', function ($scope, $route, $modal, $modalInstance, type_stock, Data, toaster) {
     $scope.title = 'Ajouter mouvement';
     $scope.buttonText = 'Ajouter';
     $scope.toolMvt = {};
     $scope.cancel = function () {
         $modalInstance.dismiss('Close');
-    };
-    var original = item;
-    $scope.isClean = function() {
-        return angular.equals(original, $scope.article);
     };
 
     $scope.loadData = function () {
@@ -205,14 +196,12 @@ app.controller('newMvtCtrl', function ($scope, $route, $modal, $modalInstance, i
 
     $scope.changeLocation = function(id_location){
         $scope.locations_to = $scope.locations;
-        //$scope.toolMvt.id_location_to = [''];
-        //$('#SelectLocation_to').selectpicker();
-        //$('#SelectLocation_to').selectpicker('refresh');
-        Data.get('stocksLocation/MATERIAL/'+id_location).then(function(data){
+
+        Data.get('stocksLocation/'+type_stock+'/'+id_location).then(function(data){
             if(data.data.length > 0){
                 $scope.stocksArticle = data.data;
-                var first_id_article = JSON.stringify($scope.stocksArticle[0]);
-                $scope.toolMvt.stockArticle = first_id_article;
+                //var first_id_article = JSON.stringify($scope.stocksArticle[0]);
+                //$scope.toolMvt.stockArticle = first_id_article;
                 //$scope.changeStockArticle(first_id_article);
             }else{
                 $scope.stocksArticle = [];
@@ -231,14 +220,15 @@ app.controller('newMvtCtrl', function ($scope, $route, $modal, $modalInstance, i
         //$('#SelectLocation, #SelectStockArticle, #SelectLocation_to').selectpicker();
         //$('#SelectLocation, #SelectStockArticle, #SelectLocation_to').selectpicker('refresh');
 
-        $('#SelectStockArticle').selectpicker();
-        $('#SelectStockArticle').selectpicker('refresh');
+        //$('#SelectStockArticle').selectpicker();
+        //$('#SelectStockArticle').selectpicker('refresh');
 
     });
 
     $scope.savetoolMvt = function(toolMvt){
         toolMvt.stockArticle = JSON.parse(toolMvt.stockArticle);
         toolMvt.type_mvt = 'INTERNAL';
+        toolMvt.type_stock = type_stock;
         console.log(toolMvt);
 
         Data.post('ToolMvt',toolMvt).then(function(result){
@@ -246,6 +236,7 @@ app.controller('newMvtCtrl', function ($scope, $route, $modal, $modalInstance, i
                 console.log(result)
                 $modalInstance.close();
                 toaster.pop('success', "succés", '<ul><li>Ajout effectué avec succés</li></ul>', 5000, 'trustedHtml');
+
             }else{
                 console.log(result);
                 $modalInstance.close();
@@ -253,63 +244,7 @@ app.controller('newMvtCtrl', function ($scope, $route, $modal, $modalInstance, i
             }
         });
     };
-});
 
-app.controller('stockEditCtrl', function ($scope, $route, $filter, $modalInstance, item, Data, toaster) {
-
-    console.log(item);
-
-    //if(item.type_form == 'INVENTORY'){
-    $scope.displayFormINV = true;
-    $scope.title = 'Inventaire';
-    $scope.subTitle = item.nom_article;
-    $scope.buttonText = 'Ajouter Inventaire'
-    //}
-    //else if(item.type_form == 'UPDATESTOCK'){
-    //    $scope.displayFormUpdateStock = true;
-    //    $scope.title = 'Mise à jour Stock Min & Alert';
-    //    $scope.buttonText = 'Mise à jour Stock'
-    //}
-
-    //displayFormINV
-    //displayFormUpdateStock
-
-    var DateNow = $filter("date")(Date.now(), 'yyyy-MM-dd');
-    $scope.stockMvt = {
-        date_mvt : DateNow,
-        quantite : item.quantite_current,
-        stock_min : item.stock_min,
-        stock_alert : item.stock_alert
-    };
-
-    $scope.cancel = function () {
-        $modalInstance.dismiss('Close');
-    };
-    var original = item;
-    $scope.isClean = function() {
-        return angular.equals(original, $scope.stock);
-    };
-
-    $scope.saveStockMvt = function(stockMvt){
-        stockMvt.uid = $scope.uid;
-        stockMvt.stockArticle = item;
-        stockMvt.to_stockArticle = item;
-        stockMvt.type_mvt = 'INVENTORY';
-
-        console.log(stockMvt);
-        Data.post('StockMvt', stockMvt).then(function (result) {
-            if(result.status != 'error'){
-                console.log(result)
-                toaster.pop('success', "succés", '<ul><li>Mouvement Inventaire effectué avec succés</li></ul>', 5000, 'trustedHtml');
-                $modalInstance.close();
-
-            }else{
-                console.log(result);
-                toaster.pop('error', "Erreur", '<ul><li>Erreur pendant l \'Ajout du Mouvement Inventaire</li></ul>', null, 'trustedHtml');
-                $modalInstance.close();
-            }
-        });
-    };
 });
 
 
