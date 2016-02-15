@@ -3,9 +3,8 @@
  */
 
 app.controller('listMvtCtrl', function ($scope, $route, $rootScope, $routeParams, $log, Data,$window, myService, jsonNumericCheck) {
-    var type = $routeParams.type;
-    var id = $routeParams.id;
 
+    var id = $routeParams.id;
     var datesInventory = [];
     var inventories = [];
     var inventory = [];
@@ -13,7 +12,19 @@ app.controller('listMvtCtrl', function ($scope, $route, $rootScope, $routeParams
     $scope.ind = 0;
     $scope.total = 0;
 
-    Data.get('movements/'+id).then(function (data){
+
+
+    //$scope.desiredLocation = myService.get();
+    $scope.desiredLocation = $window.opener.stock;
+    $scope.desiredLocation.name_location = ($scope.desiredLocation.salleDescription == null) ? $scope.desiredLocation.name_location : $scope.desiredLocation.salleDescription;
+    $scope.desiredLocation.nom_article = ($scope.desiredLocation.nom == null) ? $scope.desiredLocation.nom_article : $scope.desiredLocation.nom;
+
+    //alert($scope.desiredLocation);
+
+
+    var apiMethodeMovementsStock = ($rootScope.id_service == ID_RVA_SERVICE) ? 'movementsStockRva' : (($rootScope.id_service == ID_TRAVAUX_SERVICE) ? 'movementsStockTravaux' : '');
+
+    Data.get(apiMethodeMovementsStock+'/'+id).then(function (data){
         //$scope.movements= data.data;
         $scope.movements = jsonNumericCheck.d(data.data);
 
@@ -35,7 +46,7 @@ app.controller('listMvtCtrl', function ($scope, $route, $rootScope, $routeParams
                         obj.type_mvt_fr = 'Reception';
                         break;
                     case 'INTERNAL':
-                        obj.type_mvt_fr = id == obj.from_id_stock ? 'Sortie' : 'Entrée' ;
+                        obj.type_mvt_fr = id == obj.from_id_stock ? 'Sortie' : 'Entrée';
                         break;
                     default:
                         obj.type_mvt_fr = '';
@@ -98,12 +109,6 @@ app.controller('listMvtCtrl', function ($scope, $route, $rootScope, $routeParams
         console.log(totals);
         return totals;
     };
-
-    //$scope.desiredLocation = myService.get();
-    $scope.desiredLocation = $window.opener.stock;
-    //console.log($scope.desiredLocation);
-
-
 
 
     $rootScope.title = 'Liste Inventaire : '+ $scope.desiredLocation.nom_article;

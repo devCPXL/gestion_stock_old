@@ -413,8 +413,8 @@ function postStockMvt(){
     echoResponse(200, $rows);
 };
 
-// === Get Movements ========================================================================= //
-$app->get('/movements/:id_stock', 'getMovements');
+// === Get Movements Rva ========================================================================= //
+$app->get('/movementsStockRva/:id_stock', 'getMovements');
 function getMovements($id)
 {
     global $db;
@@ -451,7 +451,7 @@ function getMovements($id)
 
 // === Get Movements Stock TRAVAUX ===================================================== //
 
-$app->get('/movementsStock/:id_stock', 'getMovementsStock');
+$app->get('/movementsStockTravaux/:id_stock', 'getMovementsStock');
 function getMovementsStock($id)
 {
     global $db;

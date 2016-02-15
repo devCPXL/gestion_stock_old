@@ -105,12 +105,12 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
     $scope.getListMvt = function(stock){
         console.log(stock);
         var str = document.URL;
-        myService.set(stock);
+        //myService.set(stock);
         var n = str.indexOf("#");
         var host = str.substring(0, n);
         var name_article = stock.nom.replace(/ /g, '_');
         $window.stock = stock;
-        $window.open(host+'#/TRAVAUX/Stock/'+stock.id_stock, '_blank');
+        $window.open(host+'#/TRAVAUX/MouvementsStock/'+stock.id_stock, '_blank');
     };
 
     $scope.openOrderInternal = function(p,size){
@@ -262,7 +262,7 @@ app.controller('stockTravauxAddCtrl', function ($scope, $route, $modal, $modalIn
 
     $scope.changeSalleStock = function(id_location){
         $scope.articles = null; // clear the scope to trigger ngFinishRepeat function
-        Data.get('articlesToAddStock/'+id_location+'/'+id_serviceTravaux).then(function(data){
+        Data.get('articlesToAddStock/'+id_location+'/'+ID_TRAVAUX_SERVICE).then(function(data){
             if(data.data.length > 0){
 
                 $scope.newStock = {

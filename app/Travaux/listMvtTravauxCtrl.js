@@ -13,60 +13,60 @@ app.controller('listMvtTravauxCtrl', function ($scope, $route, $rootScope, $rout
     $scope.ind = 0;
     $scope.total = 0;
 
-    Data.get('movementsStock/'+id).then(function (data){
-        //if(data.data.length > 0){
-            //$scope.movements= data.data;
-            $scope.movements = jsonNumericCheck.d(data.data);
+    var apiMethode = ($rootScope.id_service == ID_RVA_SERVICE) ? 'movementsStockRva' : (($rootScope.id_service == ID_TRAVAUX_SERVICE) ? 'movementsStockTravaux' : '');
 
-            for (var key in $scope.movements) {
-                if($scope.movements.hasOwnProperty(key)){
+    Data.get(apiMethode+'/'+id).then(function (data){
+        //$scope.movements= data.data;
+        $scope.movements = jsonNumericCheck.d(data.data);
 
-                    var obj = $scope.movements[key];
-                    switch(obj.type_mvt) {
-                        case 'INIT_INVENTORY':
-                            obj.type_mvt_fr = 'Init Inventaire';
-                            break;
-                        case 'INVENTORY':
-                            obj.type_mvt_fr = 'Inventaire';
-                            break;
-                        case 'INVENTORY_CONSUMPTION':
-                            obj.type_mvt_fr = 'Inventaire Cons';
-                            break;
-                        case 'DELIVERY':
-                            obj.type_mvt_fr = 'Reception';
-                            break;
-                        case 'INTERNAL':
-                            obj.type_mvt_fr = id == obj.from_id_stock ? 'Sortie' : 'Entrée'  ;
-                            break;
-                        default:
-                            obj.type_mvt_fr = '';
-                    }
-                    if(obj.type_mvt == 'INVENTORY' || obj.type_mvt == 'INIT_INVENTORY' ){
-                        if(v)inventories.push(inventory);
-                        inventory = [];
-                        //datesInventory.push(obj); // enabled
-                        v = true;
-                    }
-                    inventory.push(obj);
+        for (var key in $scope.movements) {
+            if($scope.movements.hasOwnProperty(key)){
+
+                var obj = $scope.movements[key];
+                switch(obj.type_mvt) {
+                    case 'INIT_INVENTORY':
+                        obj.type_mvt_fr = 'Init Inventaire';
+                        break;
+                    case 'INVENTORY':
+                        obj.type_mvt_fr = 'Inventaire';
+                        break;
+                    case 'INVENTORY_CONSUMPTION':
+                        obj.type_mvt_fr = 'Inventaire Cons';
+                        break;
+                    case 'DELIVERY':
+                        obj.type_mvt_fr = 'Reception';
+                        break;
+                    case 'INTERNAL':
+                        obj.type_mvt_fr = id == obj.from_id_stock ? 'Sortie' : 'Entrée';
+                        break;
+                    default:
+                        obj.type_mvt_fr = '';
                 }
+                if(obj.type_mvt == 'INVENTORY' || obj.type_mvt == 'INIT_INVENTORY' ){
+                    if(v)inventories.push(inventory);
+                    inventory = [];
+                    //datesInventory.push(obj); // enabled
+                    v = true;
+                }
+                inventory.push(obj);
             }
-            inventories.push(inventory);
+        }
+        inventories.push(inventory);
 
 
-            if(inventories.length > 1){
-                var objAll = {};
-                objAll.date_mvt = "Tous les mouvements";
-                datesInventory.push(objAll);
-                inventories.push($scope.movements);
-            }
+        if(inventories.length > 1){
+            var objAll = {};
+            objAll.date_mvt = "Tous les mouvements";
+            datesInventory.push(objAll);
+            inventories.push($scope.movements);
+        }
 
-            $scope.datesInventory = datesInventory;
-            console.log(datesInventory);
-            console.log(inventories);
-            console.log(inventory);
-            //$scope.movements = inventories[0]; // enabled
-            $scope.selectedIndex = 0;
-        //}
+        $scope.datesInventory = datesInventory;
+        console.log(datesInventory);
+        console.log(inventories);
+        console.log(inventory);
+        //$scope.movements = inventories[0]; // enabled
+        $scope.selectedIndex = 0;
     });
 
     $scope.changeInventoryList = function($index){

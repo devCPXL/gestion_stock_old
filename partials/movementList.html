@@ -5,10 +5,9 @@
 </style>
 <!--<h4 class="blog-post-title">Articles</h4>-->
 <!--<hr/>-->
-
 <div class="table-responsive">
     <div class="panel panel-primary">
-        <div class="panel-heading">Liste des Mouvements pour le {{desiredLocation.nom}} : {{desiredLocation.description_f}} : QTE : {{desiredLocation.quantite_current}}
+        <div class="panel-heading">Liste des Mouvements pour le {{desiredLocation.name_location}} : {{desiredLocation.nom_article}} : QTE : {{desiredLocation.quantite_current}}
             <div class="sw-search" >
                 <div class="nav-search" id="nav-search">
                     Filter: <span class="input-icon">
@@ -52,8 +51,8 @@
                             <tr ng-repeat="m in movements | filter:filterMovement" id="{{m.id_mvt}}" animate-on-change="" ng-animate=" 'animate'" on-finish-render="ngRepeatFinished">
                                 <td class="tdFirst">{{m.id_mvt}}</td>
                                 <td class="dateMvt">{{ m.date_mvt | date : 'dd-MM-yyyy'}}</td>
-                                <td>{{m.nameStock_from}} {{m.name}} {{m.nameStock_from == null && m.type_mvt != 'DELIVERY' ? desiredLocation.salleDescription : ''}}</td>
-                                <td>{{m.nameStock_to}} {{m.nameStock_to_s}} {{m.nameStock_to == null && m.type_mvt != 'DELIVERY' ? desiredLocation.salleDescription : ''}}</td>
+                                <td>{{m.nameStock_from}} {{m.name}} {{m.nameStock_from == null && m.type_mvt != 'DELIVERY' ? desiredLocation.name_location : ''}}</td>
+                                <td>{{m.nameStock_to}} {{m.nameStock_to_s}} {{m.nameStock_to == null && m.type_mvt != 'DELIVERY' ? desiredLocation.name_location : ''}}</td>
                                 <td ng-class="
                                 {
                                     redColor: desiredLocation.id_stock == m.from_id_stock && desiredLocation.id_stock != m.to_id_stock,

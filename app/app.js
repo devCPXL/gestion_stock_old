@@ -53,9 +53,9 @@ app.config(['$routeProvider','$locationProvider',
             title: 'listArticleXls',
             templateUrl: 'partials/RVA/listArticleXls.php'
         })
-        .when('/RVA/Stock/:type/:id', {
+        .when('/RVA/MouvementsStock/:id', {
             title: 'Liste de Mouvements',
-            templateUrl: 'partials/RVA/movementList.html',
+            templateUrl: 'partials/movementList.html',
             controller: 'listMvtCtrl'
         })
         .when('/RVA/angularjsFileUpload', {
@@ -93,10 +93,10 @@ app.config(['$routeProvider','$locationProvider',
             templateUrl: 'partials/TRAVAUX/Tools.html',
             controller: 'toolsCtrl'
         })
-        .when('/TRAVAUX/Stock/:id', {
+        .when('/TRAVAUX/MouvementsStock/:id', {
             title: 'Liste de Mouvements',
-            templateUrl: 'partials/TRAVAUX/movementList.html',
-            controller: 'listMvtTravauxCtrl'
+            templateUrl: 'partials/movementList.html',
+            controller: 'listMvtCtrl'
         })
         .when('/measuremnt', {
             title: 'formDate',

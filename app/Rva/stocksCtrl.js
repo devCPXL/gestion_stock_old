@@ -182,12 +182,12 @@ app.controller('stocksRvaCtrl', function ($scope, $rootScope, $modal, $filter, D
     $scope.getListMvt = function(stock){
         console.log(stock);
         var str = document.URL;
-        myService.set(stock);
+        //myService.set(stock);
         var n = str.indexOf("#");
         var host = str.substring(0, n);
-        var name_article = stock.nom_article.replace(/[^a-zA-Z ]/g, ""); // Remove all special characters except space from a string
+        //var name_article = stock.nom_article.replace(/[^a-zA-Z ]/g, ""); // Remove all special characters except space from a string
         $window.stock = stock;
-        $window.open(host+'#/RVA/Stock/'+name_article+'/'+stock.id_stock, '_blank');
+        $window.open(host+'#/RVA/MouvementsStock/'+stock.id_stock, '_blank');
     };
 
     $scope.openOrderInternal = function(p,size){

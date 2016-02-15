@@ -84,12 +84,12 @@ app.controller('toolsCtrl', function ($scope, $rootScope, $modal, $filter, Data,
     $scope.getListMvt = function(stock){
         console.log(stock);
         var str = document.URL;
-        myService.set(stock);
+        //myService.set(stock);
         var n = str.indexOf("#");
         var host = str.substring(0, n);
         var name_article = stock.nom.replace(" ", "_");
         $window.stock = stock;
-        $window.open(host+'#/TRAVAUX/Stock/'+stock.id_stock, '_blank');
+        $window.open(host+'#/TRAVAUX/MouvementsStock/'+stock.id_stock, '_blank');
     };
 
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent){
