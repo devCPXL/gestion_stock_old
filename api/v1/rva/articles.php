@@ -74,8 +74,8 @@ function postArticles(){
     unset($data->id_suppliers);
     unset($data->save);
     unset($data->family);
-    $stockMagasin = (!empty($data->stockMagasin) ? $data->stockMagasin : false) ; // fixe Error Undefined property: stdClass::$stockMagasin
-    unset($data->stockMagasin);
+    $type_stock = (!empty($data->type_stock) ? $data->type_stock : "") ; // Fix Error Undefined property: stdClass::$stockMagasin
+    unset($data->type_stock);
 
     $mandatory = array();
     $data->dt_creation = date("Y-m-d H:i:s");
@@ -107,21 +107,21 @@ function postArticles(){
             array_push($rows, $rows2);
         }
 
-        if($stockMagasin){
+        if(!empty($type_stock)){
             $data3 = new stdClass();
             $data3->id_article          = $lastInsertId;
             $data3->id_location         = ID_MAGASIN_TRAVAUX; // id_location "Bâtiment  F"
-            $data3->type_stock          = "TOOL";
+            $data3->type_stock          = $type_stock; // type_stock "TOOL" OR "MATERIAL"
             $data3->dt_creation         = date("Y-m-d H:i");
             $data3->status              = 'Active';
             $data3->stock_min           = 1;
             $data3->stock_alert         = 1;
-            $data3->quantite_current    = 1;
+            $data3->quantite_current    = ($type_stock == 'TOOL') ? 1 : 0;
             $data3->id_service          = $data->id_service;
 
             $rows3 = $db->insert("gestion_stock", $data3, $mandatory);
             if($rows3["status"]=="success")
-                $rows3["message"] = "Stock TOOL added successfully.";
+                $rows3["message"] = "Stock ".$type_stock." added successfully.";
             array_push($rows, $rows3);
         }
     }
@@ -136,8 +136,8 @@ function putArticles($id){
     $id_suppliers = $data->id_suppliers;
     unset($data->id_suppliers);
 
-    $stockMagasin = (!empty($data->stockMagasin) ? $data->stockMagasin : false) ; // fixe Error Undefined property: stdClass::$stockMagasin
-    unset($data->stockMagasin);
+    $type_stock = (!empty($data->type_stock) ? $data->type_stock : "") ; // Fix Error Undefined property: stdClass::$stockMagasin
+    unset($data->type_stock);
 
     $dt_update = 'dt_update';
     $data->$dt_update = date("Y-m-d H:i:s");
@@ -184,24 +184,7 @@ function putArticles($id){
 
             array_push($subRows, $rows2);
         }
-        // comment code to create stock if not Exist
-//        if($stockMagasin){
-//            $data3 = new stdClass();
-//            $data3->id_article      = $id;
-//            $data3->id_location     = ID_MAGASIN_TRAVAUX; // id_location "Bâtiment E MAGASIN"
-//            $data3->type_stock      = "TOOL";
-//            $data3->dt_creation     = date("Y-m-d H:i");
-//            $data3->status          = 'Active';
-//            $data3->stock_min       = 1;
-//            $data3->stock_alert     = 1;
-//            $data3->quantite_current = 1;
-//            $data3->id_service      = $data->id_service;
-//
-//            $rows3 = $db->insert("gestion_stock", $data3, $mandatory);
-//            if($rows3["status"]=="success")
-//                $rows3["message"] = "Stock TOOL added successfully.";
-//            array_push($subRows, $rows3);
-//        }
+
     }
 
     $rows['SubRows'] =  $subRows;

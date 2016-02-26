@@ -34,35 +34,41 @@
 <div class="panel panel-primary">
 
     <div class="panel-heading">
-        <span>Liste des Stocks &nbsp;&nbsp;</span>
+        <div class="row">
+            <div class="col-md-8">
+                <span>Liste des Stocks &nbsp;&nbsp;</span>
 
-        <select id="filterSalle" class="filterSalle "  ng-model="filterSalle.salleDescription" data-ng-change="changeFilter()" data-style="btn-info" >
-            <option value=''>Tous les Salles</option>
-            <option ng-repeat=" salle in stocks | unique:'salleDescription' " value="{{salle.salleDescription}}" >
-                {{salle.salleDescription}}
-            </option>
-        </select>
-        <select id="filterFamily" class="filterFamily "  ng-model="filterFamily.nameFamily" data-ng-change="changeFilter()" data-style="btn-info" >
-            <option value="">Tous les familles</option>
-            <option ng-repeat=" s in stocks | unique:'nameFamily'" value="{{s.nameFamily}}" >
-                {{s.nameFamily}}
-            </option>
-        </select>
+                <select id="filterSalle" class="filterSalle "  ng-model="filterSalle.salleDescription" data-ng-change="changeFilter()" data-style="btn-info" >
+                    <option value=''>Tous les Salles</option>
+                    <option ng-repeat=" salle in stocks | unique:'salleDescription' " value="{{salle.salleDescription}}" >
+                        {{salle.salleDescription}}
+                    </option>
+                </select>
+                <select id="filterFamily" class="filterFamily "  ng-model="filterFamily.nameFamily" data-ng-change="changeFilter()" data-style="btn-info" >
+                    <option value="">Tous les familles</option>
+                    <option ng-repeat=" s in stocks | unique:'nameFamily'" value="{{s.nameFamily}}" >
+                        {{s.nameFamily}}
+                    </option>
+                </select>
 
-        <select id="filterArticle" class="filterArticle "  ng-model="filterArticle.nom_article" data-ng-change="changeFilter()" data-live-search="false" data-style="btn-info" >
-            <option value="">Tous les Articles</option>
-            <option ng-repeat=" s in stocks | unique: 'nom_article' | orderBy:'nom_article' " value="{{ s.nom_article }}" > {{ s.nom_article }} </option>
-        </select>
+                <select id="filterArticle" class="filterArticle "  ng-model="filterArticle.nom_article" data-ng-change="changeFilter()" data-live-search="false" data-style="btn-info" >
+                    <option value="">Tous les Articles</option>
+                    <option ng-repeat=" s in stocks | unique: 'nom_article' | orderBy:'nom_article' " value="{{ s.nom_article }}" > {{ s.nom_article }} </option>
+                </select>
         <!--<select id="filterStatus" class="filterStatus "  ng-model="filterStatus.status" data-ng-change="changeFilter()" data-live-search="false" data-style="btn-info" >-->
             <!--<option value="">Active & Inactive</option>-->
             <!--<option ng-repeat=" s in stocks | unique: 'status' " value="{{ s.status }}" on-finish-render="ngRepeatFinished" > {{ s.status }} </option>-->
         <!--</select>-->
-        <div class="sw-search filter-stock" >
-            <div class="nav-search" id="nav-search">
-                    Filter: <span class="input-icon">
-                        <input placeholder="Filter Liste stocks ..." class="nav-search-input" ng-model="filterStock" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">
-                        <i class="search-icon fa fa-search nav-search-icon"></i>
-                    </span>
+            </div>
+            <div class="col-md-4">
+                <div class="sw-search filter-stock" >
+                    <div class="nav-search" id="nav-search">
+                            Filter: <span class="input-icon">
+                                <input placeholder="Filter Liste stocks ..." class="nav-search-input" ng-model="filterStock" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">
+                                <i class="search-icon fa fa-search nav-search-icon"></i>
+                            </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

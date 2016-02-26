@@ -4,7 +4,7 @@
     }
 </style>
 <nav>
-    <button type="button" class="btn btn-info btn-sm" ng-click="open(article);">
+    <button type="button" class="btn btn-info btn-sm" ng-click="openAddArticle(article);">
         <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
         <span class="btn-txt">Ajouter Nouveau Article</span>
     </button>
@@ -12,22 +12,27 @@
 <div class="table-responsive">
 <div class="panel panel-travaux">
   <div class="panel-heading">
-      <span>Liste des Articles &nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <div class="row">
+          <div class="col-md-8">
+              <span>Liste des Articles &nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <select id="filterFamily" class="filterFamily"  ng-model="filterFamily.family" data-style="btn-info" >
+                  <option value="">Tous les familles</option>
+                  <option data-icon="glyphicon glyphicon-filter" ng-repeat=" f in familys " value="{{ f.description }}" on-finish-render="ngRepeatFinished" > {{ f.description }} </option>
+              </select>
+          </div>
 
-      <select id="filterFamily" class="filterFamily"  ng-model="filterFamily.family" data-style="btn-info" >
-          <option value="">Tous les familles</option>
-          <option data-icon="glyphicon glyphicon-filter" ng-repeat=" f in familys " value="{{ f.description }}" on-finish-render="ngRepeatFinished" > {{ f.description }} </option>
-      </select>
-
-      <div class="sw-search filter-article" >
-            <div class="nav-search" id="nav-search">
-                    Filter: <span class="input-icon">
+          <div class="col-md-4">
+              <div class="sw-search filter-article" >
+                  <div class="nav-search" id="nav-search">
+                      Filter: <span class="input-icon">
                         <input placeholder="Filter Liste articles ..." class="nav-search-input" ng-model="filterArticle" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">
                         <i class="search-icon fa fa-search nav-search-icon"></i>
-                    </span>
-            </div>
-        </div>
-    </div>
+                      </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
   <div class="panel-body">
       <table data-toggle="table" fixed-table-headers="scrollable-area" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
           <tr ng-show="articles.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>
@@ -52,7 +57,7 @@
                   </td>
                   <td style="width:100px">
                       <div class="btn-group">
-                      <button type="button" class="btn btn-default fa fa-edit" ng-click="open(c);"></button>
+                      <button type="button" class="btn btn-default fa fa-edit" ng-click="openAddArticle(c);"></button>
                       <!--<button type="button" class="btn btn-danger fa fa-trash-o" ng-click="deleteProduct(c);"></button>-->
                       </div>
                   </td>

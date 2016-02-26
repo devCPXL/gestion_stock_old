@@ -105,7 +105,7 @@ color: #858585;
 background-color: #fff;
 border: 1px solid #d5d5d5;
 padding: 5px 8px 6px;
-font-size: 14px;
+font-size: 90%;
 font-family: inherit;
 -webkit-box-shadow: none !important;
 box-shadow: none !important;
@@ -150,8 +150,8 @@ padding-left: 24px;
 padding-right: 6px;
 }
 .sw-search {
-float: right;
-margin-top: -3px;
+/*float: right;*/
+/*margin-top: -3px;*/
 }
 /*
  * Globals
@@ -255,7 +255,7 @@ margin-top: -3px;
     /*display:block;*/
 /*}*/
 .panel-body {
-    display: block;
+    /*display: block;*/
     max-height: 615px;
     /*min-height: 400px;*/
     /*min-height: 100%;*/
@@ -299,6 +299,11 @@ margin-top: -3px;
     width: 100%;
     background-color: #51A8F3;
     border: none;
+}
+
+.panel-heading .ui-select-container{
+    float: left;
+    margin: 0px 10px;
 }
 .open>.dropdown-toggle.btn-info {
     background-color: transparent;

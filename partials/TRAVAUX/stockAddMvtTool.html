@@ -7,23 +7,31 @@
     <div class="modal-body">
         <form name="toolMvt_form" class="form-horizontal" role="form" novalidate>
 
-            <form-element label="CHANTIER/MAGASIN {{ toolMvt.id_location }} " mod="toolMvt">
-                <select id="SelectLocation" name="id_salle" class="SelectLocation form-control" ng-model="toolMvt.id_location" ng-change="changeLocation(toolMvt.id_location)" required>
-                    <option ng-repeat=" l in locations | orderBy:'description_f' " value="{{ l.id_location }}" data-ng-disabled="l.id_location == toolMvt.id_location_to" on-finish-render="ngRepeatFinished" > {{ l.description_f }} </option>
-                </select>
-                <small class="errorMessage" ng-show="toolMvt_form.id_location.$dirty && toolMvt_form.id_location.$invalid"> Chantier Requies.</small>
+            <form-element label="CHANTIER/MAGASIN " mod="toolMvt">
+            <ui-select ng-model="toolMvt.SelectLocation" theme="bootstrap" reset-search-input="true" ng-change="changeLocation(toolMvt.SelectLocation.id_location)" required style="width: 319px;">
+                <ui-select-match placeholder="Chercher chantier/magasin ...">{{$select.selected.description_f}}</ui-select-match>
+                <ui-select-choices repeat="l in locations | filter: $select.search" ui-disable-choice="l.id_location == toolMvt.SelectLocation_to.id_location">
+                    <div ng-bind-html="l.description_f | highlight: $select.search"></div>
+                </ui-select-choices>
+            </ui-select>
             </form-element>
 
-            <form-element label="OUTIL" mod="toolMvt">
-                <select id="SelectStockArticle" name="id_article" class="SelectStockArticle form-control" ng-model="toolMvt.stockArticle" ng-change="changeStockArticle(toolMvt.stockArticle)" required>
-                    <option ng-repeat=" a in stocksArticle | orderBy:'nom_article' | orderBy:'-quantite_current' " value="{{ a }}" ng-disabled="a.quantite_current == 0" on-finish-render="ngRepeatFinished" > {{ a.quantite_current }} - {{ a.nom_article }}</option>
-                </select>
+            <form-element label="ARTICLE" mod="toolMvt">
+                <ui-select ng-model="toolMvt.stockArticle" theme="bootstrap" ng-disabled="disabled" ng-change="changeStockArticle()" style="width: 319px;">
+                    <ui-select-match placeholder="chercher un article..."> <small>{{$select.selected.quantite_current +' - '+$select.selected.nom_article}}</small></ui-select-match>
+                    <ui-select-choices repeat="article in stocksArticle | filter: $select.search" ui-disable-choice="article.quantite_current == 0">
+                        <small ng-bind-html="article.quantite_current"></small>
+                        <small ng-bind-html="article.nom_article | highlight: $select.search"></small>
+                        <small ng-bind-html="article.code_barre | highlight: $select.search"></small>
+                        <small ng-bind-html="article.unite | highlight: $select.search"></small>
+                    </ui-select-choices>
+                </ui-select>
                 <small class="errorMessage" ng-show="toolMvt_form.stockArticle.$dirty && toolMvt_form.stockArticle.$invalid">Stock Article Requies.</small>
             </form-element>
 
-            <form-element label="QUANTITE " mod="toolMvt" class="inputNumber">
-                <input type="number" ng-model="toolMvt.quantite" placeholder="1 - {{ quantiteMax }}" name="quantite" min="1" max="{{quantiteMax}}" class="form-control" integer required/>
-                <small ng-show="toolMvt_form.description_f.$dirty && toolMvt_form.description_f.$invalid" class="help-inline">QUANTITE Requies</small>
+            <form-element label="QUANTITE" mod="toolMvt" class="inputNumber">
+                <input type="number" ng-model="toolMvt.quantite" placeholder="1 - {{ toolMvt.stockArticle.quantite_current }}" id="quantite" name="quantite" min="1" max="{{ toolMvt.stockArticle.quantite_current | num}}" class="form-control" integer required/>
+                <small ng-show="toolMvt_form.quantite.$dirty && toolMvt_form.quantite.$invalid" class="help-inline">QUANTITE Requies</small>
             </form-element>
 
             <form-element label="DATE MOUVEMENT" mod="toolMvt">
@@ -32,16 +40,18 @@
             </form-element>
 
             <form-element label="A STOCK ARTICLE" mod="toolMvt">
-                <select id="SelectLocation_to" name="id_location_to" class="SelectLocation_to form-control" ng-model="toolMvt.id_location_to" required>
-                    <option ng-repeat=" a in locations_to | orderBy:'description_f' " value="{{ a.id_location }}" data-ng-disabled="a.id_location == toolMvt.id_location" on-finish-render="ngRepeatFinished" >{{ a.description_f }}</option>
-                </select>
-                <small class="errorMessage" ng-show="toolMvt_form.to_stockArticle.$dirty && toolMvt_form.to_stockArticle.$invalid"> STOCK Article Requies.</small>
+                <ui-select ng-model="toolMvt.SelectLocation_to" theme="bootstrap" reset-search-input="true" name="SelectLocation_to" required style="width: 319px;">
+                    <ui-select-match placeholder="Chercher chantier/magasin ...">{{$select.selected.description_f}}</ui-select-match>
+                    <ui-select-choices repeat="a in locations_to | filter: $select.search" ui-disable-choice="a.id_location == toolMvt.SelectLocation.id_location">
+                        <div ng-bind-html="a.description_f | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+                <small class="errorMessage" ng-show="toolMvt_form.SelectLocation_to.$dirty && toolMvt_form.SelectLocation_to.$invalid"> STOCK Article Requies.</small>
             </form-element>
 
             <form-element label="PLUS D'INFORMATIONS" mod="toolMvt">
                 <textarea class="form-control" name="further_information" placeholder="PLUS D'INFORMATIONS" ng-model="toolMvt.further_information"></textarea>
             </form-element>
-
 
             <div class="space"></div>
             <div class="space-4"></div>

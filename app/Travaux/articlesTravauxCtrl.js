@@ -20,10 +20,7 @@ app.controller('articlesTravauxCtrl', function ($rootScope, $scope, $modal, $fil
         Data.put("articles/"+article.id_article,{status:article.status});
     };
 
-    $scope.open = function (p,size) {
-        //if(angular.isUndefined(p.id_article)){
-        //    p.id_family = 1;
-        //}
+    $scope.openAddArticle = function (p,size) {
         var modalInstance = $modal.open({
           templateUrl: 'partials/TRAVAUX/articleEdit.html',
           controller: 'articleTravauxEditCtrl',
@@ -32,8 +29,8 @@ app.controller('articlesTravauxCtrl', function ($rootScope, $scope, $modal, $fil
             item: function () {
               return p;
             },
-            stockMagasin: function () {
-              return false;
+            type_stock: function () {
+              return "";
             }
           }
         });
@@ -86,7 +83,7 @@ app.controller('articlesTravauxCtrl', function ($rootScope, $scope, $modal, $fil
 });
 
 
-app.controller('articleTravauxEditCtrl', function ($rootScope, $scope, $route, $modal, $modalInstance, item, Data, stockMagasin) {
+app.controller('articleTravauxEditCtrl', function ($rootScope, $scope, $route, $modal, $modalInstance, item, Data, type_stock) {
     var id_suppliers = [];
 
     if (typeof item === "undefined") {
@@ -97,27 +94,13 @@ app.controller('articleTravauxEditCtrl', function ($rootScope, $scope, $route, $
         $scope.article = angular.copy(item);
     }
 
-    console.log(item);
-
     $scope.loadData = function () {
-        //Data.get('familys/'+$rootScope.id_service).then(function(data){
-        //    $scope.familys = data.data;
-        //    if(!item.id_article > 0)
-        //        $scope.article.id_family = $scope.familys[0].id_family;
-        //});
 
-        if(stockMagasin){
-            Data.get('familysTools/'+$rootScope.id_service).then(function(data){
-                $scope.familys = data.data;
-                if(!item.id_article > 0)
-                    $scope.article.id_family = $scope.familys[0].id_family;
-            });
-        }else
-            Data.get('familys/'+$rootScope.id_service).then(function(data){
-                $scope.familys = data.data;
-                if(!item.id_article > 0)
-                    $scope.article.id_family = $scope.familys[0].id_family;
-            });
+        Data.get('familys'+type_stock+'/'+$rootScope.id_service).then(function(data){
+            $scope.familys = data.data;
+            if(!item.id_article > 0)
+                $scope.article.id_family = $scope.familys[0].id_family;
+        });
 
         Data.get('suppliers/'+$rootScope.id_service).then(function(data){
             $scope.suppliers = data.data;
@@ -130,7 +113,7 @@ app.controller('articleTravauxEditCtrl', function ($rootScope, $scope, $route, $
         $modalInstance.dismiss('Close');
     };
 
-    $scope.title = (item.id_article > 0) ? 'Editer article' : (stockMagasin) ? 'Ajouter Outil' : 'Ajouter article';
+    $scope.title = (item.id_article > 0) ? 'Editer article' : (type_stock) ? 'Ajouter Outil' : 'Ajouter article';
     $scope.buttonText = (item.id_article > 0) ? 'Mise à jour article' : 'Ajouter nouveau article';
 
     if(item.id_article > 0){
@@ -180,7 +163,7 @@ app.controller('articleTravauxEditCtrl', function ($rootScope, $scope, $route, $
                 });
             });
             console.log("after : " + article.id_suppliers);
-            article.stockMagasin = stockMagasin; // For manage tools to create stock to the Article
+            article.type_stock = type_stock; // For manage tools to create stock to the Article
             article.id_service = $rootScope.id_service; // define which service
             console.log(article);
 
@@ -197,7 +180,7 @@ app.controller('articleTravauxEditCtrl', function ($rootScope, $scope, $route, $
         }else{
             article.status = 'Active';
             article.id_service = $rootScope.id_service; // define which service
-            article.stockMagasin = stockMagasin; // For manage tools to create stock to the Article
+            article.type_stock = type_stock; // "TOOL" OR "MATERIAL"
             Data.post('articles', article).then(function (result) {
                 if(result.status != 'error'){
                     var x = angular.copy(article);

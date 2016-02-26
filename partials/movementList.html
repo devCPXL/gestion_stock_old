@@ -7,13 +7,16 @@
 <!--<hr/>-->
 <div class="table-responsive">
     <div class="panel panel-primary">
-        <div class="panel-heading">Liste des Mouvements pour le {{desiredLocation.name_location}} : {{desiredLocation.nom_article}} : QTE : {{desiredLocation.quantite_current}}
-            <div class="sw-search" >
-                <div class="nav-search" id="nav-search">
-                    Filter: <span class="input-icon">
-                        <input placeholder="Filter Liste mouvements ..." class="nav-search-input" ng-model="filterMovement" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>
-                        <i class="search-icon fa fa-search nav-search-icon"></i>
-                    </span>
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-8"> Liste des Mouvements pour le {{desiredLocation.name_location}} : {{desiredLocation.nom_article}} : QTE : {{desiredLocation.quantite_current}}</div>
+                <div class="sw-search col-md-4">
+                    <div class="nav-search" id="nav-search">
+                        Filter: <span class="input-icon">
+                            <input placeholder="Filter Liste mouvements ..." class="nav-search-input" ng-model="filterMovement" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>
+                            <i class="search-icon fa fa-search nav-search-icon"></i>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

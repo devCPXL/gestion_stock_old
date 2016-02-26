@@ -6,15 +6,22 @@
 </nav>
 <div class="table-responsive">
 <div class="panel panel-travaux">
-  <div class="panel-heading">Liste des Chantiers
-      <div class="sw-search" >
-            <div class="nav-search" id="nav-search">
-                    Filter: <span class="input-icon">
-                        <input placeholder="Filter Liste Chantiers ..." class="nav-search-input" ng-model="filterLocation" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>
-                        <i class="search-icon fa fa-search nav-search-icon"></i>
-                    </span>
-            </div>
-        </div>
+  <div class="panel-heading">
+      <div class="row">
+          <div class="col-md-8">
+            Liste des Chantiers
+          </div>
+          <div class="col-md-4">
+              <div class="sw-search" >
+                    <div class="nav-search" id="nav-search">
+                            Filter: <span class="input-icon">
+                                <input placeholder="Filter Liste Chantiers ..." class="nav-search-input" ng-model="filterLocation" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>
+                                <i class="search-icon fa fa-search nav-search-icon"></i>
+                            </span>
+                    </div>
+              </div>
+          </div>
+      </div>
     </div>
   <div class="panel-body">
       <table data-toggle="table" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >

@@ -98,7 +98,7 @@ app.controller('stocksRvaCtrl', function ($scope, $rootScope, $modal, $filter, D
     $scope.openStockEdit = function (p,size) {
         var modalInstance = $modal.open({
             templateUrl: 'partials/RVA/stockEdit.html',
-            controller: 'stockRvaEditCtrl',
+            controller: 'stockEditCtrl',
             size: size,
             resolve: {
                 item: function () {
@@ -385,7 +385,7 @@ app.controller('stockRvaEditAddMvtCtrl', function ($scope, $route, $modal, $moda
     };
 });
 
-app.controller('stockRvaEditCtrl', function ($scope, $route, $filter, $modalInstance, item, Data, toaster) {
+app.controller('stockEditCtrl', function ($scope, $route, $filter, $modalInstance, item, Data, toaster) {
 
     console.log(item);
 

@@ -1,5 +1,6 @@
 <?php
 header ('Content-type: text/html; charset=utf-8');
+echo "flgkndfl ";
 $rootpath = addslashes($_SERVER["DOCUMENT_ROOT"]);
 require_once $rootpath.'/PHPExcel_1.8.0_doc/Classes/PHPExcel/IOFactory.php';
 require_once '../../api/v1/dbHelper.php';
@@ -7,7 +8,7 @@ require_once '../../api/v1/dbHelper.php';
 $db = new dbHelper(DB_NAME);
 
 // Chargement du fichier Excel
-$objPHPExcel = PHPExcel_IOFactory::load("ListeProductsFacq.xlsx");
+$objPHPExcel = PHPExcel_IOFactory::load("List_Products_final.xlsx");
 
 /**
  * récupération de la première feuille du fichier Excel
@@ -16,7 +17,6 @@ $objPHPExcel = PHPExcel_IOFactory::load("ListeProductsFacq.xlsx");
 $sheet = $objPHPExcel->getSheet(0);
 $results = array();
 
-
 foreach($sheet->getRowIterator() as $row) {
     $mandatory = array();
     $rowIndex = $row->getRowIndex();
@@ -24,12 +24,14 @@ foreach($sheet->getRowIterator() as $row) {
     $article = new stdClass();
 
     $article->code_barre    = $sheet->getCell('A' . $rowIndex)->getValue();
-//    $article->description_f = $sheet->getCell('B' . $rowIndex)->getValue();
     $article->nom           = $sheet->getCell('B' . $rowIndex)->getValue();
-    $article->unite         = $sheet->getCell('D' . $rowIndex)->getValue();
-    $article->price         = $sheet->getCell('E' . $rowIndex)->getValue();
-    $article->vat           = $sheet->getCell('F' . $rowIndex)->getValue();
-    $article->id_family     = $sheet->getCell('G' . $rowIndex)->getValue();
+    $article->description_f = $sheet->getCell('C' . $rowIndex)->getValue();
+    $article->mark          = $sheet->getCell('D' . $rowIndex)->getValue();
+    $article->type_article  = $sheet->getCell('E' . $rowIndex)->getValue();
+    $article->price         = $sheet->getCell('F' . $rowIndex)->getValue();
+    $article->vat           = $sheet->getCell('I' . $rowIndex)->getValue();
+    $article->unite         = $sheet->getCell('H' . $rowIndex)->getValue();
+    $article->id_family     = $sheet->getCell('J' . $rowIndex)->getValue();
     $article->quantite      = 0;
     $article->status        = "Active";
     $article->id_service    = 19;
@@ -44,9 +46,9 @@ foreach($sheet->getRowIterator() as $row) {
 // Insert SUPPLIER Stock
     $stockSupplier = new stdClass();
     $stockSupplier->id_article      = $lastInsertId;
-    $stockSupplier->id_location     = $sheet->getCell('H' . $rowIndex)->getValue(); // id_supplier
+    $stockSupplier->id_location     = $sheet->getCell('K' . $rowIndex)->getValue(); // id_supplier
     $stockSupplier->type_stock      = "SUPPLIER";
-    $stockSupplier->prix_current    = $sheet->getCell('E' . $rowIndex)->getValue();
+    $stockSupplier->prix_current    = $sheet->getCell('F' . $rowIndex)->getValue();
     $stockSupplier->dt_creation     = date("Y-m-d H:i");
     $stockSupplier->status          = 'Active';
     $stockSupplier->stock_min       = 0;
@@ -66,7 +68,7 @@ foreach($sheet->getRowIterator() as $row) {
     $stockStore->status          = 'Active';
     $stockStore->stock_min       = 1;
     $stockStore->stock_alert     = 1;
-    $stockStore->quantite_current = 0;
+    $stockStore->quantite_current = (empty($sheet->getCell('G' . $rowIndex)->getValue())) ? 0 : $sheet->getCell('G' . $rowIndex)->getValue();
     $stockStore->id_service      = 19;
 
     $rows2 = $db->insert("gestion_stock", $stockStore, $mandatory);
@@ -74,13 +76,5 @@ foreach($sheet->getRowIterator() as $row) {
 
 }
 echo json_encode($results);
-//
-//function echoResponse($status_code, $response) {
-//    global $app;
-//    $app->status($status_code);
-//    $app->contentType('application/json');
-//    //var_dump($response);
-//    echo json_encode($response);
-//    //JSON_NUMERIC_CHECK
-//}
+
 ?>

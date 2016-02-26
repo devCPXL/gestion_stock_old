@@ -26,44 +26,56 @@
     <div class="panel panel-travaux">
 
         <div class="panel-heading">
-            <span>Gestion Outils &nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div class="row">
+                <div class="col-md-8">
 
-            <select id="filterLocation" ng-model="filterLocation.description_f"  data-ng-change="changeFilter()" data-style="btn-info" >
-                <option value="">Tous les chantiers</option>
-                <option ng-repeat="l in locations | unique:'description_f' | orderBy:'description_f'" value="{{l.description_f}}" on-finish-render="ngRepeatFinished"  data-icon="glyphicon glyphicon-filter" >
-                    {{l.description_f}}
-                </option>
-            </select>
-            <select id="filterTool" ng-model="filterTool.nom"  data-ng-change="changeFilter()" data-style="btn-info" >
-                <option value="">Tous les Outils</option>
-                <option ng-repeat="t in tools | unique:'nom' " value="{{t.nom}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >
-                    {{t.nom}}
-                </option>
-            </select>
-            <!--<select id="filterStatus" ng-model="filterTool.nom"  data-ng-change="changeFilter()" data-style="btn-info" >-->
-                <!--<option value="">Tous les Outils</option>-->
-                <!--<option ng-repeat="t in tools | unique:'quantite_current' " value="{{t.quantite_current}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >-->
-                    <!--{{t.quantite_current}}-->
-                <!--</option>-->
-            <!--</select>-->
+                    <ui-select id="filterLocation" ng-model="filterLocation.location" theme="bootstrap" reset-search-input="true" style="width: 230px;">
+                        <ui-select-match placeholder="Chercher chantier/magasin ...">
+                            <span>{{$select.selected.name_location | limitTo : 20}}</span>
+                            <button class="clear" ng-click="clear('filterLocation')">X</button>
+                        </ui-select-match>
+                        <ui-select-choices repeat="l in tools | unique:'name_location' | orderBy:'name_location' | filter: $select.search">
+                            <small ng-bind-html="l.name_location | highlight: $select.search"></small>
+                        </ui-select-choices>
+                    </ui-select>
 
-            <!--<select id="filterFamily" ng-model="filterFamily.description"  data-ng-change="changeFilter()" data-style="btn-info" >-->
-                <!--<option value="">Tous les Famille</option>-->
-                <!--<option ng-repeat="t in tools | unique:'description' " value="{{t.description}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >-->
-                    <!--{{t.description}}-->
-                <!--</option>-->
-            <!--</select>-->
+                    <ui-select id="filterTool" ng-model="filterTool.location" theme="bootstrap" reset-search-input="true" style="width: 350px;">
+                        <ui-select-match placeholder="Chercher article...">
+                            <span>{{$select.selected.nom | limitTo : 40}}</span>
+                            <button class="clear" ng-click="clear('filterTool')">X</button>
+                        </ui-select-match>
+                        <ui-select-choices repeat="l in tools | unique:'nom' | orderBy:'nom' | filter: $select.search">
+                            <small ng-bind-html="l.nom | highlight: $select.search"></small> /
+                            <small ng-bind-html="l.code_barre | highlight: $select.search"></small> /
+                            <small ng-bind-html="l.mark | highlight: $select.search"></small>
+                        </ui-select-choices>
+                    </ui-select>
 
+                    <!--<select id="filterStatus" ng-model="filterTool.nom"  data-ng-change="changeFilter()" data-style="btn-info" >-->
+                        <!--<option value="">Tous les Outils</option>-->
+                        <!--<option ng-repeat="t in tools | unique:'quantite_current' " value="{{t.quantite_current}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >-->
+                            <!--{{t.quantite_current}}-->
+                        <!--</option>-->
+                    <!--</select>-->
 
-            <div class="sw-search filter-tool" >
-                <div class="nav-search" id="nav-search">
-                    Filter: <span class="input-icon">
-                        <input placeholder="Filter Liste Outils ..." class="nav-search-input" ng-model="filterLine" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">
-                        <i class="search-icon fa fa-search nav-search-icon"></i>
-                    </span>
+                    <!--<select id="filterFamily" ng-model="filterFamily.description"  data-ng-change="changeFilter()" data-style="btn-info" >-->
+                        <!--<option value="">Tous les Famille</option>-->
+                        <!--<option ng-repeat="t in tools | unique:'description' " value="{{t.description}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >-->
+                            <!--{{t.description}}-->
+                        <!--</option>-->
+                    <!--</select>-->
+                </div>
+                <div class="col-md-4">
+                    <!--<div class="sw-search filter-tool" >-->
+                        <!--<div class="nav-search" id="nav-search">-->
+                            <!--Filter: <span class="input-icon">-->
+                                <!--<input placeholder="Filter Liste Outils ..." class="nav-search-input" ng-model="filterLine" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">-->
+                                <!--<i class="search-icon fa fa-search nav-search-icon"></i>-->
+                            <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
             </div>
-
         </div>
         <div class="panel-body">
             <table data-toggle="table" fixed-table-headers="scrollable-area" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
@@ -74,10 +86,8 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="t in tools
-                | filter : filterTool
-                | filter : filterFamily
-                | filter : filterLocation.description_f
-                | filter : filterLine
+                | filter : filterTool.location.nom
+                | filter : filterLocation.location.name_location
                 "
                     id="{{t.id_stock}}"
                     animate-on-change='t.nom + t.mark + t.code_barre'
@@ -109,4 +119,3 @@
         </div>
     </div>
 </div>
-

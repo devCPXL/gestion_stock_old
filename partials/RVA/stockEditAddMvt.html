@@ -26,7 +26,7 @@
             <form-element label="QUANTITE " mod="stockMvt" class="inputNumber">
                 <input type="number" ng-model="stockMvt.quantite" placeholder="1 - {{ quantiteMax }}" name="quantite" min="1" max="{{ quantiteMax }}" class="form-control" integer required/>
                 <!--max=" {{ quantiteMax }} "-->
-                <small ng-show="stockMvt_form.description_f.$dirty && stockMvt_form.description_f.$invalid" class="help-inline">QUANTITE Requies</small>
+                <small ng-show="stockMvt_form.quantite.$dirty && stockMvt_form.quantite.$invalid" class="help-inline">QUANTITE Requies</small>
             </form-element>
 
             <form-element label="DATE MOUVEMENT" mod="stockMvt">

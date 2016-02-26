@@ -1,0 +1,901 @@
+code_barre;nom;description_f;mark;type_article;price;quantite_current;unite;vat;id_family;id_supplier
+MWVZVK30016 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;1025,00;pces;21,00;19;11
+MWVZVK30025 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;280,00;pces;21,00;19;11
+MWVZVK35016 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;486,00;pces;21,00;19;11
+MWVZVK35020 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;179,00;pces;21,00;19;11
+MWVZVK35025 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;241,00;pces;21,00;19;11
+MWVZVK35030 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;268,00;pces;21,00;19;11
+MWVZVK35040 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;546,00;pces;21,00;19;11
+MWVZVK35050 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;108,00;pces;21,00;19;11
+MWVZVK40016 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;226,00;pces;21,00;19;11
+MWVZVK40025 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;397,00;pces;21,00;19;11
+MWVZVK40035 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;667,00;pces;21,00;19;11
+MWVZVK40040 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;303,00;pces;21,00;19;11
+MWVZVK40045 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;340,00;pces;21,00;19;11
+MWVZVK40050 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;140,00;pces;21,00;19;11
+MWVZVK45020 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;225,00;pces;21,00;19;11
+MWVZVK45025 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;154,00;pces;21,00;19;11
+MWVZVK45030 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;297,00;pces;21,00;19;11
+MWVZVK45035 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;504,00;pces;21,00;19;11
+MWVZVK45040 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;343,00;pces;21,00;19;11
+MWVZVK45045 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;435,00;pces;21,00;19;11
+MWVZVK45050 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;55,00;pces;21,00;19;11
+MWVZVK 45070 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;374,00;pces;21,00;19;11
+MWVZVK45080 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;166,00;pces;21,00;19;11
+MWVZVK50020 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;159,00;pces;21,00;19;11
+MWVZVK50030 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;369,00;pces;21,00;19;11
+MWVZVK50035 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;779,00;pces;21,00;19;11
+MWVZVK50040 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;442,00;pces;21,00;19;11
+MWVZVK50045 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;324,00;pces;21,00;19;11
+MWVZVK50050 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;209,00;pces;21,00;19;11
+MWVZVK50060 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;157,00;pces;21,00;19;11
+MWVZVK50070 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;210,00;pces;21,00;19;11
+MWVZVK50080 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;41,00;pces;21,00;19;11
+MWVZVK500120 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;169,00;pces;21,00;19;11
+MWVZVK60040 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;810,00;pces;21,00;19;11
+MWVZVK60045 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;595,00;pces;21,00;19;11
+MWVZVK60050 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;442,00;pces;21,00;19;11
+MWVZVK60070 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;59,00;pces;21,00;19;11
+MWVZVK600100 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;308,00;pces;21,00;19;11
+MWVZVK600110 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;172,00;pces;21,00;19;11
+MWVZVK600140 GZ;VIS A PANNEAUX;;FASTENERS;ACIER;;63,00;pces;21,00;19;11
+HLD4/KWIK TOG 4;CHEVILLES;FIXATIONS LEGERE  DITE PAPILLON  24/32 MM;HILTI;PVC;;205,00;pces;21,00;19;5
+HLD3/KWIK TOG 3;CHEVILLES;FIXATIONS LEGERE  DITE PAPILLON  15/23 MM;HILTI;PVC;;135,00;pces;21,00;19;5
+HLD2/KWIK TOG 2;CHEVILLES;FIXATIONS LEGERE  DITE PAPILLON  4/16 MM;HILTI;PVC;;346,00;pces;21,00;19;5
+SMOOPD06 N;CHEVILLES  DIM 6;A EXPANSION SANS COLLORETTE;SMART;NYLON;;1670,00;pces;21,00;19;11
+SMOOPD08 N;CHEVILLES  DIM 8;A EXPANSION SANS COLLORETTE;SMART;NYLON;;989,00;pces;21,00;19;11
+SMOOPD10 N;CHEVILLES DIM 10;A EXPANSION SANS COLLORETTE;SMART;NYLON;;1204,00;pces;21,00;19;11
+SMOOPD12 N;CHEVILLES DIM 12;A EXPANSION SANS COLLORETTE;SMART;NYLON;;374,00;pces;21,00;19;11
+;CHEVIILES DIM 14;A EXPANSION SANS COLLORETTE;FISCHER;NYLON;;110,00;pces;21,00;19;11
+M10 x 18;RONDELLES Growé ;;;ACIER;;58,00;pces;21,00;19;2
+M8 x 15;RONDELLES Growé;;;ACIER;;212,00;pces;21,00;19;2
+M6 x 10;RONDELLES Growé;;;ACIER;;217,00;pces;21,00;19;2
+M4 x8;RONDELLES Growé;;;ACIER;;169,00;pces;21,00;19;2
+M6 x 12;RONDELLES;;;ACIER;;1580,00;pces;21,00;19;2
+M5 x 12;RONDELLES;;;ACIER;;63,00;pces;21,00;19;2
+M5 x 16;RONDELLES;;;ACIER;;30,00;pces;21,00;19;2
+M5 x 10;RONDELLES;;;ACIER;;492,00;pces;21,00;19;2
+M8 X 16;RONDELLES;;;ACIER;;1620,00;pces;21,00;19;2
+M10 X 30;RONDELLES;;;ACIER;;222,00;pces;21,00;19;2
+M10 x 20;RONDELLES;;;ACIER;;848,00;pces;21,00;19;2
+M8 FIN;RONDELLES;;;ACIER;;848,00;pces;21,00;19;2
+M8 X 25;RONDELLES;;;ACIER;;541,00;pces;21,00;19;2
+6,0 X 25;TIREFONDS;TETE EXAGONALE ;;ACIER;;136,00;pces;21,00;19;11
+6,0 X 40;TIREFONDS;TETE EXAGONALE ;;ACIER;;39,00;pces;21,00;19;11
+6,0 X 80;TIREFONDS;TETE EXAGONALE ;;ACIER;;348,00;pces;21,00;19;11
+8,0 X 45;TIREFONDS;TETE EXAGONALE ;;ACIER;;131,00;pces;21,00;19;11
+8,0 X 60;TIREFONDS;TETE EXAGONALE ;;ACIER;;75,00;pces;21,00;19;11
+8,0 X 100;TIREFONDS;TETE EXAGONALE ;;ACIER;;9,00;pces;21,00;19;11
+10 X 70 ;TIREFONDS;TETE EXAGONALE ;;ACIER;;42,00;pces;21,00;19;11
+10 X 100;TIREFONDS;TETE EXAGONALE ;;ACIER;;102,00;pces;21,00;19;11
+6,0 X 52;CHEVILLES METALLIQUE ;A BOULON;HILTI;ACIER;;152,00;pces;21,00;19;5
+6,0 X 65;CHEVILLES METALLIQUE ;A BOULON;HILTI;ACIER;;48,00;pces;21,00;19;5
+8,0 X 54;CHEVILLES METALLIQUE ;A BOULON;HILTI;ACIER;;179,00;pces;21,00;19;5
+8,0 X 66;CHEVILLES METALLIQUE ;A BOULON;HILTI;ACIER;;138,00;pces;21,00;19;5
+8,0 X 83;CHEVILLES METALLIQUE ;A BOULON;HILTI;ACIER;;173,00;pces;21,00;19;5
+10 X 92;CHEVILLES METALLIQUE ;A BOULON;HILTI;ACIER;;108,00;pces;21,00;19;5
+10 X 112;CHEVILLES METALLIQUE ;A BOULON;HILTI;ACIER;;155,00;pces;21,00;19;5
+10 X 72;CHEVILLES METALLIQUE ;A BOULON;FISCHER;ACIER;;324,00;pces;21,00;19;11
+M 10 X 16;CHEVILLES METALLIQUE ;EXENTRIQUE;FISCHER;ACIER;;42,00;pces;21,00;19;11
+10 X 132;CHEVILLES METALLIQUE ;A BOULON;FISCHER;ACIER;;46,00;pces;21,00;19;11
+10 X 152;CHEVILLES METALLIQUE ;A BOULON;FISCHER;ACIER;;58,00;pces;21,00;19;11
+6,0 X 19;CHEVILLE PAPILLON METAL;;HILTI;ACIER;;238,00;pces;21,00;19;5
+6,0 X 32;CHEVILLE PAPILLON METAL;;HILTI;ACIER;;282,00;pces;21,00;19;5
+6,0 X 45;CHEVILLE PAPILLON METAL;;HILTI;ACIER;;100,00;pces;21,00;19;5
+4,0 X 19;CHEVILLE PAPILLON METAL;;HILTI;ACIER;;;pces;21,00;19;5
+M7;CHEVILLE LAITON;;;LAITON;;217,00;pces;21,00;19;2
+M8;CHEVILLE LAITON;;;LAITON;;14,00;pces;21,00;19;2
+M10;CHEVILLE LAITON;;;LAITON;;4,00;pces;21,00;19;2
+M6 X 40;VIS DOUBLE FILET;SANS CHEVILLE ;;ACIER;;0,00;pces;21,00;19;2
+M6 X 60;VIS DOUBLE FILET;SANS CHEVILLE ;;ACIER;;0,00;pces;21,00;19;2
+M8 x 40;VIS DOUBLE FILET;SANS CHEVILLE ;;ACIER;;113,00;pces;21,00;19;2
+M8 X 100  ;VIS DOUBLE FILET;SANS CHEVILLE ;REISER;ACIER;;443,00;pces;21,00;19;2
+M10 X 80 ;VIS DOUBLE FILET;SANS CHEVILLE ;REISER;ACIER;;53,00;pces;21,00;19;2
+M6;CHEVILLES LAITON;;;LAITON;;102,00;pces;21,00;19;2
+DBZ 6/35;CLOUX HILTI;;HILTI;ACIER;;100,00;pces;21,00;19;HILTI
+DBZ 6/4,5;CLOUX HILTI;;HILTI;ACIER;;100,00;pces;21,00;19;HILTI
+M 8 L100;TIGE FILLETEE;FILET;;ACIER;;126,00;pces;21,00;19;2
+????;BOULON A JOINT;EXAGONALE;;ACIER;;9,00;pces;21,00;19;11
+????;ECROU TETONS;;;ACIER;;105,00;pces;21,00;19;2
+M 8 ;ECROU FIN;EXAGONALE;;ACIER;;380,00;pces;21,00;19;2
+6,0 X 80;ECROU BONNET;EXAGONALE;;ACIER;;16,00;pces;21,00;19;2
+OGGPZ35035 FOS;VIS A GYPROC;;FASTENERS;ACIER;;5000,00;pces;21,00;19;11
+OGGPZ35040 FOS;VIS A GYPROC;;FASTENERS;ACIER;;0,00;pces;21,00;19;11
+OGGPZ35045 FOS;VIS A GYPROC;;FASTENERS;ACIER;;0,00;pces;21,00;19;11
+OOOSH50050 Z;CROCHET D ARMOIRE;;FASTENERS;ZINC;;115,00;pces;21,00;19;11
+OOOSH30030 Z;CROCHET D ARMOIRE;;FASTENERS;ZINC;;229,00;pces;21,00;19;11
+OOOSH40040Z;CROCHET D ARMOIRE;;FASTENERS;;;37,00;pces;21,00;19;11
+SMPKKDO6040 N;CHEVILLE A CLOU;TETE FRAISEE;SMART;;;745,00;pces;21,00;19;11
+SMPKKDO6060 N;CHEVILLE A CLOU;TETE FRAISEE;SMART;;;299,00;pces;21,00;19;11
+SMPKKDO8080 N;CHEVILLE A CLOU;TETE FRAISEE;SMART;;;65,00;pces;21,00;19;11
+SMPKKDO8120 N;CHEVILLE A CLOU;TETE FRAISEE;SMART;;;321,00;pces;21,00;19;11
+;CHEVILLE A CLOU;TETE FRAISEE;FISCHER;ACIER;;170,00;pces;21,00;19;11
+;CHEVILLE A CLOU;TETE FRAISEE;FISCHER;ACIER;;29,00;pces;21,00;19;11
+M 8 dim 10 L 40;Vis double filet avec chevilles ;;Fischer;;;233,00;pces;21,00;19;11
+M 7 dim 8 L 45;Vis double filet avec chevilles ;;Fischer;;;83,00;pces;21,00;19;11
+M 6 dim 6 L 40;Vis double filet avec chevilles ;;Fischer;;;157,00;pces;21,00;19;11
+M 5  L 40 ;BOULON ;TETE EXAGONALE;;ACIER;;62,00;pces;21,00;20;11
+M 6  L 10;BOULON ;TETE EXAGONALE;;ACIER;;573,00;pces;21,00;20;11
+M 6  L 12;BOULON ;TETE EXAGONALE;;ACIER;;295,00;pces;21,00;20;11
+M 6  L 15 ;BOULON ;TETE EXAGONALE;;ACIER;;48,00;pces;21,00;20;11
+M 6  L 25;BOULON ;TETE EXAGONALE;;ACIER;;340,00;pces;21,00;20;11
+M 6  L 45;BOULON ;TETE EXAGONALE;;ACIER;;570,00;pces;21,00;20;11
+M 6  L 60;BOULON ;TETE EXAGONALE;;ACIER;;325,00;pces;21,00;20;11
+M 8 L 10;BOULON ;TETE EXAGONALE;;ACIER;;169,00;pces;21,00;20;11
+M 8  L 80;BOULON ;TETE EXAGONALE;;ACIER;;268,00;pces;21,00;20;11
+M 8  L 30;BOULON ;TETE EXAGONALE;;ACIER;;594,00;pces;21,00;20;11
+M 8  L 50 ;BOULON ;TETE EXAGONALE;;ACIER;;770,00;pces;21,00;20;11
+M 8  L 70;BOULON ;TETE EXAGONALE;;ACIER;;295,00;pces;21,00;20;11
+M 10  L 30;BOULON ;TETE EXAGONALE;;ACIER;;175,00;pces;21,00;20;11
+M 12  L 20;BOULON ;TETE EXAGONALE;;ACIER;;17,00;pces;21,00;20;11
+M 8  L 25;BOULON ;TETE ALENE;;ACIER;;29,00;pces;21,00;20;11
+M 6  L 20;BOULON ;TETE ALENE;;ACIER;;101,00;pces;21,00;20;11
+M7 L 20;BOULON;TETE EXAGONALE;;ACIER;;14,00;pces;21,00;20;11
+M 8  L 15;BOULON ;TETE PLATE ;;ACIER;;32,00;pces;21,00;20;11
+M 6 ;ECROU;EXAGONALE;;ACIER;;475,00;pces;21,00;20;11
+M  7;ECROU;EXAGONALE;;ACIER;;280,00;pces;21,00;20;11
+M  8;ECROU;EXAGONALE;;ACIER;;470,00;pces;21,00;20;11
+M  10;ECROU;EXAGONALE;;ACIER;;670,00;pces;21,00;20;11
+M  12;ECROU;EXAGONALE;;ACIER;;119,00;pces;21,00;20;11
+M  8 AUTO BLOC;ECROU;EXAGONALE;;ACIER;;280,00;pces;21,00;20;11
+M  6 FLAMCO;ECROU;;FLAMCO;ACIER;;30,00;pces;21,00;20;2
+M  8 FLAMCO;ECROU;;FLAMCO;ACIER;;299,00;pces;21,00;20;2
+M 10 FLAMCO;ECROU;;FLAMCO;ACIER;;106,00;pces;21,00;20;2
+M 6 X20 mm;ECROU allonge;EXAGONALE;;ACIER;;99,00;pces;21,00;20;2
+M 7 x 25 mm;ECROU allonge;EXAGONALE;;ACIER;;117,00;pces;21,00;20;2
+M 8 X 30 mm;ECROU allonge;EXAGONALE;;ACIER;;31,00;pces;21,00;20;2
+M 8 X 25 mm;ECROU allonge;ROND;;ACIER;;99,00;pces;21,00;20;2
+M 10 X 30 mm;ECROU allonge;EXAGONALE;;ACIER;;85,00;pces;21,00;20;2
+865690;RACCORD;DROIT 2 X A SERTIR  16 X 2;COMAP;SYNTE;;45,00;pces;21,00;21;2
+865680;RACCORD;DROIT 2 X A SERTIR  20 X 2;COMAP;SYNTE;;3,00;pces;21,00;21;2
+865670;RACCORD;DROIT 2 X A SERTIR 26 X 2;COMAP;SYNTE;;43,00;pces;21,00;21;2
+865660;RACCORD;DROIT 2 X A SERTIR 32 X 3;COMAP;SYNTE;;25,00;pces;21,00;21;2
+510157;RACCORD;DROIT 2 X A SERTIR 40 X 3,5;COMAP;SYNTE;;9,00;pces;21,00;21;2
+166157;RACCORD;DROIT 2 X A SERTIR 50 X 4;COMAP;SYNTE;;5,00;pces;21,00;21;2
+231934;RACCORD;DROIT 2 X A SERTIR 63 X 4,5;COMAP;SYNTE;;3,00;pces;21,00;21;2
+510154;RACCORD;DROIT  REDUIT 2 X A SERTIR 20 X 16;COMAP;SYNTE;;7,00;pces;21,00;21;2
+510153;RACCORD;DROIT REDUIT 2 X A SERTIR 26 X 16;COMAP;SYNTE;;1,00;pces;21,00;21;2
+510152;RACCORD;DROIT REDUIT 2 X A SERTIR 26 X 20;COMAP;SYNTE;;13,00;pces;21,00;21;2
+510150;RACCORD;DROIT REDUIT 2 X A SERTIR 32 X 20;COMAP;SYNTE;;0,00;pces;21,00;21;2
+510149;RACCORD;DROIT REDUIT 2 X A SERTIR 32 X 26;COMAP;SYNTE;;15,00;pces;21,00;21;2
+510148;RACCORD;DROIT REDUIT 2 X A SERTIR 40 X 26;COMAP;SYNTE;;3,00;pces;21,00;21;2
+510147;RACCORD;DROIT REDUIT 2 X A SERTIR 40 X 32;COMAP;SYNTE;;1,00;pces;21,00;21;2
+232048;RACCORD;DROIT REDUIT 2 X A SERTIR 50 X 40;COMAP;SYNTE;;4,00;pces;21,00;21;2
+232050;RACCORD;DROIT REDUIT 2 X A SERTIR 63 X 50 ;COMAP;SYNTE;;3,00;pces;21,00;21;2
+311397;RACCORD;DROIT D INTERFACE 15-16X2;COMAP;SYNTE;;14,00;pces;21,00;21;2
+311398;RACCORD;DROIT D INTERFACE 15-20X2;COMAP;SYNTE;;16,00;pces;21,00;21;2
+311399;RACCORD;DROIT D INTERFACE 22-20X2;COMAP;SYNTE;;14,00;pces;21,00;21;2
+311401;RACCORD;DROIT D INTERFACE 22-26X3;COMAP;SYNTE;;3,00;pces;21,00;21;2
+865560;RACCORD;INTERFACE A SERTIR ECROU PRISONNIER  16X2 M22;COMAP;SYNTE;;9,00;pces;21,00;21;2
+865550;RACCORD;INTERFACE A SERTIR ECROU PRISONNIER  20X2 M22;COMAP;SYNTE;;35,00;pces;21,00;21;2
+523090;RACCORD;"INTERFACE EUROCONUS 16 X 2 -3/4""";COMAP;SYNTE;;7,00;pces;21,00;21;2
+523080;RACCORD;"INTERFACE EUROCONUS 20 X 2 -3/4""";COMAP;SYNTE;;0,00;pces;21,00;21;2
+232099;RACCORD;"INTERFACE A JOINT 16 X 2-1/2 """;COMAP;SYNTE;;0,00;pces;21,00;21;2
+232120;RACCORD;"INTERFACE A JOINT 16 X 2 -3/4 """;COMAP;SYNTE;;0,00;pces;21,00;21;2
+232123;RACCORD;"INTERFACE A JOINT 20 X 2-1/2""";COMAP;SYNTE;;0,00;pces;21,00;21;2
+232124;RACCORD;"INTERFACE A JOINT 20 X 2-3/4 """;COMAP;SYNTE;;20,00;pces;21,00;21;2
+503218;RACCORD;"INTERFACE A JOINT 26 X 3 - 3/4""";COMAP;SYNTE;;19,00;pces;21,00;21;2
+335076;RACCORD;"INTERFACE A JOINT 26 X 3- 4/4""";COMAP;SYNTE;;82,00;pces;21,00;21;2
+865650;RACCORD;"DROIT A SERTIR Femelle 16 X 2 -1/2""   ( F )";COMAP;SYNTE;;;pces;21,00;21;2
+865640;RACCORD;"DROIT A SERTIR Femelle 20 x 2 - 1/2""";COMAP;SYNTE;;9,00;pces;21,00;21;2
+125528;RACCORD;"DROIT A SERTIR Femelle 20 x 2 - 3/4""";COMAP;SYNTE;;34,00;pces;21,00;21;2
+865630;RACCORD;"DROIT A SERTIR Femelle 26 x 3 - 3/4""";COMAP;SYNTE;;4,00;pces;21,00;21;2
+174754;RACCORD;"DROIT A SERTIR Femelle 26 x 3 - 4/4 """;COMAP;SYNTE;;5,00;pces;21,00;21;2
+865620;RACCORD;"DROIT A SERTIR Femelle 32 x 3 - 4/4""";COMAP;SYNTE;;0,00;pces;21,00;21;2
+232055;RACCORD;"DROIT A SERTIR Femelle 40 x 3,5 - 5/4""";COMAP;SYNTE;;2,00;pces;21,00;21;2
+232057;RACCORD;"DROIT A SERTIR Femelle 63 x 4,5 - 2""";COMAP;SYNTE;;0,00;pces;21,00;21;2
+865760;RACCORD;"DROIT A SERTIR Male 16 X 2 - 1/2""";COMAP;SYNTE;;1,00;pces;21,00;21;2
+865750;RACCORD;"DROIT A SERTIR Male 20 x 2 - 1/2""     (M )";COMAP;SYNTE;;6,00;pces;21,00;21;2
+865740;RACCORD;"DROIT A SERTIR Male 20 x 2 - 3/4""";COMAP;SYNTE;;73,00;pces;21,00;21;2
+865730;RACCORD;"DROIT A SERTIR Male 26 x 3 - 3/4""";COMAP;SYNTE;;0,00;pces;21,00;21;2
+865720;RACCORD;"DROIT A SERTIR Male 26 x 3 - 4/4""";COMAP;SYNTE;;103,00;pces;21,00;21;2
+865710;RACCORD;"DROIT A SERTIR Male 32 x 3 - 4/4""";COMAP;SYNTE;;0,00;pces;21,00;21;2
+510120;RACCORD;"DROIT A SERTIR Male 40 x 3,5 - 5/4""";COMAP;SYNTE;;0,00;pces;21,00;21;2
+232091;RACCORD;"DROIT A SERTIR Male 50 x 4 - 6/4""";COMAP;SYNTE;;0,00;pces;21,00;21;2
+;RACCORD;"DROIT A SERTIR Male 63 x 4,5 - 2""";COMAP;SYNTE;;10,00;pces;21,00;21;2
+865910;Té;EGAL 3 X A SERTIR  16 X 2;COMAP;SYNTE;;10,00;pces;21,00;21;2
+865900;Té;EGAL 3 X A SERTIR  20 X 2;COMAP;SYNTE;;20,00;pces;21,00;21;2
+865890;Té;EGAL 3 X A SERTIR  26 X 3;COMAP;SYNTE;;1,00;pces;21,00;21;2
+865880;Té;EGAL 3 X A SERTIR  32 X 3;COMAP;SYNTE;;3,00;pces;21,00;21;2
+510177;Té;EGAL 3 X A SERTIR  40 X 3,5;COMAP;SYNTE;;0,00;pces;21,00;21;2
+172388;Té;EGAL 3 X A SERTIR  50 X 4;COMAP;SYNTE;;8,00;pces;21,00;21;2
+231858;Té;EGAL 3 X A SERTIR  63 X 4,5;COMAP;SYNTE;;1,00;pces;21,00;21;2
+865850;Té Reduit;REDUIT 3 X A SERTIR  16 X 20 X 16;COMAP;SYNTE;;0,00;pces;21,00;21;2
+865830;Té Reduit;REDUIT 3 X A SERTIR  20 X 16 X 16;COMAP;SYNTE;;0,00;pces;21,00;21;2
+865840;Té Reduit;REDUIT 3 X A SERTIR  20 X 16 X 20;COMAP;SYNTE;;4,00;pces;21,00;21;2
+510190;Té Reduit;REDUIT 3 X A SERTIR  20 X 20 X 16;COMAP;SYNTE;;16,00;pces;21,00;21;2
+865800;Té Reduit;REDUIT 3 X A SERTIR  20 X 26 X 20 ;COMAP;SYNTE;;0,00;pces;21,00;21;2
+865820;Té Reduit;REDUIT 3 X A SERTIR  26 X 16 X 26;COMAP;SYNTE;;3,00;pces;21,00;21;2
+510185;Té Reduit;REDUIT 3 X A SERTIR  26 X 16 X 20;COMAP;SYNTE;;0,00;pces;21,00;21;2
+865810;Té Reduit;REDUIT 3 X A SERTIR  26 X 20 X 20;COMAP;SYNTE;;3,00;pces;21,00;21;2
+865790;Té Reduit;REDUIT 3 X A SERTIR  26 X 20 X 26;COMAP;SYNTE;;0,00;pces;21,00;21;2
+510186;Té Reduit;REDUIT 3 X A SERTIR  26 X 26 X 20 ;COMAP;SYNTE;;0,00;pces;21,00;21;2
+865780;Té Reduit;REDUIT 3 X A SERTIR  26 X 32 X 26;COMAP;SYNTE;;1,00;pces;21,00;21;2
+510183;Té Reduit;REDUIT 3 X A SERTIR  32 X 16 X 32;COMAP;SYNTE;;0,00;pces;21,00;21;2
+510182;Té Reduit;REDUIT 3 X A SERTIR  32 X 20 X 32;COMAP;SYNTE;;4,00;pces;21,00;21;2
+510181;Té Reduit;REDUIT 3 X A SERTIR  32 X 26 X 26;COMAP;SYNTE;;0,00;pces;21,00;21;2
+510180;Té Reduit;REDUIT 3 X A SERTIR  32 X 26 X 32;COMAP;SYNTE;;2,00;pces;21,00;21;2
+174752;Té Reduit;REDUIT 3 X A SERTIR  40 X 26 X 40 ;COMAP;SYNTE;;4,00;pces;21,00;21;2
+174748;Té Reduit;REDUIT 3 X A SERTIR 40 X 32 X 40 ;COMAP;SYNTE;;0,00;pces;21,00;21;2
+232040;Té Reduit;REDUIT 3 X A SERTIR  50 X 26 X 50;COMAP;SYNTE;;5,00;pces;21,00;21;2
+232041;Té Reduit;REDUIT 3 X A SERTIR  50 X 40 X 50 ;COMAP;SYNTE;;3,00;pces;21,00;21;2
+232043;Té Reduit;REDUIT 3 X A SERTIR  63 X 40 X 63;COMAP;SYNTE;;1,00;pces;21,00;21;2
+;COUDE 45°;2 X A SERTIR 32 X 3 ;COMAP;SYNTE;;16,00;pces;21,00;21;2
+174746;COUDE 45°;2 X A SERTIR 40 X 3,5;COMAP;SYNTE;;11,00;pces;21,00;21;2
+231845;COUDE 45°;2 X A SERTIR 50 X 4;COMAP;SYNTE;;1,00;pces;21,00;21;2
+;COUDE 45°;2 x A SERTIR 63 X 4,5;COMAP;SYNTE;;5,00;pces;21,00;21;2
+865960;COUDE 90°;2 X A SERTIR 16 X 2;COMAP;SYNTE;;24,00;pces;21,00;21;2
+865950;COUDE 90°;2 X A SERTIR 20 X 2;COMAP;SYNTE;;10,00;pces;21,00;21;2
+865940;COUDE 90°;2 X A SERTIR 26 X 3;COMAP;SYNTE;;0,00;pces;21,00;21;2
+865930;COUDE 90°;2 X A SERTIR 32 X 3;COMAP;SYNTE;;32,00;pces;21,00;21;2
+510197;COUDE 90°;2 X A SERTIR 40 X 3,5;COMAP;SYNTE;;10,00;pces;21,00;21;2
+231848;COUDE 90°;2 X SERTIR 50 X 4;COMAP;SYNTE;;9,00;pces;21,00;21;2
+232009;COUDE 90°;2 x A SERTIR 63 X 4,5;COMAP;SYNTE;;1,00;pces;21,00;21;2
+510019;COUDE 90°;"A SERTIR 16 - 1/2"" F";COMAP;SYNTE;;0,00;pces;21,00;21;2
+510194;COUDE 90°;"A SERTIR 20 - 1/2"" F";COMAP;SYNTE;;4,00;pces;21,00;21;2
+510193;COUDE 90°;"A SERTIR 20 - 3/4"" F";COMAP;SYNTE;;0,00;pces;21,00;21;2
+510192;COUDE 90°;"A SERTIR 26 - 3/4 "" F";COMAP;SYNTE;;0,00;pces;21,00;21;2
+520040;COUDE 90°;"A SERTIR 16 -1/2"" M";COMAP;SYNTE;;1,00;pces;21,00;21;2
+510199;COUDE 90°;"A SERTIR 20 - 1/2 "" M";COMAP;SYNTE;;0,00;pces;21,00;21;2
+510198;COUDE 90°;"A SERTIR 20 3/4 "" M";COMAP;SYNTE;;8   0;pces;21,00;21;2
+865990;COUDE 90°;"A SERTIR 26 - 3/4 "" M";COMAP;SYNTE;;0,00;pces;21,00;21;2
+865980;COUDE 90°;"A SERTIR 32 - 4/4 "" M";COMAP;SYNTE;;0,00;pces;21,00;21;2
+510162;CULLASE ;"APPLIQUE MURALE SIMPLE A SERTIR 16 - 1/2""F   h 40";COMAP;SYNTE;;3,00;pces;21,00;21;2
+865610;CULLASE ;"APPLIQUE MURALE SIMPLE A SERTIR 16 - 1/2""F   h 52";COMAP;SYNTE;;2,00;pces;21,00;21;2
+865600;CULLASE ;"APPLIQUE MURALE SIMPLE A SERTIR 20 - 1/2 ""   h 52";COMAP;SYNTE;;1,00;pces;21,00;21;2
+503215;CULLASE DOUBLE;"APPLIQUE MURALE DOUBLE A SERTIR  16 - 1/2""";COMAP;SYNTE;;19,00;pces;21,00;21;2
+152522;CULLASE DOUBLE;"APPLIQUE MURALE DOUBLE A SERTIR  20 - 1/2""";COMAP;SYNTE;;0,00;pces;21,00;21;2
+510118;BOUCHON;A SERTIR 16;COMAP;SYNTE;;0,00;pces;21,00;21;2
+510117;BOUCHON;A SERTIR 20;COMAP;SYNTE;;0,00;pces;21,00;21;2
+146500;"Courbe 90° M/F 3/4 "" acier noir ";;GF;Acier;;10,00;pces;21,00;21;2
+141380;"Courbe 90° M/F 3/4 "" acier noir ";galvanisé;GF;Acier G;;23,00;pces;21,00;21;2
+146610;"Courbe 90° F/F 3/4 "" acier noir ";;GF;Acier;;20,00;pces;21,00;21;2
+141490;"Courbe 90° F/F 3/4 "" acier galva ";galvanisé;GF;Acier G;;12,00;pces;21,00;21;2
+146620;"Courbe 90° F/F 4/4"" acier noir";;GF;Acier;;7,00;pces;21,00;21;2
+150060;"Mamelon 1/2"" acier noir M/M";;GF;Acier;;11,00;pces;21,00;21;2
+150070;"Mamelon 3/4"" acier noir M/M";;GF;Acier;;21,00;pces;21,00;21;2
+150080;"Mamelon 4/4"" acier noir M/M";;GF;Acier;;4,00;pces;21,00;21;2
+150090;"Mamelon 5/4"" acier noir M/M";;GF;Acier;;;pces;21,00;21;2
+150100;"Mamelon 6/4"" acier noir M/M";;GF;Acier;;8,00;pces;21,00;21;2
+141140;"Mamelon 1/2"" acier galvanisé M/M";;GF;Acier G;;2,00;pces;21,00;21;2
+145150;"Mamelon 3/4"" acier galvanisé M/M";;GF;Acier G;;1,00;pces;21,00;21;2
+145020;"Manchon F/F  Droite/ Gauche Acier Galvanisé 1/2""";;GF;Acier G;;11,00;pces;21,00;21;2
+149940;"Manchon F/F  Droite/ Gauche Acier Noir 1/2""";;GF;Acier  ;;10,00;pces;21,00;21;2
+145040;"Manchon F/F -D/G Acier galvbanisé 3/4""";;GF;Acier G;;8,00;pces;21,00;21;2
+149950;"Manchon  F/F -D/G Acier noir  3/4""";;GF;Acier ;;12,00;pces;21,00;21;2
+149840;"Manchon F/F  Acier noir 1/2 """;;G F;Acier;;1,00;pces;21,00;21;2
+149850;"Manchon F/F  Acier noir 3/4""";;G F;Acier;;43,00;pces;21,00;21;2
+149860;"Manchon F/F Acier noir 4/4""";;G F;Acier;;9,00;pces;21,00;21;2
+149870;"Manchon F/F Acier noir 5/4""";;G F;Acier;;0,00;pces;21,00;21;2
+149880;"Manchon F/F Acier noir 6/4""";;G F;Acier;;15,00;pces;21,00;21;2
+149890;"Manchon F/F Acier noit 2""";;G F;Acier;;0,00;pces;21,00;21;2
+144910;"Manchon F/F Acier galvanisé 1/2""";;G F;Acier;;0,00;pces;21,00;21;2
+144920;"Manchon F/F Acier galvanisé 3/4""";;G F;Acier;;2,00;pces;21,00;21;2
+144930;"Manchon F/F acier galvanisé 4/4""";;G F;Acier;;0,00;pces;21,00;21;2
+144940;"Manchon F/F acier galvanisé 5/4 """;;G F;Acier;;32,00;pces;21,00;21;2
+144950;"Manchon F/F acier galvanisé 6/4""";;G F;Acier;;5,00;pces;21,00;21;2
+144960;"Manchon F/F acier galvanisé 2""";;G F;Acier;;0,00;pces;21,00;21;2
+144970;"Manchon F/F acier galvanisé 2""1/2";;G F;Acier;;0,00;pces;21,00;21;2
+144980;"Manchon F/F acier galvanisé 3""";;G F;Acier;;0,00;pces;21,00;21;2
+146940;"Coude 90° F/F acier noir 1/2""";;G F;Acier ;;20,00;pces;21,00;21;2
+146950;"Coude 90° F/F acier noir 3/4""";;G F;Acier;;46,00;pces;21,00;21;2
+146960;"Coude 90° F/F acier noir 4/4""";;G F;Acier;;7,00;pces;21,00;21;2
+146970;"Coude 90° F/F acier noir 5/4""";;G F;Acier;;16,00;pces;21,00;21;2
+146980;"Coude 90° F/F acier noir 6/4""";;G F;Acier;;6,00;pces;21,00;21;2
+146990;"Coude 90°F/F acier noir 2"" ,";;G F;Acier;;1,00;pces;21,00;21;2
+141760;"Coude 90° F/F acier galvanisé 1/2""";;G F;Acier G;;13,00;pces;21,00;21;2
+141770;"Coude 90 ° F/F acier galvanisé 3/4""";;G F;Acier G;;2,00;pces;21,00;21;2
+141780;"Coude 90° F/F acier galvanisé  4/4""";;G F;Acier G;;4,00;pces;21,00;21;2
+141790;"Coude 90° F/F acier galvanisé 5/4""";;G F;Acier G;;2,00;pces;21,00;21;2
+141800;"Coude 90° F/F acier galvanisé 6/4""";;G F;Acier G;;6,00;pces;21,00;21;2
+141810;"Coude 90° F/F acier galvanisé 2""";;G F;Acier G;;;pces;21,00;21;2
+141820;"Coude 90° F/F acier galvanisé 2""1/2";;G F;Acier G;;;pces;21,00;21;2
+141830;"Coude 90) F/F acier galvanisé 3""";;G F;Acier G;;;pces;21,00;21;2
+147340;"Coude 90° M/F acier noir 1/2""";;G F;Acier;;8,00;pces;21,00;21;2
+147350;"Coude 90° M/f acier noir 3/4""";;G F;Acier;;8,00;pces;21,00;21;2
+147360;"Coude 90°  M/F acier noir 4/4""";;G F;Acier;;13,00;pces;21,00;21;2
+147370;"Coude 90° M/F acier noir 5/4""";;G F;Acier;;;pces;21,00;21;2
+147380;"Coude 90° M/F acier noir 6/4""";;G F;Acier;;3,00;pces;21,00;21;2
+147390;"Coude 90° M/F acier noir 2""";;G F;Acier;;3,00;pces;21,00;21;2
+142090;"Coude 90° M/F acier galvanisé 1/2""";;G F;Acier G;;1,00;pces;21,00;21;2
+142110;"Coude 90° M/F acier galvanisé 3/4""";;G F;Acier G;;;pces;21,00;21;2
+142130;"Coude 90° M/F acier galvanisé 4/4""";;G F;Acier G;;2,00;pces;21,00;21;2
+142150;"Coude 90° M/F acier galvanisé 5/4""";;G F;Acier G;;1,00;pces;21,00;21;2
+142160;"Coude 90° M/F acier galvanisé 6/4""";;G F;Acier G;;;pces;21,00;21;2
+142170;"Coude 90° M/F acier galvanisé 2""";;G F;Acier G;;1,00;pces;21,00;21;2
+147600;"Coude 45° F/F acier noir  1/2""";;G F;Acier;;12,00;pces;21,00;21;2
+147610;"Coude 45 ° F/F acier noir 3/4""";;G F;Acier;;11,00;pces;21,00;21;2
+147630;"Coude 45 ° F/F acier noir 4/4""";;G F;Acier;;4,00;pces;21,00;21;2
+142430;"Coude 45° F/F acier galvanisé 1/2""";;G F;Acier G;;46,00;pces;21,00;21;2
+142450;"Coude 45° F/F acier galvanisé 3/4""";;G F;Acier G;;10,00;pces;21,00;21;2
+142460;"Coude 45° F/F acier galvanisé 4/4""";;G F;Acier G;;;pces;21,00;21;2
+142470;"Coude 45° F/F acier galvanisé 5/4""";;G F;Acier G;;1,00;pces;21,00;21;2
+142480;"Coude 45° F/F acier galvanisé 6/4""";;G F;Acier G;;;pces;21,00;21;2
+142490;"Coude 45° F/F acier galvanisé 2""";;G F;Acier G;;;pces;21,00;21;2
+147700;"Coude 45° M/F acier noir 1/2""";;G F;Acier;;;pces;21,00;21;2
+147710;"Coude 45° M/F acier noir 3/4""";;G F;Acier;;6,00;pces;21,00;21;2
+147720;"Coude 45°M/F acier noir 4/4""";;G F;Acier;;1,00;pces;21,00;21;2
+147730;"Coude 45° M/F acier noir 5/4""";;G F;Acier;;;pces;21,00;21;2
+147750;"Coude 45° M/F acier noir 2""";;G F;Acier;;;pces;21,00;21;2
+142520;"Coude 45° M/F acier galvanisé 1/2""";;G F;Acier G;;2,00;pces;21,00;21;2
+142540;"Coude 45° M/F acier galvanisé 3/4""";;G F;Acier G;;;pces;21,00;21;2
+142550;"Coude 45° M/F acier galvanisé 4/4""";;G F;Acier G;;1,00;pces;21,00;21;2
+142560;"Coude 45° M/F acier galvanisé 5/4""";;G F;Acier G;;3,00;pces;21,00;21;2
+142570;"Coude 45° M/F acier galvanisé 6/4""";;G F;Acier G;;;pces;21,00;21;2
+142580;"Coude 45° M/F acier galvanisé 2""";;G F;Acier G;;;pces;21,00;21;2
+150200;"Bouchon 1/2"" acier noir";;G F;Acier;;5,00;pces;21,00;21;2
+150220;"Bouchon 3/4"" acier noir";;G F;Acier;;2,00;pces;21,00;21;2
+150230;"Bouchon 4/4"" acier noir";;G F;Acier;;1,00;pces;21,00;21;2
+150240;"bouchon 5/4"" acier noir";;G F;Acier;;;pces;21,00;21;2
+150250;"Bouchon 6/4"" acier noir";;G F;Acier;;1,00;pces;21,00;21;2
+150260;"Bouchon 2"" acier noir ";;G F;Acier;;;pces;21,00;21;2
+145320;"Bouchon 1/2"" acier galvanisé";;G F;Acier G;;21,00;pces;21,00;21;2
+145330;"Bouchon 3/4"" acier galvanisé";;G F;Acier G;;69,00;pces;21,00;21;2
+145340;"Bouchon 4/4"" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+145350;"Bouchon 5/4"" acier galvanisé";;G F;Acier G;;;pces;21,00;21;2
+145360;"Bouchon 6/4"" acier galvanisé";;G F;Acier G;;2,00;pces;21,00;21;2
+145370;"Bouchon 2"" acier galvanisé";;G F;Acier G;;;pces;21,00;21;2
+150300;"Bonnet  1/2"" acier noir";;G F;Acier;;13,00;pces;21,00;21;2
+150310;"Bonnet 3/4"" acier noir ";;G F;Acier;;17,00;pces;21,00;21;2
+150320;"Bonnet 4/4"" acier noir";;G F;Acier;;6,00;pces;21,00;21;2
+150330;"Bonnet 5/4"" acier noir";;G F;Acier;;;pces;21,00;21;2
+150340;"Bonnet 6/4"" acier noir";;G F;Acier;;;pces;21,00;21;2
+150350;"Bonnet 2"" acier noir";;G F;Acier;;;pces;21,00;21;2
+145420;"Bonnet 1/2"" acier galvanisé";;G F;Acier G;;6,00;pces;21,00;21;2
+145430;"Bonnet 3/4"" acier galvanisé";;G F;Acier G;;8,00;pces;21,00;21;2
+145440;"Bonnet 4/4"" acier galvanisé ";;G F;Acier G;;;pces;21,00;21;2
+145450;"Bonnet 5/4"" acier galvanisé";;G F;Acier G;;;pces;21,00;21;2
+145460;"Bonnet 6/4"" acier galvanisé";;G F;Acier G;;;pces;21,00;21;2
+145470;"Bonnet 2"" acier galvanisé ";;G F;Acier G;;;pces;21,00;21;2
+149240;"Réduction acier noir M/F 1/2"" x 3/8""";;G F;Acier;;1,00;pces;21,00;21;2
+149260;"Réduction acier noir M/F 3/4"" x 3/8""";;G F;Acier;;2,00;pces;21,00;21;2
+149270;"Réduction acier noir M/F 3/4"" x 1/2""";;G F;Acier;;2,00;pces;21,00;21;2
+149290;"Réduction acier noir M/F 4/4"" x 1/2""";;G F;Acier;;2,00;pces;21,00;21;2
+149300;"Réduction acier noir M/F 4/4"" x 3/4""";;G F;Acier;;4,00;pces;21,00;21;2
+149320;"Réduction acier noir M/F 5/4"" x 1/2""";;G F;Acier;;3,00;pces;21,00;21;2
+149330;"Réduction acier noir M/F 5/4"" x 3/4""";;G F;Acier;;3,00;pces;21,00;21;2
+149340;"Réduction acier noir M/F 5/4"" x 4/4""";;G F;Acier;;3,00;pces;21,00;21;2
+149360;"Réduction acier noir M/F 6/4"" x 1/2""";;G F;Acier;;;pces;21,00;21;2
+149370;"Réduction acier noir M/F 6/4"" x  3/4""";;G F;Acier;;;pces;21,00;21;2
+149380;"Réduction acier noir M/F 6/4"" x 4/4""";;G F;Acier;;;pces;21,00;21;2
+149390;"Réduction acier noir M/F 6/4"" x 5/4""";;G F;Acier;;2,00;pces;21,00;21;2
+149400;"Réduction acier noir M/F 2"" x 1/2""";;G F;Acier;;;pces;21,00;21;2
+149420;"Réduction acier noir M/F 2"" x 4/4""";;G F;Acier;;;pces;21,00;21;2
+149430;"Réduction acier noir M/F 2"" x 5/4""";;G F;Acier;;;pces;21,00;21;2
+149440;"Réduction acier noir M/F 2"" x 6/4""";;G F;Acier;;;pces;21,00;21;2
+144170;"Réduction acier galvanisé M/F 1/2"" x 3/8""";;G F;Acier G;;;pces;21,00;21;2
+144180;"Réduction acier galvanisé M/F 3/4"" x 1/4""";;G F;Acier G;;;pces;21,00;21;2
+144190;"Réduction acier galvanisé M/F 3/4"" x 3/8""";;G F;Acier G;;;pces;21,00;21;2
+144200;"Réduction acier galvanisé M/F 3/4"" x 1/2""";;G F;Acier G;;3,00;pces;21,00;21;2
+144220;"Réduction acier galvanisé M/F 4/4"" x 1/2""";;G F;Acier G;;;pces;21,00;21;2
+144230;"Réduction acier galvanisé M/F 4/4"" x 3/4"" ";;G F;Acier G;;2,00;pces;21,00;21;2
+144250;"Réduction acier galvanisé M/F 5/4"" x 1/2""";;G F;Acier G;;2,00;pces;21,00;21;2
+144260;"Réduction acier galvanisé M/F 5/4"" x 3/4""";;G F;Acier G;;;pces;21,00;21;2
+144270;"Réduction acier galvanisé M/F 5/4"" x 4/4""";;G F;Acier G;;3,00;pces;21,00;21;2
+144290;"Réduction acier galvanisé M/F 6/4"" x 1/2""";;G F;Acier G;;;pces;21,00;21;2
+144300;"Réduction acier galvanisé M/F 6/4"" x 3/4""";;G F;Acier G;;;pces;21,00;21;2
+144310;"Réduction acier galvanisé M/F 6/4"" x 4/4""";;G F;Acier G;;6,00;pces;21,00;21;2
+144320;"Réduction acier galvanisé M/F 6/4"" x 5/4""";;G F;Acier G;;9,00;pces;21,00;21;2
+144330;"Réduction acier galvanisé M/F 2"" x 1/2""";;G F;Acier G;;;pces;21,00;21;2
+144340;"Réduction acier galvanisé M/F 2"" x 3/4""";;G F;Acier G;;;pces;21,00;21;2
+144350;"Réduction acier galvanisé M/F2"" x 4/4""";;G F;Acier G;;;pces;21,00;21;2
+144360;"Réduction acier galvanisé M/F 2"" x 5/4""";;G F;Acier G;;;pces;21,00;21;2
+144370;"Réduction acier galvanisé M/F2"" x 6/4""";;G F;Acier G;;8,00;pces;21,00;21;2
+144400;"Réduction acier galvanisé M/F 2"" 1/2 x 2""";;G F;Acier G;;1,00;pces;21,00;21;2
+144440;"Réduction acier galvanisé M/F 3"" x 2""";;G F;Acier G;;;pces;21,00;21;2
+144950;"Manchon acier galvanisé F/F 6/4""";;G F;Acier G;;1,00;pces;21,00;21;2
+149880;"Manchon acier noir F/F  6/4""";;G F;Acier   ;;3,00;pces;21,00;21;2
+149970;"Manchon  acier noir F/F 4/4"" G/D";;G F;Acier;;3,00;pces;21,00;21;2
+149980;"Manchon acier noir F/F 5/4""  G/D";;G F;Acier;;2,00;pces;21,00;21;2
+144960;"Manchon acier galvanisé F/F 2""";;G F;Acier G;;10,00;pces;21,00;21;2
+145190;"Mamelon FM M 2"" acier galvanisé";;G F;Acier G;;13,00;pces;21,00;21;2
+147810;"Té  F F F  1/2"" acier noir";;G F;Acier;;1,00;pces;21,00;21;2
+147820;"Té  F F F 3/4"" acier noir";;G F;Acier;;9,00;pces;21,00;21;2
+147830;"Té  F F F  4/4"" acier noir";;G F;Acier;;10,00;pces;21,00;21;2
+147840;"Te  F F F  5/4""  acier noir";;G F;Acier;;;pces;21,00;21;2
+147850;"Té  F F F  6/4""  acier noir";;G F;Acier;;;pces;21,00;21;2
+147860;"Té  F F F  2""  acier noir ";;G F;Acier;;1,00;pces;21,00;21;2
+148260;"Te reduit acier noir 3/4"" -3/4""-1/2"" FFF";;G F;Acier;;;pces;21,00;21;2
+148350;"Té réduit acier noir 4/4""-4/4""-1/2"" FFF";;G F;Acier;;5,00;pces;21,00;21;2
+148460;"Té réduit acier noir 5/4""-5/4""-1/2"" FFF";;G F;Acier;;1,00;pces;21,00;21;2
+142620;"Té  F F F 1/2"" Acier Galvanisé";;G F;Acier G;;3,00;pces;21,00;21;2
+142630;"Té  F F F 3/4"" acier galvanisé";;G F;Acier G;;2,00;pces;21,00;21;2
+143040;"Té  F F F 1/2"" -3/4"" -1/2"" acier galvanisé";;G F;Acier G;;2,00;pces;21,00;21;2
+142830;"Té F F F  4/4"" -3/4"" -4/4"" acier galvanisé";;G F;Acier G;;2,00;pces;21,00;21;2
+143710;"Té F F M 1/2"" acier galvanisé";;G F;Acier G;;2,00;pces;21,00;21;2
+143720;"Té F F M 3/4"" acier galvanisé";;G F;Acier G;;2,00;pces;21,00;21;2
+142910;"Té F F F 6/4""-3/4""-6/4"" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+144760;"Manchon acier galvanisé M F 3/4"" - 1/2""";;G F;Acier G;;2,00;pces;21,00;21;2
+144810;"Manchon acier galvanisé M F 5/4""-4/4""";;G F;Acier G;;3,00;pces;21,00;21;2
+144010;"Manchon reduit F F 5/4""-4/4"" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+144050;"Manchon reduit F F 6/4""""-5/4"" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+149630;"Manchon acier noir M F 4/4""";;G F;Acier ;;2,00;pces;21,00;21;2
+149080;"Manchon reduit F F 4/4"" - 1/2"" acier noir";;G F;Acier;;2,00;pces;21,00;21;2
+149060;"Manchon reduit F F 3/4"" - 1/2"" acier noir";;G F;Acier;;3,00;pces;21,00;21;2
+149690;"Manchon reduit M F 3/4"" -1/2"" acier noir";;G F;Acier;;1,00;pces;21,00;21;2
+149500;"Mamelon reduit 4/4"" - 3/4"" acier noir";;G F;Acier;;1,00;pces;21,00;21;2
+150080;"Mamelon  M M 4/4"" acier noir";;G F;Acier;;10,00;pces;21,00;21;2
+145160;"Mamelon M M ,4/4"" acier galvanisé";;G F;Acier G;;5,00;pces;21,00;21;2
+145190;"Mamelon M M 2"" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+145170;"Mamelon  M M 5/4"" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+144540;"Mamelon reduit  M M 3/4"" - 1/2"" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+144590;"Mamelon reduit  M M 5/4"" -4/4"" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+145600;"Raccord union F F 3/4 "" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+145610;"Raccord union F F 4/4"" acier galvanisé";;G F;Acier G;;3,00;pces;21,00;21;2
+145620;"Raccord union F F 5/4 "" acier galvanisé";;G F;Acier G;;2,00;pces;21,00;21;2
+145630;"Raccord union F F 1/2 "" acier galvanisé";;G F;Acier G;;10,00;pces;21,00;21;2
+145640;"Raccord union F F 6/4"" "" acier galvanisé";;G F;Acier G;;;pces;21,00;21;2
+145650;"Raccord union F F 2 "" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+150470;"Raccord union F F 1/2"" acier noir ";;G F;Acier ;;;pces;21,00;21;2
+150480;"Raccord union F F 3/4"" acier noir";;G F;Acier;;;pces;21,00;21;2
+150490;"Raccord union FF 4/4 "" acier noir";;G F;Acier;;;pces;21,00;21;2
+150500;"Raccord union F F 5/4 "" acier noir";;G F;Acier;;3,00;pces;21,00;21;2
+150510;"Raccord union F F 6/4 "" acier noir";;G F;Acier;;8,00;pces;21,00;21;2
+150520;"Raccord union F F 2"" acier noir";;G F;Acier;;;pces;21,00;21;2
+150610;"Raccord union M F 5/4"" acier noir ";;G F;Acier;;1,00;pces;21,00;21;2
+145720;"Raccord union M F  3/4"" acier galvanisé";;G F;Acier;;1,00;pces;21,00;21;2
+147730;"Raccord union M F 4/4"" acier galvanisé ";;G F;Acier G;;2,00;pces;21,00;21;2
+147740;"Raccord union M F 5/4"" acier galvanisé";;G F;Acier G;;4,00;pces;21,00;21;2
+147750;"Raccord union M F 6/4"" acier galvanisé";;G F;Acier G;;1,00;pces;21,00;21;2
+142370;"Coude raccord M F 4/4"" acier galvanisé ";;G F;Acier;;1,00;pces;21,00;21;2
+142380;"Coude raccord M F 5/4"" acier gavanisé";;G F;Acier;;1,00;pces;21,00;21;2
+147550;"Coude raccord M F 4/4"" acier noir";;G F;Acier;;1,00;pces;21,00;21;2
+;"Coude raccord M F 6/4"" acier noir ";;G F;Acier;;1,00;pces;21,00;21;2
+151750;"Raccord dos d' ane  3/4"" acier galvanisé ";;G F;Acier;;2,00;pces;21,00;21;2
+518530;Collier chromat double M7 à isolation DIM 14;;Walraven;Chrome;;;pces;21,00;22;2
+518520;Collier chromat double M7 à isolation DIM 16;;Walraven;Chrome;;99,00;pces;21,00;22;2
+518510;Collier chromat double M7 à isolation DIM 18;;Walraven;Chrome;;60,00;pces;21,00;22;2
+518500;Collier chromat double M7 à isolation DIM 20;;Walraven;Chrome;;82,00;pces;21,00;22;2
+518490;Collier chromat double M7 à isolation DIM 22;;Walraven;Chrome;;;pces;21,00;22;2
+518470;Collier chromat double M7 à isolation DIM 28;;Walraven;Chrome;;75,00;pces;21,00;22;2
+518700;Collier chromat simple M7 a isolation DIM12;;Walraven;Chrome;;;pces;21,00;22;2
+518690;Collier chromat  simple M7 a isolation DIM 16;;Walraven;Chrome;;6,00;pces;21,00;22;2
+518680;Collier chromat simple M7 a isolation DIM 18;;Walraven;Chrome;;31,00;pces;21,00;22;2
+518670;Collier chromat simple M7 a isolation DIM 22;;Walraven;Chrome;;70,00;pces;21,00;22;2
+518650;Collier chromat simple M7 a isolation DIM 28;;Walraven;Chrome;;58,00;pces;21,00;22;2
+518630;Collier chromat simple M7 a isolation DIM 32;;Walraven;Chrome;;3,00;pces;21,00;22;2
+518610;Collier chromat simple M7 a isolation DIM 40;;Walraven;Chrome;;;pces;21,00;22;2
+282451;Collier WM Bismat Flash M8 finition zinguée 20-23;;Walraven;Zinc/PVC;;;pces;21,00;22;2
+282452;Collier WM Bismat Flash M8 finition zinguée 25-28;;Walraven;Zinc/PVC;;;pces;21,00;22;2
+282453;Collier WM Bismat Flash M8 finition zinguée 32-35;;Walraven;Zinc/PVC;;;pces;21,00;22;2
+282454;Collier WM Bismat Flash M8 finition zinguée 40-43;;Walraven;Zinc/PVC;;;pces;21,00;22;2
+512466;Collier WM Bismat Flash M8 finition zinguée 53-56;;Walraven;Zinc/PVC;;;pces;21,00;22;2
+512467;Collier WM Bismat Flash M8 finition zinguée 57-63;;Walraven;Zinc/PVC;;;pces;21,00;22;2
+282455;Collier WM Bismat Flash M8/M10 finition zinguée 20-23;;Walraven;Zinc/PVC;;;pces;21,00;22;2
+282456;Collier WM Bismat Flash M8/M10 finition zinguée 25-28;;Walraven;Zinc/PVC;;;pces;21,00;22;2
+282457;Collier WM Bismat Flash M8/M10 finition zinguée 32-35;;Walraven;Zinc/PVC;;;pces;21,00;22;2
+282458;Collier WM Bismat Flash M8/M10 finition zinguée 40-43;;Walraven;Zinc/PVC;;;pces;21,00;22;2
+247040;Collier de securité en PVC M7  DIM 32;;Nicoll;PVC;;16,00;pces;21,00;22;2
+247070;Collier de securité en PVC M7 DIM 40;;Nicoll;PVC;;14,00;pces;21,00;22;2
+247100;Collier de securité en PVC M7 DIM 50;;Nicoll;PVC;;74,00;pces;21,00;22;2
+247140;Collier de securité en PVC M7 DIM 75;;Nicoll;PVC;;;pces;21,00;22;2
+247150;Collier de securité en PVC M7 DIM 80;;Nicoll;PVC;;;pces;21,00;22;2
+247160;Collier de securité en PVC M7 DIM 90;;Nicoll;PVC;;15,00;pces;21,00;22;2
+247170;Collier de securité en PVC M7 DIM 100;;Nicoll;PVC;;;pces;21,00;22;2
+247180;Collier de securité en PVC M7 DIM 110;;Nicoll;PVC;;;pces;21,00;22;2
+;Collier a viser Dim 80 ;;Nicoll;PVC;;47,00;pces;21,00;22;2
+371820;"Collier ""clic"" en PVC M7  DIM 32";;Nicoll;PVC;;;pces;21,00;22;2
+371830;"Collier ""clic"" en PVC M7  DIM 40";;Nicoll;PVC;;37,00;pces;21,00;22;2
+371840;"Collier ""clic"" en PVC M7 DIM50";;Nicoll;PVC;;29,00;pces;21,00;22;2
+210057;Collier monobloc M7 DIM 32;;Nicoll;PVC;;;pces;21,00;22;2
+210058;Collier monobloc M7 DIM 40;;Nicoll;PVC;;;pces;21,00;22;2
+210059;Collier monobloc M7  DIM 50;;Nicoll;PVC;;;pces;21,00;22;2
+177750;"Collier monobloc zingué avec vis et écrou de fixation 8 x 3/8"" x 18";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+407680;"Collier monobloc zingué avec vis et écrou de fixation 8 x 1/2"" x 22";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+407690;"Collier monobloc zingué avec vis et écrou de fixation 8 x 3/4"" x 28";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+167360;"Collier monobloc zingué avec vis et écrou de fixation 8 x 4/4"" x 35";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+383830;"Collier monobloc zingué avec vis et écrou de fixation 8 x 5/4"" x 42";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+383840;"Collier monobloc zingué avec vis et écrou de fixation 8 x 6/4"" x 48";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+407710;"Collier monobloc zingué avec vis et écrou de fixation 8 x 2"" x 60";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+299960;Collier en deux éléments avec vis et écrou de fixation 8 x 14 - 16;;Flamco;Zinc/PVC;;;pces;21,00;22;2
+201120;"Collier en deux éléments avec vis et écrou de fixation 8 x 17 - 19 x 3/8""";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+316160;"Collier en deux éléments avec vis et écrou de fixation 8 x 20 - 24 x 1/2""";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+316180;"Collier en deux éléments avec vis et écrou de fixation 8 x 25 - 28 x 3/4""";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+316220;"Collier en deux éléments avec vis et écrou de fixation 8 x 33 - 37 x 4/4""";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+316230;"Collier en deux éléments avec vis et écrou de fixation 8 x 38 - 42 x 5/4""";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+316260;"Collier en deux éléments avec vis et écrou de fixation 8 x 44 - 49 x 6/4""";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+316270;Collier en deux éléments avec vis et écrou de fixation 8 x 50 - 54;;Flamco;Zinc/PVC;;;pces;21,00;22;2
+316280;"Collier en deux éléments avec vis et écrou de fixation 8 x 56 - 60 x 2""";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+111980;"Collier en deux éléments avec vis et écrou de fixation 8 x 80 x 2""1/2";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+341840;"Collier en deux éléments avec vis et écrou de fixation 8 x 89 - 91 x 3""";;Flamco;Zinc/PVC;;;pces;21,00;22;2
+210030;Collier double fixation sol pour tube multiskin dim 16;;Comap;CU /AL;;117,00;pces;21,00;22;2
+592350;Colliervdouble fixation sol pour tube multiskin dim 25;;Comap;CU /AL;;25,00;pces;21,00;22;2
+243630;Collier simple fixation sol pour tube multiskin dim 16;;Comap;CU /AL;;1,00;pces;21,00;22;2
+243630;Collier simple fixation sol pour tube multiskin dim 25;;Comap;CU /AL;;41,00;pces;21,00;22;2
+735610;Rosace conique  DIM 14;;Walraven;Chrome;;208,00;pces;21,00;22;2
+748680;Rosace conique  DIM 19;;Walraven;Chrome;;75,00;pces;21,00;22;2
+130730;Set de fixation WD 10 x 140 pour lavabo;;Fischer;Metal;;26,00;pces;21,00;22;2
+414310;Set de fixation S 8 RD 80 WCR pour WC;;Fischer;Metal;;3,00;pces;21,00;22;2
+569900;Set attaches pour radiateur;;;;;26,00;pces;21,00;22;2
+871340;Coude a coller 90° dim 32;M/F;Nicoll;PVC;;2,00;pces;21,00;23;2
+129970;Coude a coller 90° dim 40;M/F;Nicoll;PVC;;;;21,00;23;2
+871330;Coude a coller 90° dim 50;M/F;Nicoll;PVC;;;;21,00;23;2
+871320;Coude a coller 90° dim 63;M/F;Nicoll;PVC;;;;21,00;23;2
+871310;Coude a coller 90° dim 75;M/F;Nicoll;PVC;;;;21,00;23;2
+796850;Coude a coller 90° dim 80;M/F;Nicoll;PVC;;;;21,00;23;2
+871300;Coude a coller 90° dim 90;M/F;Nicoll;PVC;;;;21,00;23;2
+871290;Coude a coller 90° dim 100;M/F;Nicoll;PVC;;;;21,00;23;2
+871280;Coude a coller 90° dim 110 M/F;;Nicoll;PVC;;;;21,00;23;2
+169294;Coude a coller 90° dim 125 M/F;;Nicoll;PVC;;;;21,00;23;2
+;Coude a coller 20° dim 40 M/F;;Nicoll;PVC;;4,00;pces;21,00;23;2
+129960;Coude a coller 45° dim 32 M/F;;Nicoll;PVC;;4,00;pces;21,00;23;2
+280940;Coude a coller 45° dim 40 M/F;;Nicoll;PVC;;3,00;pces;21,00;23;2
+871190;Coude a coller 45° dim 50 M/F;;Nicoll;PVC;;4,00;pces;21,00;23;2
+871180;Coude a coller 45° dim 63 M/F;;Nicoll;PVC;;;;21,00;23;2
+871170;Coude a coller 45° dim 75 M/F;;Nicoll;PVC;;;;21,00;23;2
+871160;Coude a coller 45° dim 80 M/F;;Nicoll;PVC;;;;21,00;23;2
+366920;Coude a coller 45° dim 90 M/F;;Nicoll;PVC;;;;21,00;23;2
+366950;Coude a coller 45° dim 100 M/F;;Nicoll;PVC;;;;21,00;23;2
+871150;Coude a coller 45° dim 110 M/F;;Nicoll;PVC;;;;21,00;23;2
+169298;Coude a coller 45° dim 125 M/F;;Nicoll;PVC;;;;21,00;23;2
+871140;Coude a coller 90° dim 32 F/F;;Nicoll;PVC;;8,00;pces;21,00;23;2
+871130;Coude a coller 90° dim 40 F/F;;Nicoll;PVC;;3,00;pces;21,00;23;2
+871120;Coude a coller 90° dim 50 F/F;;Nicoll;PVC;;;;21,00;23;2
+871110;Coude a coller 90° dim 63 F/F ;;Nicoll;PVC;;;;21,00;23;2
+871100;Coude a coller 90° dim 75 F/F;;Nicoll;PVC;;;;21,00;23;2
+366960;Coude a coller 90° dim 80 F/F;;Nicoll;PVC;;;;21,00;23;2
+871090;Coude a coller 90° dim 90 F/F;;Nicoll;PVC;;;;21,00;23;2
+871080;Coude a coller 90° dim 100 F/F;;Nicoll;PVC;;;;21,00;23;2
+871070;Coude a coller 90° dim 110 F/F;;Nicoll;PVC;;;;21,00;23;2
+169295;Coude a coller 90° dim 125 F/F;;Nicoll;PVC;;;;21,00;23;2
+870970;Coude a coller 45° dim 32 F/F;;Nicoll;PVC;;6,00;pces;21,00;23;2
+397820;Coude a coller 45° dim 40 F/F;;Nicoll;PVC;;;;21,00;23;2
+366910;Coude a coller 45° dim 50 F/F;;Nicoll;PVC;;;;21,00;23;2
+870960;Coude a coller 45° dim 63 F/F;;Nicoll;PVC;;;;21,00;23;2
+870950;Coude a coller 45° dim 75 F/F;;Nicoll;PVC;;;;21,00;23;2
+870940;Coude a coller 45° dim 80 F/F;;Nicoll;PVC;;;;21,00;23;2
+870930;Coude a coller 45° dim 90 F/F;;Nicoll;PVC;;;;21,00;23;2
+366940;Coude a coller 45° dim 100 F/F;;Nicoll;PVC;;;;21,00;23;2
+870920;Coude a coller 45° dim 110 F/F;;Nicoll;PVC;;;;21,00;23;2
+169299;Coude a coller 45° dim 125  F/F;;Nicoll;PVC;;;;21,00;23;2
+870810;Té pied de biche a coller dim 32 M/F;;Nicoll;PVC;;;;21,00;23;2
+870790;Té pied de biche a coller dim 40 M/F;;Nicoll;PVC;;;;21,00;23;2
+870780;Té pied de biche a coller dim 40° M/F;;Nicoll;PVC;;;;21,00;23;2
+280960;Té pied de biche a coller dim 50 M/F;;Nicoll;PVC;;;;21,00;23;2
+870770;Té pied de biche a coller dim 32 F/F;;Nicoll;PVC;;;;21,00;23;2
+870760;Té pied de biche a coller dim 40 F/F;;Nicoll;PVC;;;;21,00;23;2
+366930;Té pied de biche a coller dim 50 F/F;;Nicoll;PVC;;;;21,00;23;2
+870300;Té simple dim 32 M/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870290;Té simple dim 40 M/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870280;Té simple dim 50 M/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870270;Té simple dim 63 M/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870260;Té simple dim 75 M/F;a coller;Nicoll;PVC;;;;21,00;23;2
+796880;Té simple dim 80 M/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870200;Té simple dim 90 M/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870160;Té simple dim 100 M/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870150;Té simple dim 110 M/F;a coller;Nicoll;PVC;;;;21,00;23;2
+169300;Té simple dim 125 M/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870140;Té simple dim 32 F/F;a coller;Nicoll;PVC;;1,00;pces;21,00;23;2
+750190;Té simple dim 40 F/F;a coller;Nicoll;PVC;;12,00;pces;21,00;23;2
+870120;Té simple dim 50 F/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870100;Té simple dim 75 F/F;a coller;Nicoll;PVC;;;;21,00;23;2
+796870;Té simple dim 80 F/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870080;Té simple dim 90 F/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870070;Té simple dim 100 F/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870060;Té simple dim 110 F/F;a coller;Nicoll;PVC;;;;21,00;23;2
+169302;Té simple dim 125 F/F;a coller;Nicoll;PVC;;;;21,00;23;2
+870560;Té Y simple dim 32 M/F a coller;;Nicoll;PVC;;;;21,00;23;2
+870550;Té Y simple dim 40 M/F a coller;;Nicoll;PVC;;;;21,00;23;2
+870540;Té Y simple dim 50 M/F a coller;;Nicoll;PVC;;;;21,00;23;2
+870530;Té Y simple dim 63 M/F a coller;;Nicoll;PVC;;;;21,00;23;2
+870520;Té Y simple dim 75 M/F a coller;;Nicoll;PVC;;;;21,00;23;2
+870500;Té Y simple dim 80 M/F a coller;;Nicoll;PVC;;;;21,00;23;2
+870460;Té Y simple dim 90 M/F a coller;;Nicoll;PVC;;;;21,00;23;2
+870420;Té Y simple dim 100 M/F a coller;;Nicoll;PVC;;;;21,00;23;2
+870400;Té Y simple dim 110 M/F a coller;;Nicoll;PVC;;;;21,00;23;2
+169301;Té Y simple dim 125  M/F a coller;;Nicoll;PVC;;;;21,00;23;2
+870390;Té Y simple dim 32 F/F a coller ;;Nicoll;PVC;;;;21,00;23;2
+870380;Té Y simple dim 40 F/F a coller ;;Nicoll;PVC;;;;21,00;23;2
+870370;Té Y simple dim 50 F/F a coller;;Nicoll;PVC;;;;21,00;23;2
+511580;Té Y simple dim 75 F/F a coller ;;Nicoll;PVC;;;;21,00;23;2
+511530;Té Y simple dim 80 F/F a coller;;Nicoll;PVC;;;;21,00;23;2
+511520;Té Y simple dim 90 F/F a coller ;;Nicoll;PVC;;;;21,00;23;2
+139390;Té Y simple dim 100 F/F a coller ;;Nicoll;PVC;;;;21,00;23;2
+511490;Té Y simple dim 110 F/F a coller ;;Nicoll;PVC;;;;21,00;23;2
+169303;Té Y simple dim 125 F/F a coller ;;Nicoll;PVC;;;;21,00;23;2
+512810;Tampon de réduction éxentrique M/F dim 63/40 a coller;;Nicoll;PVC;;;;21,00;23;2
+512820;Tampon de réduction éxentrique M/F dim 63/50 a coller;;Nicoll;PVC;;2,00;pces;21,00;23;2
+248520;Tampon de réduction éxentrique M/F dim 75/32 a coller;;Nicoll;PVC;;;;21,00;23;2
+248530;Tampon de réduction éxentrique M/F dim 75/40 a coller;;Nicoll;PVC;;13,00;pces;21,00;23;2
+248540;Tampon de réduction éxentrique M/F dim 75/50 a coller;;Nicoll;PVC;;12,00;pces;21,00;23;2
+365220;Tampon de réduction éxentrique M/F dim 80/40 a coller;;Nicoll;PVC;;;;21,00;23;2
+248550;Tampon de réduction éxentrique M/F dim 80/50 a coller;;Nicoll;PVC;;;;21,00;23;2
+869890;Tampon de réduction éxentrique M/F dim 80/63 a coller;;Nicoll;PVC;;;;21,00;23;2
+869880;Tampon de réduction éxentrique M/F dim 90/32 a coller;;Nicoll;PVC;;;;21,00;23;2
+248560;Tampon de réduction éxentrique M/F dim 90/40 a coller;;Nicoll;PVC;;4,00;pces;21,00;23;2
+248570;Tampon de réduction éxentrique M/F dim 90/50 a coller;;Nicoll;PVC;;10,00;pces;21,00;23;2
+869870;Tampon de réduction éxentrique M/F dim 90/63 a coller;;Nicoll;PVC;;;;21,00;23;2
+284100;Tampon de réduction éxentrique M/F dim 90/75 a coller;;Nicoll;PVC;;20,00;pces;21,00;23;2
+128490;Tampon de réduction éxentrique M/F dim 90/80 a coller;;Nicoll;PVC;;;;21,00;23;2
+365190;Tampon de réduction éxentrique M/F dim 100/32 a coller;;Nicoll;PVC;;;;21,00;23;2
+365200;Tampon de réduction éxentrique M/F dim 100/40 a coller;;Nicoll;PVC;;;;21,00;23;2
+248580;Tampon de réduction éxentrique M/F dim 100/50 a coller;;Nicoll;PVC;;;;21,00;23;2
+248590;Tampon de réduction éxentrique M/F dim 100/80 a coller;;Nicoll;PVC;;;;21,00;23;2
+284110;Tampon de réduction éxentrique M/F dim 100/90 a coller;;Nicoll;PVC;;;;21,00;23;2
+869840;Tampon de réduction éxentrique M/F dim 110/32 a coller;;Nicoll;PVC;;;;21,00;23;2
+128270;Tampon de réduction éxentrique M/F dim 110/40 a coller;;Nicoll;PVC;;;;21,00;23;2
+128430;Tampon de réduction éxentrique M/F dim 110/50 a coller;;Nicoll;PVC;;1,00;pces;21,00;23;2
+140990;Tampon de réduction éxentrique M/F dim 110/75 a coller;;Nicoll;PVC;;;;21,00;23;2
+869820;Tampon de réduction éxentrique M/F dim 110/80 a coller;;Nicoll;PVC;;;;21,00;23;2
+192710;Tampon de réduction éxentrique M/F dim 110/90 a coller;;Nicoll;PVC;;;;21,00;23;2
+191620;Tampon de réduction éxentrique M/F dim 110/100 a coller;;Nicoll;PVC;;;;21,00;23;2
+125165;Tampon de réduction éxentrique M/F dim 125/40 a coller;;Nicoll;PVC;;;;21,00;23;2
+869800;Tampon de réduction éxentrique M/F dim 125/80 a coller;;Nicoll;PVC;;;;21,00;23;2
+803270;Tampon de réduction éxentrique M/F dim 125/90 a coller;;Nicoll;PVC;;2,00;pces;21,00;23;2
+869780;Tampon de réduction éxentrique M/F dim 125/100 a coller;;Nicoll;PVC;;;;21,00;23;2
+191650;Tampon de réduction éxentrique M/F dim 125/110 a coller;;Nicoll;PVC;;;;21,00;23;2
+248620;Tampon de visite dim 32 a coller;;Nicoll;PVC;;12,00;pces;21,00;23;2
+248630;Tampon de visite dim40 a coller;;Nicoll;PVC;;;;21,00;23;2
+248640;Tampon de visite dim 50 a coller;;Nicoll;PVC;;12,00;pces;21,00;23;2
+869680;Tampon de visite dim 63 a coller;;Nicoll;PVC;;;;21,00;23;2
+869660;Tampon de visite dim 80 a coller;;Nicoll;PVC;;;;21,00;23;2
+869670;Tampon de visite dim 75 a coller;;Nicoll;PVC;;;;21,00;23;2
+869650;Tampon de visitre dim 90 a coller;;Nicoll;PVC;;11,00;pces;21,00;23;2
+869640;Tampon de visite dim 100 a coller;;Nicoll;PVC;;;;21,00;23;2
+869630;Tampon de visite dim 110 a coller;;Nicoll;PVC;;;;21,00;23;2
+204361;Tampon de visite dim 125 a coller;;Nicoll;PVC;;;;21,00;23;2
+212915;Tube a bout lisse gris long, 4 m dim 32;;Nicoll;PVC;;;;21,00;23;2
+212916;Tube a bout lisse gris long, 4 m dim 40;;Nicoll;PVC;;;;21,00;23;2
+212917;Tube a bout lisse gris long, 4 m dim 50;;Nicoll;PVC;;;;21,00;23;2
+215036;Tube a bout lisse gris long, 4 m dim 63 *;;Nicoll;PVC;;;;21,00;23;2
+212918;Tube a bout lisse gris long, 4 m dim 75;;Nicoll;PVC;;;;21,00;23;2
+212941;Tube a bout lisse gris  long 4 m dim 80*;;Nicoll;PVC;;;;21,00;23;2
+212919;Tube a bout lisse gris long, 4 m dim 90;;Nicoll;PVC;;;;21,00;23;2
+212940;Tube a bout lisse gris long, 4 m dim 100*;;Nicoll;PVC;;;;21,00;23;2
+212942;Tube a bout lisse gris long, 4 m dim 110;;Nicoll;PVC;;;;21,00;23;2
+169304;Tube a bout lisse gris long, 4 m dim 125                     * avec manchon;;Nicoll;PVC;;;;21,00;23;2
+212944;Tube a bouts lisses  blanc long,4m dim 32 HT**     ** HT : Haute Température ;;Eupen;PVC;;;;21,00;23;2
+212945;Tube a bouts lisses  blanc long,4m dim 40 HT;;Eupen;PVC;;;;21,00;23;2
+212946;Tube a bouts lisses blanc long 4m dim 50 HT;;Eupen;PVC;;;;21,00;23;2
+212947;Tube a bouts lisses blanc long 4m dim 75 HT;;Eupen;PVC;;;;21,00;23;2
+264910;Coude 90° a emboiter HT dim 32;;Eupen;PVC;;12,00;pces;21,00;23;2
+264920;Coude 90° a emboiter HT dim 40;;Eupen;PVC;;;;21,00;23;2
+264930;Coude 90° a emboiter HT dim 50;;Eupen;PVC;;9,00;pces;21,00;23;2
+264940;Coude 90° a emboiter HT dim 75;;Eupen;PVC;;;;21,00;23;2
+265010;Coude 45° a emboiter HT dim 32;;Eupen;PVC;;10,00;pces;21,00;23;2
+265020;Coude 45° a emboiter HT dim 40;;Eupen;PVC;;6,00;pces;21,00;23;2
+265030;Coude 45° a emboiter HT dim 50;;Eupen;PVC;;10,00;pces;21,00;23;2
+265040;Coude 45° a emboiter HT dim 75;;Eupen;PVC;;;;21,00;23;2
+265160;Té Y a emboiter HT dim 32;;Eupen;PVC;;;;21,00;23;2
+265170;Té Y a emboiter HT dim 40;;Eupen;PVC;;3,00;pces;21,00;23;2
+265180;Té Y a emboiter HT dim 50;;Eupen;PVC;;2,00;pces;21,00;23;2
+265060;Té  a emboiter HT dim 32;;Eupen;PVC;;;;21,00;23;2
+265070;Té a emboiter HT dim 40;;Eupen;PVC;;1,00;pces;21,00;23;2
+265080;Té a emboiter HT dim 50;;Eupen;PVC;;;;21,00;23;2
+265090;Té a emboiter HT dim 75;;Eupen;PVC;;;;21,00;23;2
+265320;Té réduit a emboiter H T dim 40/32;;Eupen;PVC;;4,00;pces;21,00;23;2
+266130;Coude 90° a emboiter dim 32;;Eupen;PVC;;;;21,00;23;2
+266140;Coude 90° a emboiter dim 40;;Eupen;PVC;;;;21,00;23;2
+266150;Coude 90° a emboiter dim 40;;Eupen;PVC;;;;21,00;23;2
+266160;Coude 90° a emboiter dim 50;;Eupen;PVC;;12,00;pces;21,00;23;2
+266170;Coude 90°  a emboiter dim 75;;Eupen;PVC;;;;21,00;23;2
+266180;Coude 90° a emboiter dim 90;;Eupen;PVC;;;;21,00;23;2
+266190;Coude 90° a emboiter dim 110;;Eupen;PVC;;;;21,00;23;2
+266200;Coude 90° a emboiter dim 125;;Eupen;PVC;;;;21,00;23;2
+266290;Coude 45° a emboiter dim 32;;Eupen;PVC;;6,00;pces;21,00;23;2
+266300;Coude 45° a emboiter dim 40;;Eupen;PVC;;;;21,00;23;2
+266310;Coude 45° a emboiter dim 50;;Eupen;PVC;;17,00;pces;21,00;23;2
+266320;Coude 45° a emboiter dim 75;;Eupen;PVC;;;;21,00;23;2
+266330;Coude 45° a emboiter dim 90;;Eupen;PVC;;;;21,00;23;2
+266350;Coude 45° a emboiter dim 110;;Eupen;PVC;;;;21,00;23;2
+266360;Coude 45° a emboiter dim 125;;Eupen;PVC;;;;21,00;23;2
+266530;Té a emboiter dim 32;;Eupen;PVC;;5,00;pces;21,00;23;2
+266540;Té a emboiter dim40;;Eupen;PVC;;11,00;pces;21,00;23;2
+266550;Té a emboiter dim 50;;Eupen;PVC;;10,00;pces;21,00;23;2
+266560;Té a emboiter dim 75;;Eupen;PVC;;;;21,00;23;2
+266570;Té a emboiter dim 90;;Eupen;PVC;;;;21,00;23;2
+266590;Té a emboiter dim 110;;Eupen;PVC;;;;21,00;23;2
+266600;Té a emboiter dim 125;;Eupen;PVC;;;;21,00;23;2
+266370;Té Y a emboiter dim 32;;Eupen;PVC;;;;21,00;23;2
+266380;Té Y a emboiter dim 40;;Eupen;PVC;;3,00;pces;21,00;23;2
+266390;Té Y a emboiter dim 50;;Eupen;PVC;;26,00;pces;21,00;23;2
+266400;Té Y a emboiter dim 75;;Eupen;PVC;;;;21,00;23;2
+266410;Té Y a emboiter dim 90;;Eupen;PVC;;;;21,00;23;2
+266430;Té Y a emboiter dim 110;;Eupen;PVC;;;;21,00;23;2
+311485;Réduction exentrique M/F 40/32;;Eupen;PVC;;5,00;pces;21,00;23;2
+311487;Réduction exentrique M/F 50/40;;Eupen;PVC;;5,00;pces;21,00;23;2
+311486;Réduction exentrique M/F 50/32;;Eupen;PVC;;5,00;pces;21,00;23;2
+248490;;Réduction exterieure exentrée M/F 100/90;Nicoll;PVC;;1,00;pces;21,00;23;2
+248480;;Réduction exterieure exentrée M/F110/100;Nicoll;PVC;;1,00;pces;21,00;23;2
+248500;;Réduction exterieure exentrée M/F 125/110;Nicoll;PVC;;1,00;pces;21,00;23;2
+268280;Anneau de reduction  H T 32/50;;Eupen;PVC;;1,00;pces;21,00;23;2
+268290;Anneau de reduction   40/50;;Eupen;PVC;;2,00;pces;21,00;23;2
+265450;A nneau de reduction HT 40/32;;Eupen;PVC;;1,00;pces;21,00;23;2
+265460;Anneau de reduction ;50/40;Nicoll;PVC;;3,00;pces;21,00;23;2
+268260;Anneau de reduction  a coller;;Nicoll;PVC;;6,00;pces;21,00;23;2
+750440;Manchon de reduction centrique F/F 40/32;;Nicoll;PVC;;33,00;pces;21,00;23;2
+8700040;Manchon F/F dim 40;;Nicoll;PVC;;11,00;pces;21,00;23;2
+244110;Aerateur a membrane fixe dim 50;;Nicoll;PVC;;7,00;pces;21,00;23;2
+708640;Aerateur a membrane démontable 80/75;;Nicoll;PVC;;3,00;pces;21,00;23;2
+869530;Selle M/F 100/40;;Nicoll;PVC;;2,00;pces;21,00;23;2
+134300;Selle M/F 110/40;;Nicoll;PVC;;2,00;pces;21,00;23;2
+266700;Manchon de dilatation dim 50;;Eupen;PVC;;3,00;pces;21,00;23;2
+870730;Manchon de dilatation dim 50;;Nicoll;PVC;;5,00;pces;21,00;23;2
+182910;Crépine chromé avec bouchon;;Viega;;;56,00;pces;21,00;23;2
+910019;Manchon F/F 2 x a sertir ; 15/15;Comap;Acier;;23,00;pces;21,00;24;2
+910020;Manchon F/F 2 x a sertir ;18/18;Comap;Acier;;7,00;pces;21,00;24;2
+910021;Manchon F/F 2 x a sertir ; 22/22;Comap;Acier;;13,00;pces;21,00;24;2
+910157;Manchon coulissant F/F 2 x a sertir 15/15;;Comap;Acier;;7,00;pces;21,00;24;2
+910158;Manchon coulissant F/F 2 x a sertir 15/15;2 x a sertir 18/18;Comap;Acier;;3,00;pces;21,00;24;2
+910040;Coude 90 F/F  2 x a sertir 15/15;;Comap;Acier;;37,00;pces;21,00;24;2
+910041;Coude 90 F/F 2 x a sertir 18/18;;Comap;Acier;;41,00;pces;21,00;24;2
+910042;Coude 90 F/F 2 x a sertir 22/22;;Comap;Acier;;16,00;pces;21,00;24;2
+910011;Coude 90 M/F  a sertir x a emboiter  15/15;;Comap;Acier;;38,00;pces;21,00;24;2
+910013;Coude 90 M/F a sertier a emboiter 22/22;;Comap;Acier;;8,00;pces;21,00;24;2
+;Coude 90 M/F a sertier a emboiter 28/28;;Comap;Acier;;8,00;pces;21,00;24;2
+910047;Coude 45 F/F a sertier a emboiter 15/15;;Comap;Acier;;3,00;pces;21,00;24;2
+910005;Coude 45 M/F a sertier a emboiter 22/22;;Comap;Acier;;3,00;pces;21,00;24;2
+910049;Coude 45 F/F a sertier a emboiter 22/22;;Comap;Acier;;1,00;pces;21,00;24;2
+910006;Coude 45 M/F a sertier a emboiter 28/28;;Comap;Acier;;7,00;pces;21,00;24;2
+910098;Coude 90 M a sertier /filet male conique 1/2 15;;Comap;Acier;;17,00;pces;21,00;24;2
+910097;Coude 90 M a sertier /filet male conique 3/8 15;3/8 15;Comap;Acier;;3,00;pces;21,00;24;2
+910118;Té egal FFF a sertier 18/18/18;;Comap;Acier;;5,00;pces;21,00;24;2
+910127;Té egal FFF a sertier 18/15/18;;Comap;Acier;;7,00;pces;21,00;24;2
+910117;Té egal FFF a sertier 15/15/15;;Comap;Acier;;6,00;pces;21,00;24;2
+900134;Té egal FFF a sertier 22/15/22;;Comap;Acier;;1,00;pces;21,00;24;2
+488760;Raccord T niron dim 25;;Niron;Synté;;4;pces;21,00;25;2
+488900;Raccord T niron reduit dim 25 x 20;;Niron;Synté;;3;pces;21,00;25;2
+488750;Raccord T niron dim 20;;Niron;Synté;;2;pces;21,00;25;2
+488820;"Raccord T niron dim 20 -1/2"" F";;Niron;Synté;;6;pces;21,00;25;2
+488690;Coude niron 45° FF dim 25;;Niron;Synté;;17;pces;21,00;25;2
+488480;Coude niron 90° FF dim 25;;Niron;Synté;;42;pces;21,00;25;2
+488700;Coude niron 45° FF dim 32;;Niron;Synté;;13;pces;21,00;25;2
+488540;"Coude niron 90°  dim 20 -1/2"" F";;Niron;Synté;;6;pces;21,00;25;2
+488550;"Coude niron 90°  dim 25 - 1/2"" F";;Niron;Synté;;7;pces;21,00;25;2
+488600;"Coude niron 90°  dim 25 - 1/2"" M";;Niron;Synté;;1;pces;21,00;25;2
+488640;"Culasse niron dim 20 - 1/2""F";;Niron;Synté;;1;pces;21,00;25;2
+488490;Coude niron 90° dim32 FF;;Niron;Synté;;11;pces;21,00;25;2
+488470;Coude niron 90° dim20 FF;;Niron;Synté;;14;pces;21,00;25;2
+488680;Coude niron 45° dim 20 FF;;Niron;Synté;;50;pces;21,00;25;2
+433140;Dos d ane FF dim 20;;Niron;Synté;;5;pces;21,00;25;2
+509740;Coude niron 45° MF dim 20;;Niron;Synté;;2;pces;21,00;25;2
+489420;"Raccord niron a fillet dim 25 - 3/4"" M";;Niron;Synté;;1;pces;21,00;25;2
+489430;"Raccord niron a fillet dim 32 - 4/4""  M";;Niron;Synté;;3;pces;21,00;25;2
+489340;"Raccord niron  a fillet dim 32 - 4/4"" F";;Niron;Synté;;12;pces;21,00;25;2
+489330;"Raccord niron a fillet dim 25 - 3/4"" F";;Niron;Synté;;3;pces;21,00;25;2
+489320;"Raccord niron a fillet dim 25 - 1/2"" F";;Niron;Synté;;2;pces;21,00;25;2
+489560;Raccord union 3 pieces  dim20;;Niron;Synté;;2;pces;21,00;25;2
+489250;Manchon dim 32;;Niron;Synté;;2;pces;21,00;25;2
+489240;Manchon dim 25;;Niron;Synté;;7;pces;21,00;25;2
+489230;Manchon dim 20;;Niron;Synté;;2;pces;21,00;25;2
+489490;Bonnet  dim 20;;Niron;Synté;;1;pces;21,00;25;2
+489500;Bonnet dim 25;;Niron;Synté;;1;pces;21,00;25;2
+538972;THERMOMASTER T25/30;;;;588,00;;pces;21,00;14;2
+400719;PLAQUE DE MONTAGE THEMACONDENS/THERMOMASTER T;;;;59,45;;pces;21,00;14;2
+259269;VENTOUSE 70CM + COUDE D.60/100;;;;43,38;;pces;21,00;14;2
+427390;EXACONTROL 70CM THERMOSTAT MODULANT;;;;56,31;;pces;21,00;14;2
+292858;SONDE EXTER.15M P/THEMA- COND.+ISOTWIN+THERMOMAST;;;;32,32;;pces;21,00;14;2
+311077;SUNRAD H400XL1350X22 1841w;;;;74,58;;pces;21,00;14;2
+439197;COMBIN. BITURE RK532LTLE SENSO AVEC COUDE 1/2 DROIT;;;;25,03;;pces;21,00;14;2
+557530;TUBE LIAISON 9848 DIAM.15 L.80mm NICKELEE+ECROU;;;;4,78;;pces;21,00;14;2
+334070;BOITIER SEUL 9840 1/2xM22;;;;2,93;;pces;21,00;14;2
+523090;SUDOPR.RACC,DROIT 16x2-3/4 EUROCONUS ECROU PRISONN;;;;2,45;;pces;21,00;14;2
+241892;TUBE MULTISKIN ROUL.100M 16x2 AVEC ISOLATION 6MM BLEU;;;;129,36;;pces;21,00;14;2
+241893;TUBE MULTISKIN ROUL.100M 16x2 A/ISOLAT   6MM -ROUGE;;;;129,36;;pces;21,00;14;2
+339150;COLLECTEUR 4/4x1/2 9800/6;;;;14,96;;pces;21,00;14;2
+339250;TERMINAISON COLLECT.9827 4/4;;;;2,38;;pces;21,00;14;2
+384070;ROBINET PURGE RADIAT.1/2 - LAITON;;;;2,11;;pces;21,00;14;2
+145181;FLEXVENT 1/2;;;;6,46;;pces;21,00;14;2
+280690;REGULAT.PRESS.DIFFER.3/4 872;;;;20,58;;pces;21,00;14;2
+247446;"SET DE REMPLISSAGE 1/2"" NBN EN 1717 A/CLAPET CA";;;;25,42;;pces;21,00;14;2
+442020;VANNE EQUILIBRAGE 4/4 751 2 PRISES;;;;37,61;;pces;21,00;14;2
+118020;NIPPLE 9810JT 1/2-M22 AVEC JOINT 0-RING;;;;0,90;;pces;21,00;14;2
+123930;ROBINET A BILLE 4/4 UNIVERSAL;;;;9,53;;pces;21,00;14;2
+339240;RACCORD JONCTION 9829 P/COLLECTEUR 4/4;;;;1,80;;pces;21,00;14;2
+299732;WICU GAZ LONGUEUR DE 5M CUIVRE 20/22 A/PVC JAUNE;;;;24,26;;pces;21,00;14;2
+495050;COURSE 5002A 22 FF 90 5002A;;;;0,67;;pces;21,00;14;2
+197945;COUDE 90D.2616 FF 90 DEGRES GAZ D.22 - CUIVRE;;;;2,67;;pces;21,00;14;2
+244548;"RACCORD MALE MOD.2611 GAZ 22x1"" - BRONZE";;;;4,17;;pces;21,00;14;2
+579420;EVIER EUROSET ESX621 ENC. 123,5x43,5CM SANS SOUPAPE;;;;80,85;;pces;21,00;15;2
+380390;GARNIT.ECOULEMENT 6/4x40 RACCORD ECO POUR EVIER 2BACS;;;;6,73;;pces;21,00;15;2
+378520;ROBINET ARR.EQUERRE A80A A/BOULE 1/2x3/8x10 CHROME;;;;2,76;;pces;21,00;15;2
+505275;LAGUNA MELANGEUR EVIER AVEC BEC MOB.A/DISQ.CERAM CHROME;;;;23,20;;pces;21,00;15;2
+280080;ROBINET A BILLE 1/2 DOUBL SERVICE MANETTE ROUGE;;;;5,09;;pces;21,00;15;2
+313470;SIPHON ABS GRIS SORT.S-P DIAM.40MM;;;;1,94;;pces;21,00;15;2
+212945;TUBE EUPEN HAUT TEMP 40MM PAR LONGUEUR DE 4M;;;;7,95;;pces;21,00;15;2
+401860;SOUDAFOAM 1K 750ML;;;;5,07;;pces;21,00;15;2
+338210;MASTIGUM SANITAIRKIT - BOITE 450GR;;;;2,87;;pces;21,00;15;2
+130580;FISHER CHEVILLE S10 - PAR 50 PCES;;;;4,27;;pces;21,00;15;2
+316300;DOCK FILETE HO 8050 SOIS;;;;0,08;;pces;21,00;15;2
+285980;PATTE VIS A BOIS 60MM M7;;;;0,06;;pces;21,00;15;2
+238530;ROBINET A BILLE 3/8 UNIVERSAL;;;;3,19;;pces;21,00;15;2
+123860;ROBINET A BILLE 1/2 UNIVERSAL;;;;4,47;;pces;21,00;15;2
+123910;ROBINET A BILLE 3/4 UNIVERSAL;;;;6,43;;pces;21,00;15;2
+123930;ROBINET A BILLE 4/4 UNIVERSAL;;;;9,53;;pces;21,00;15;2
+123970;ROBINET A BILLE 5/4 UNIVERSAL;;;;13,53;;pces;21,00;15;2
+124040;ROBINET A BILLE 6/4 UNIVERSAL;;;;20,71;;pces;21,00;15;2
+280080;ROBINET A BILLE 1/2 DOUBL SERVICE MANETTE ROUGE;;;;5,09;;pces;21,00;15;2
+242837;ROBINET A BILLE POUR GAZ 1/2 MF ARGB;;;;6,26;;pces;21,00;15;2
+875500;ROBINET A BILLE POUR GAZ 3/4 FF ARGB;;;;8,21;;pces;21,00;15;2
+259859;HSH FLEXIBLE 50CM GAS INOX 1/2MF EN14800;;;;11,00;;pces;21,00;15;2
+611590;BIDON DE 5 LITRES HUILE DE COUPE;;;;27,12;;pces;21,00;15;2
+628960;ROTEST AEROSOL 400ML DETECTEUR DE FUITES;;;;4,77;;pces;21,00;15;2
+374090;PRESCOR 108-1/2 F;;;;5,21;;pces;21,00;15;2
+403110;"PURGEUR AUTOMATIQUE 3/8"" AVEC SOUPAPE";;;;5,19;;pces;21,00;15;2
+439098;CORPS EQUERRE 1/2 R808;;;;8,91;;pces;21,00;15;2
+505434;SENSO TETE THERMOSTATIQUE M28;;;;9,74;;pces;21,00;15;2
+505435;SENSO RI TETE THERMOSTAT. POUR INTEGRA M30;;;;9,81;;pces;21,00;15;2
+873710;TETE THERMOSTATIQUE RAE SONDE INCORPORE;;;;8,63;;pces;21,00;15;2
+229632;"LONGUEUR DE 6M TUBE ACIER PE 4/4"" ISO MED";;;;41,45;;pces;21,00;15;2
+229631;"LONGUEUR DE 6M TUBE ACIER PE 3/4"" ISO MED";;;;32,91;;pces;21,00;15;2
+229630;"LONGUEUR DE 6M TUBE ACIER PE 1/2"" 000 MED";;;;30,04;;pces;21,00;15;2
+147830;130 TE 4/4 NOIR;;;;1,81;;pces;21,00;15;2
+147820;130 TE 3/4 NOIR;;;;1,24;;pces;21,00;15;2
+147810;130 TE 1/2 NOIR;;;;0,73;;pces;21,00;15;2
+146960;90 COUDE FF 4/4 NOIR;;;;1,24;;pces;21,00;15;2
+146950;90 COUDE FF 3/4 NOIR;;;;0,81;;pces;21,00;15;2
+146940;90 COUDE FF 1/2 NOIR;;;;0,51;;pces;21,00;15;2
+150080;280 MAMELON 4/4 NOIR;;;;1,00;;pces;21,00;15;2
+150070;280 MAMELON 3/4 NOIR;;;;0,72;;pces;21,00;15;2
+150060;280 MAMELON 1/2 NOIR;;;;0,54;;pces;21,00;15;2
+282453;COLLIER WM BISMAT FLASH M8 32-35MM;;;;0,89;;pces;21,00;15;2
+282452;COLLIER WM BISMAT FLASH M8 25-28MM;;;;0,80;;pces;21,00;15;2
+282451;COLLIER WM BISMAT FLASH M8 20-23MM;;;;0,82;;pces;21,00;15;2
+242839;ROBINET A BILLE POUR GAZ 4/4 MF ARGB;;;;12,34;;pces;21,00;15;2
+242838;ROBINET A BILLE POUR GAZ 3/4 MF ARGB;;;;8,46;;pces;21,00;15;2
+242837;ROBINET A BILLE POUR GAZ 1/2 MF ARGB;;;;6,26;;pces;21,00;15;2
+259859;HSH FLEXIBLE 50CM GAS INOX 1/2MF EN14800;;;;11,00;;pces;21,00;15;2
+116640;BAIN STANDARD Ac.160x70 SANS PIEDS 2,3MM - BLANC;;;;57,75;;pces;21,00;16;2
+311482;PIEDS A COLLER POUR BAIGNOIRES 2,366 EUROWA;;;;10,55;;pces;21,00;16;2
+883850;FIMS LAVABO 60CM - BLANC;;;;22,64;;pces;21,00;16;2
+171820;COUPE-AIR AuTOMAT. POUR BAIN SORTIE VIDAGE DIAM. 50;;;;30,75;;pces;21,00;16;2
+182200;SIPHON BOUTEILLE 5/4 POUR LAVABO - CHROME;;;;8,66;;pces;21,00;16;2
+130730;SET 2 FIXATIONS M10/140 WD140 ECROU NYLON;;;;0,99;;pces;21,00;16;2
+402739;61X1666 BLu MITIGEUR BAIN-DOUCHE COMPL.A/SUPP.MURAL CHROME;;;;47,67;;pces;21,00;16;2
+402737;RIVIERA BLU MITIGEUR LAVABO AVEC VIDAGE - CHROME;;;;33,90;;pces;21,00;16;2
+378520;ROBINET ARR.EQUERRE A80A A/BOULE 1/203/8010 CHROME;;;;2,76;;pces;21,00;16;2
+140390;MIROIR 5 MM 40x60;;;;6,41;;pces;21,00;16;2
+252580;ATTACHE-GLACE 3EU DE 4 PIECES - CHROME;;;;1,92;;pces;21,00;16;2
+153030;ETAGERE VERRE CLAIR 60012;;;;3,34;;pces;21,00;16;2
+315040;PAIRE CONSOLES P/TABLETTE S032;;;;14,28;;pces;21,00;16;2
+377990;PORTE-SERVIETTE ANNEAU - CHROME;;;;12,69;;pces;21,00;16;2
+212945;TUBE EUPEN HAUT TEMP 406m PAR LONGUEUR DE 4M;;;;7,95;;pces;21,00;16;2
+264920;HT RA 18 COURBE 87 40;;;;1,36;;pces;21,00;16;2
+265070;HT RA 7B TE CULOTT.87 40;;;;1,88;;pces;21,00;16;2
+244100;ABU VENTICLAIR AERATEUR A MEMBRANE FIXE DIAM.40;;;;5,60;;pces;21,00;16;2
+212946;TUBE EUPEN HAUT TEMP 50MM PAR LONGUEUR DE 4M;;;;9,69;;pces;21,00;16;2
+264930;HT RA 18 COURBE 87 50;;;;1,59;;pces;21,00;16;2
+265460;HT RA 14 ANNEAU REDUCTION 50040;;;;1,25;;pces;21,00;16;2
+414490;TUBE 3/8-1/2010 -S0cm - CHROME;;;;2,97;;pces;21,00;16;2
+378520;ROBINET ARR.EQUERRE A80A A/BOULE 1/203/8010 CHROME;;;;2,76;;pces;21,00;16;2
+516510;COLLECTEUR 3/40M22 9532E2;;;;5,51;;pces;21,00;16;2
+337160;CONSOLE MURALE METALLIQUE 3/4 POUR 9532.9532E;;;;3,01;;pces;21,00;16;2
+201115;TUBE MULT/SKIN RouL.50m 2002 AVEC GAINE BLEU;;;;69,30;;pces;21,00;16;2
+248856;TUBE MuLTISKIN RouL.50m 1602 AVEC GAINE BLEU;;;;45,62;;pces;21,00;16;2
+248857;TUBE MULTISKIN ROUL.506 16X2 AVEC GAINE ROUGE;;;;45,62;;pces;21,00;16;2
+334070;BOITIER SEUL 9840 1/201122;;;;2,93;;pces;21,00;16;2
+123910;ROBINET A BILLE 3/4 UNIVERSAL;;;;6,43;;pces;21,00;16;2
+774420;BOUCHON COLLECTEUR 9821 3/4;;;;1,25;;pces;21,00;16;2
+122170;MAMELON 3/4 CONIQUE - BRONZE;;;;1,14;;pces;21,00;16;2
+125528;SKINPRESS RACCORD DROIT 2003/4F TARAUDE;;;;3,90;;pces;21,00;16;2
+865740;SKINPRESS RACCORD DROIT 2002-3/411 A SERTIR;;;;4,18;;pces;21,00;16;2
+523090;supoPR.RAcc.DRoir1602-3/4 EUROCONUS ECROU PRISONN;;;;2,45;;pces;21,00;16;2
+774420;BOUCHON COLLECTEUR 9821 3/4;;;;1,25;;pces;21,00;16;2
+518150;EXTRACTEUR DECOR 100cRz A/GRILLE EXTRA-PLATE;;;;83,95;;pces;21,00;17;2
+225482;GAINE GALVA DIAMETRE 100 -LONGUEUR DE 3M;;;;16,55;;pces;21,00;17;2
+299837;COUDE GALVA 90' D.100 AVEC »INT;;;;9,73;;pces;21,00;17;2
+178360;FLEXIBLE ALU DIAMETRE 100 GSA 100-3M -LONGUEUR 3M;;;;24,54;;pces;21,00;17;2
+406916;BIS AERO COLLIER m8 DIAM.10066;;;;1,11;;pces;21,00;17;2
+402963;GRILLE VENTILATION 15,50 15,5 - INOX;;;;4,78;;pces;21,00;17;2
+465040;GRILLE VENTILATION POUR PORTE 46X9 - BLANC;;;;2,34;;pces;21,00;17;2
+507691;ECO Room 100/430 RECUPERATEUR DE CHALEUR;;;;357,67;;pces;21,00;17;2
+570290;FIMS CUVETTE DE WC SORTIE H - BLANC;;;;31,39;;pces;21,00;18;2
+317660;F400 SIEGE WC AVEC CHARNIERES INOX - BLANC;;;;13,32;;pces;21,00;18;2
+563610;RESERvo/R 9L POUR DUOBLOC - BLANC;;;;40,71;;pces;21,00;18;2
+414490;TUBE 3/8-1/2010 -50cm - CHROME;;;;2,97;;pces;21,00;18;2
+414310;S 8 RD 80wcR -2 FIXATIONS POUR WC;;;;1,02;;pces;21,00;18;2
+213857;LONGUEUR DE 5M TUYAU GE8ERIT 90;;;;16,85;;pces;21,00;18;2
+373590;MANCHETTE DE RACCORDEMENT 90mm P/CUVETTE MURALE;;;;10,62;;pces;21,00;18;2
+175990;COUDE 90 90;;;;2,63;;pces;21,00;18;2
+176260;OUVERTURE NETTOYAGE 90;;;;10,21;;pces;21,00;18;2
+176420;MANCHON LONG 90;;;;4,83;;pces;21,00;18;2
+176620;COLLIER GALVANISE AVEC 8- MANCHON 610-90;;;;2,90;;pces;21,00;18;2
+176630;COLLIER GALVANISE AVEC B- MANCHON 1/2-90;;;;3,10;;pces;21,00;18;2
+176530;MANCHON A EMBOITER 90;;;;2,59;;pces;21,00;18;2
+315020;PORTE-PAPIER  -CHROME;;;;14,28;;pces;21,00;18;2
+883740;FORS LAVE-MAINS 45CM AVEC TROP-PLEIN - BLANC;;;;21,23;;pces;21,00;18;2
+130640;SET 2 FIXATIONS m 8/110 00980110 ECROU NYLON;;;;0,91;;pces;21,00;18;2
+378520;ROBINET ARR.EQUERRE A80A A/souLE 1/203/8010 CHROME;;;;2,76;;pces;21,00;18;2
+476000;CREPINE A BOUCHON PP 5121R POUR LAVABO 5/4055;;;;1,65;;pces;21,00;18;2
+182200;SIPHON BOUTEILLE 5/4 POUR LAVABO - CHROME;;;;8,66;;pces;21,00;18;2
+494220;LAGUNA ROBINET DE LAVABO EAU FROIDE - CHROME;;;;11,71;;pces;21,00;18;2

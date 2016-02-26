@@ -60,14 +60,24 @@ function postFamily(){
     echoResponse(200, $rows);
 };
 
-$app->get('/familysTools/:id_service', 'getFamilysTools');
+$app->get('/familysTOOL/:id_service', 'getFamilysTools');
 function getFamilysTools($id_service) {
     global $db;
-    $condition = array('id_service'=>$id_service);
     $rows = $db->selectComplex("Select id_family, code, description
                                 From gestion_family
                                 Where id_service = $id_service
                                 and id_family IN(3)");
+    echoResponse(200, $rows);
+};
+
+
+$app->get('/familysMATERIAL/:id_service', 'getFamilysMaterials');
+function getFamilysMaterials($id_service) {
+    global $db;
+    $rows = $db->selectComplex("Select id_family, code, description
+                                From gestion_family
+                                Where id_service = $id_service
+                                and id_family NOT IN(3)");
     echoResponse(200, $rows);
 };
 

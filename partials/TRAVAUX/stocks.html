@@ -4,7 +4,7 @@
     }
 </style>
 <nav>
-    <button type="button" class="btn btn-sm btn-warning" ng-click="">
+    <button type="button" class="btn btn-sm btn-warning" ng-click="openAddMaterial();">
         <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
         <span class="btn-txt">Ajouter Stock Material</span>
     </button>
@@ -26,44 +26,47 @@
     <div class="panel panel-travaux">
 
         <div class="panel-heading">
-            <span>Gestion Materials &nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div class="row">
 
-            <select id="filterLocation" ng-model="filterLocation.name_location"  data-ng-change="changeFilter()" data-style="btn-info" >
-                <option value="">Tous les chantiers</option>
-                <option ng-repeat="l in materials | unique:'name_location' | orderBy:'name_location'" value="{{l.name_location}}" on-finish-render="ngRepeatFinished"  data-icon="glyphicon glyphicon-filter" >
-                    {{l.name_location}}
-                </option>
-            </select>
-            <select id="filterMaterial" ng-model="filterMaterial.nom"  data-ng-change="changeFilter()" data-style="btn-info" >
-                <option value="">Tous les Materials</option>
-                <option ng-repeat="t in materials | unique:'nom' " value="{{t.nom}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >
-                    {{t.nom}}
-                </option>
-            </select>
-            <select id="filterfamily" ng-model="filterfamily.name_family"  data-ng-change="changeFilter()" data-style="btn-info" >
-                <option value="">Tous les familles</option>
-                <option ng-repeat="t in materials | unique:'name_family' " value="{{t.name_family}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >
-                {{t.name_family}}
-                </option>
-            </select>
+                <ui-select id="filterLocation" ng-model="filterLocation.location" theme="bootstrap" reset-search-input="true" style="width: 230px;">
+                    <ui-select-match placeholder="Chercher chantier/magasin ...">
+                        <span>{{$select.selected.name_location | limitTo : 20}}</span>
+                        <button class="clear" ng-click="clear('filterLocation')">X</button>
+                    </ui-select-match>
+                    <ui-select-choices repeat="l in materials | unique:'name_location' | orderBy:'name_location' | filter: $select.search">
+                        <small ng-bind-html="l.name_location | highlight: $select.search"></small>
+                    </ui-select-choices>
+                </ui-select>
 
-            <!--<select id="filterFamily" ng-model="filterFamily.description"  data-ng-change="changeFilter()" data-style="btn-info" >-->
-            <!--<option value="">Tous les Famille</option>-->
-            <!--<option ng-repeat="t in materials | unique:'description' " value="{{t.description}}" on-finish-render="ngRepeatFinished" data-icon="glyphicon glyphicon-filter" >-->
-            <!--{{t.description}}-->
-            <!--</option>-->
-            <!--</select>-->
+                <ui-select id="filterMaterial" ng-model="filterMaterial.location" theme="bootstrap" reset-search-input="true"style="width: 350px;">
+                    <ui-select-match placeholder="Chercher article...">
+                        <span>{{$select.selected.nom | limitTo : 40}}</span>
+                        <button class="clear" ng-click="clear('filterMaterial')">X</button>
+                    </ui-select-match>
+                    <ui-select-choices repeat="l in materials | unique:'nom' | orderBy:'nom' | filter: $select.search">
+                        <small ng-bind-html="l.nom | highlight: $select.search"></small> /
+                        <small ng-bind-html="l.code_barre | highlight: $select.search"></small>
+                    </ui-select-choices>
+                </ui-select>
 
-
-            <div class="sw-search filter-tool" >
-                <div class="nav-search" id="nav-search">
-                    Filter: <span class="input-icon">
-                        <input placeholder="Filter Liste Outils ..." class="nav-search-input" ng-model="filterLine" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">
-                        <i class="search-icon fa fa-search nav-search-icon"></i>
-                    </span>
+                <ui-select id="filterfamily" ng-model="filterfamily.location" theme="bootstrap" reset-search-input="true" style="width: 350px;">
+                    <ui-select-match placeholder="Chercher famille...">
+                        <span>{{$select.selected.name_family | limitTo : 40}}</span>
+                        <button class="clear" ng-click="clear('filterfamily')">X</button>
+                    </ui-select-match>
+                    <ui-select-choices repeat="l in materials | unique:'name_family' | orderBy:'name_family' | filter: $select.search">
+                        <small ng-bind-html="l.name_family | highlight: $select.search"></small>
+                    </ui-select-choices>
+                </ui-select>
+                <div class="sw-search filter-tool" >
+                    <div class="nav-search" id="nav-search">
+                        Filter: <span class="input-icon">
+                            <input placeholder="Filter Liste Materiels ..." class="nav-search-input" ng-model="filterRow" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">
+                            <i class="search-icon fa fa-search nav-search-icon"></i>
+                        </span>
+                    </div>
                 </div>
             </div>
-
         </div>
         <div class="panel-body">
             <table data-toggle="table" fixed-table-headers="scrollable-area" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
@@ -74,26 +77,25 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="t in materials
-                | filter : filterLocation
-                | filter : filterMaterial
-                | filter : filterfamily
+                | filter : filterLocation.location.name_location
+                | filter : filterMaterial.location.nom
+                | filter : filterfamily.location.name_family
+                | filter : filterRow
                 "
                     id="{{t.id_stock}}"
                     animate-on-change='t.nom + t.mark + t.code_barre'
                     ng-animate="'animate'" >
                     <td>{{t.name_location}}</td>
                     <td>{{t.nom}}</td>
+                    <td>{{t.description_f}}</td>
                     <td>{{t.code_barre}}</td>
+                    <td>{{t.type_article}}</td>
                     <td>{{t.unite}}</td>
                     <td>{{t.quantite_current}}</td>
                     <td>{{t.name_family}}</td>
 
-                    <td>
-                        <button type="button" class="btn btn-default fa fa-history" title="Ajouter Inventaire" class="btn" ng-click="openAddInventory(t);"></button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-default fa fa-list" class="btn" ng-click="getListMvt(t);"></button>
-                    </td>
+                    <td><button type="button" class="btn btn-default fa fa-history" title="Ajouter Inventaire" class="btn" ng-click="openAddInventory(t);"></button></td>
+                    <td><button type="button" class="btn btn-default fa fa-list" class="btn" ng-click="getListMvt(t);"></button></td>
                     <td><button class="btn" ng-class="{Active:'btn-success', Inactive:''}[t.status]" ng-click="changeMaterialStatus(t);">{{t.status}}</button></td>
                 </tr>
                 </tbody>

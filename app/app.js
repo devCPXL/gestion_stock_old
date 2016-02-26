@@ -1,9 +1,9 @@
 'use strict';
 
-var app = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'toaster']); // 'angularFileUpload'
+var app = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'toaster', 'ui.select', 'ngSanitize']); // 'angularFileUpload'
 
 //var id_serviceRva = 260, id_serviceTravaux = 370;
-var id_serviceRva = 15, id_serviceTravaux = 19;
+//var id_serviceRva = 15, id_serviceTravaux = 19;
 
 const ID_RVA_SERVICE = 15;
 const ID_TRAVAUX_SERVICE = 19;
@@ -106,6 +106,10 @@ app.config(['$routeProvider','$locationProvider',
         .when('/RVA/readXlsx', {
             title: 'readXlsx',
             templateUrl: 'partials/readXlsx.php'
+        })
+        .when('/importJsonFile', {
+            title: 'import Json File',
+            templateUrl: 'partials/importJsonFile.php'
         })
         .otherwise({
             redirectTo: '/home'
@@ -266,4 +270,41 @@ app.controller('formDateCtrl', function($scope, $location, Data) {
         {text:"mm_end",predicate:"mm_end",sortable:true}
     ];
 
+});
+
+app.filter('propsFilter', function() {
+    return function(items, props) {
+        var out = [];
+
+        if (angular.isArray(items)) {
+            items.forEach(function(item) {
+                var itemMatches = false;
+
+                var keys = Object.keys(props);
+                for (var i = 0; i < keys.length; i++) {
+                    var prop = keys[i];
+                    var text = props[prop].toLowerCase();
+                    if (item[prop].toString().toLowerCase().indexOf(text) !== -1) {
+                        itemMatches = true;
+                        break;
+                    }
+                }
+
+                if (itemMatches) {
+                    out.push(item);
+                }
+            });
+        } else {
+            // Let the output be the input untouched
+            out = items;
+        }
+
+        return out;
+    }
+});
+
+app.filter('num', function() {
+    return function(input) {
+        return parseInt(input, 10);
+    };
 });

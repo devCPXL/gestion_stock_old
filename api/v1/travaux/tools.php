@@ -53,7 +53,7 @@ function postToolMvt(){
 
     // ===== Check if Stock Exist !!!
     $oneRow = $db->selectComplex("SELECT * FROM gestion_stock
-                                  WHERE id_location = ".$data->id_location_to."
+                                  WHERE id_location = ".$data->SelectLocation_to->id_location."
                                   AND id_article = ".$data->stockArticle->gs_id_article."
                                   AND type_stock = '".$data->type_stock."'
                                   ");
@@ -65,7 +65,7 @@ function postToolMvt(){
 
         $data1->id_service          = TRAVAUX_SERVICE;
         $data1->id_article          = $data->stockArticle->gs_id_article;
-        $data1->id_location         = $data->id_location_to;
+        $data1->id_location         = $data->SelectLocation_to->id_location;
         $data1->type_stock          = $data->type_stock;
         $data1->status              = 'Active';
         $data1->stock_min           = 1;

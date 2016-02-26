@@ -1,14 +1,24 @@
 app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filter, Data, $location, $window, myService, jsonNumericCheck) {
     $scope.stock = {};
+    $scope.filterLocation = {};
+    $scope.filterMaterial = {};
+    $scope.filterfamily = {};
 
     $scope.loadData = function(){
 
+        //*** Get All Materials ***//
         Data.get('stocksMaterials/gs.id_location').then(function(data){
-            $scope.materials = jsonNumericCheck.d(data.data);
+            $scope.materials = data.data;
         });
+
+
     };
 
     $scope.loadData();
+
+    $scope.clear = function(filterName) {
+        $scope[filterName] = {};
+    };
 
     $scope.changeMaterialStatus = function(stock){
         stock.status = (stock.status=="Active" ? "Inactive" : "Active");
@@ -39,7 +49,7 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
     $scope.openAddInventory = function (p,size) {
         var modalInstance = $modal.open({
             templateUrl: 'partials/RVA/stockEdit.html',
-            controller: 'stockRvaEditCtrl',
+            controller: 'stockEditCtrl',
             size: size,
             resolve: {
                 item: function () {
@@ -52,53 +62,22 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
         });
     };
 
-    $scope.openStockAdd = function (p,size) {
+    $scope.openAddMaterial = function (p,size) {
         var modalInstance = $modal.open({
-            templateUrl: 'partials/RVA/StockAdd.html',
-            controller: 'stockTravauxAddCtrl',
+            templateUrl: 'partials/TRAVAUX/articleEdit.html',
+            controller: 'articleTravauxEditCtrl',
             size: size,
             resolve: {
                 item: function () {
                     return p;
+                },
+                type_stock: function () {
+                    return "MATERIAL";
                 }
             }
         });
         modalInstance.result.then(function(selectedObject) {
-            console.log(selectedObject);
-            $scope.loadStocks();
-
-            $scope.filterArticle.nom_article = selectedObject;
-        });
-    };
-
-    $scope.openStockDelivery = function(p,size){
-        var modalInstance = $modal.open({
-            templateUrl: 'partials/RVA/stockDelivery.html',
-            controller: 'stockDeliveryCtrl',
-            size: size,
-            resolve: {
-                item: function () {
-                    return p;
-                }
-            }
-        });
-        modalInstance.result.then(function() {
-            $scope.loadStocks();
-        });
-    };
-
-    $scope.openStockDeliveryList = function(p,size){
-        var modalInstance = $modal.open({
-            templateUrl: 'partials/RVA/stockDeliveryList.html',
-            controller: 'stockDeliveryListCtrl',
-            size: size,
-            resolve: {
-                item: function(){
-                    return p;
-                }
-            }
-        });
-        modalInstance.result.then(function() {
+            $scope.loadData();
         });
     };
 
@@ -113,42 +92,7 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
         $window.open(host+'#/TRAVAUX/MouvementsStock/'+stock.id_stock, '_blank');
     };
 
-    $scope.openOrderInternal = function(p,size){
-        var modalInstance = $modal.open({
-            templateUrl: 'partials/RVA/orderInternal.html',
-            controller: 'orderInternalCtrl',
-            size: size,
-            resolve: {
-                item: function () {
-                    return p;
-                }
-            }
-        });
-        modalInstance.result.then(function() {
-
-        });
-    };
-
-    $scope.openOrderInternalFinalize = function(p, size){
-        var modalInstance = $modal.open({
-            templateUrl: 'partials/RVA/orderInternalFinalize.html',
-            controller: 'orderInternalFinalizeCtrl',
-            size: size,
-            resolve: {
-                item: function () {
-                    return p;
-                }
-            }
-        });
-        modalInstance.result.then(function() {
-
-        });
-    };
-
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent){
-
-        $('#filterLocation, #filterMaterial, #filterfamily').selectpicker();
-        $('#filterLocation, #filterMaterial, #filterfamily').selectpicker('refresh');
 
         var i= 1;
         $('.tableFloatingHeader th').each(function() {
@@ -167,7 +111,9 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
     $scope.columns = [
         {text:"MAGASIN/CHANTIER",predicate:"MAGASIN/CHANTIER"},
         {text:"MODELE",predicate:"MODELE"},
+        {text:"DESCRIPTION",predicate:"DESCRIPTION"},
         {text:"REFERENCE",predicate:"REFERENCE"},
+        {text:"TYPE",predicate:"TYPE"},
         {text:"UNITE",predicate:"UNITE"},
         {text:"QTE",predicate:"QTE"},
         {text:"FAMILLE",predicate:"FAMILLE"},
@@ -178,10 +124,16 @@ app.controller('stocksTravauxCtrl', function ($scope, $rootScope, $modal, $filte
 
 });
 
-app.controller('addMvtCtrl', function ($scope, $route, $modal, $modalInstance, type_stock, Data, toaster) {
+app.controller('addMvtCtrl', function ($scope, $route, $modal, $filter, $modalInstance, type_stock, Data, toaster) {
     $scope.title = 'Ajouter mouvement';
     $scope.buttonText = 'Ajouter';
-    $scope.toolMvt = {};
+    $scope.qteMax = 0;
+
+    $scope.toolMvt = {
+        date_mvt : $filter("date")(Date.now(), 'yyyy-MM-dd')
+    };
+
+
     $scope.cancel = function () {
         $modalInstance.dismiss('Close');
     };
@@ -198,35 +150,26 @@ app.controller('addMvtCtrl', function ($scope, $route, $modal, $modalInstance, t
         $scope.locations_to = $scope.locations;
 
         Data.get('stocksLocation/'+type_stock+'/'+id_location).then(function(data){
+            $scope.stocksArticle = data.data;
             if(data.data.length > 0){
-                $scope.stocksArticle = data.data;
-                //var first_id_article = JSON.stringify($scope.stocksArticle[0]);
-                //$scope.toolMvt.stockArticle = first_id_article;
-                //$scope.changeStockArticle(first_id_article);
+                $scope.toolMvt.stockArticle = {}
             }else{
                 $scope.stocksArticle = [];
-                //$scope.to_stocksArticle = [''];
             }
         });
         //console.log($scope.toolMvt);
     };
-
-    $scope.changeStockArticle = function(stockArticle){
-        var stockArticle = JSON.parse(stockArticle);
-        $scope.quantiteMax = stockArticle.quantite_current;
+    $scope.changeStockArticle = function(){
+        $scope.toolMvt.quantite = 1;
     };
 
+    $scope.qteMax = $scope.toolMvt.quantite;
+
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent){
-        //$('#SelectLocation, #SelectStockArticle, #SelectLocation_to').selectpicker();
-        //$('#SelectLocation, #SelectStockArticle, #SelectLocation_to').selectpicker('refresh');
-
-        //$('#SelectStockArticle').selectpicker();
-        //$('#SelectStockArticle').selectpicker('refresh');
-
     });
 
     $scope.savetoolMvt = function(toolMvt){
-        toolMvt.stockArticle = JSON.parse(toolMvt.stockArticle);
+        //toolMvt.stockArticle = JSON.parse(toolMvt.stockArticle);
         toolMvt.type_mvt = 'INTERNAL';
         toolMvt.type_stock = type_stock;
         console.log(toolMvt);

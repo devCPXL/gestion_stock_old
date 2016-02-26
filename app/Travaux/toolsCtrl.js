@@ -3,15 +3,16 @@
  */
 app.controller('toolsCtrl', function ($scope, $rootScope, $modal, $filter, Data, $location, $window, myService, jsonNumericCheck) {
     $scope.stock = {};
-    $scope.filterFamily = null;
-    //console.log($scope.filterFamily);
+    $scope.filterLocation = {};
+    $scope.filterTool = {};
 
+    $scope.clear = function(filterName) {
+        $scope[filterName] = {};
+    };
     $scope.loadData = function(){
 
         Data.get('tools/'+$rootScope.id_service).then(function(data){
-            $scope.tools = jsonNumericCheck.d(data.data);
-            $scope.filterFamily = {description : ''};
-
+            $scope.tools = data.data;
         });
 
         Data.get('familys/'+$rootScope.id_service).then(function(data){
@@ -46,21 +47,13 @@ app.controller('toolsCtrl', function ($scope, $rootScope, $modal, $filter, Data,
                 item: function () {
                     return p;
                 },
-                stockMagasin: function () {
-                    return true;
+                type_stock: function () {
+                    return "TOOL";
                 }
             }
         });
         modalInstance.result.then(function(selectedObject) {
-
-            //p.nom = selectedObject.nom;
-            //p.mark = selectedObject.mark;
-            //p.code_barre = selectedObject.code_barre;
-            // ============= After 1500ms LoadData ========= //
-            //setTimeout(function() { $scope.loadData(); }, 1500);
-
             $scope.loadData();
-
             //$scope.filterArticle.nom_article = selectedObject;
         });
     };

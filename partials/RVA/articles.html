@@ -9,22 +9,25 @@
 <div class="table-responsive">
 <div class="panel panel-primary">
   <div class="panel-heading">
-      <span>Liste des Articles &nbsp;&nbsp;&nbsp;&nbsp;</span>
-
-      <select id="filterFamily" class="filterFamily"  ng-model="filterFamily.family" data-style="btn-info" >
-          <option value="">Tous les familles</option>
-          <option data-icon="glyphicon glyphicon-filter" ng-repeat=" s in articles | unique: 'family' | orderBy:'family' " value="{{ s.family }}" on-finish-render="ngRepeatFinished" > {{ s.family }} </option>
-      </select>
-
-      <div class="sw-search filter-article" >
-            <div class="nav-search" id="nav-search">
-                    Filter: <span class="input-icon">
-                        <input placeholder="Filter Liste articles ..." class="nav-search-input" ng-model="filterArticle" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">
-                        <i class="search-icon fa fa-search nav-search-icon"></i>
-                    </span>
-            </div>
-        </div>
-    </div>
+      <div class="row">
+          <div class="col-md-8">Liste des Articles &nbsp;&nbsp;
+              <select id="filterFamily" class="filterFamily"  ng-model="filterFamily.family" data-style="btn-info" >
+                  <option value="">Tous les familles</option>
+                  <option data-icon="glyphicon glyphicon-filter" ng-repeat=" s in articles | unique: 'family' | orderBy:'family' " value="{{ s.family }}" on-finish-render="ngRepeatFinished" > {{ s.family }} </option>
+              </select>
+          </div>
+          <div class="col-md-4">
+              <div class="sw-search filter-article" >
+                    <div class="nav-search" id="nav-search">
+                            Filter: <span class="input-icon">
+                                <input placeholder="Filter Liste articles ..." class="nav-search-input" ng-model="filterArticle" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;">
+                                <i class="search-icon fa fa-search nav-search-icon"></i>
+                            </span>
+                    </div>
+              </div>
+          </div>
+      </div>
+  </div>
   <div class="panel-body">
       <table data-toggle="table" fixed-table-headers="scrollable-area" data-cache="false" data-height="200" class="table table-hover table-striped" data-height="200" >
           <tr ng-show="articles.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;Aucune donnée trouvée.</td></tr>

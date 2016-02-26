@@ -1,0 +1,115 @@
+-- my $query_nh
+select
+dos_jaar,
+dos_number,
+dos_soc_dos,
+dos_naam,
+dos_voornaam,
+dos_voornaam2,
+dos_straat,
+dos_huisnr,
+dos_huisvlg,
+dos_busnr,
+dos_postcode,
+dos_woonplaats,
+dos_wijk,
+dos_gebdatum,
+dos_datedec,
+dos_status,
+dos_taal,
+dos_nationaliteit,
+dos_geslacht,
+dos_burg_staat,
+dos_nr_nat_reg,
+dos_temp_soc
+from dossier
+where
+  trim(dos_status) in ('1','15','16','25','34','94','95','96','97')
+  and dos_soc_dos is not null
+  and trim(dos_soc_dos) <> ''
+  and ((dos_dat_cre >= ".$dbconnect_mysql_nh->quote($date_where).") or (dos_dat_upd >= ".$dbconnect_mysql_nh->quote($date_where)."))
+
+-- my $query_nh
+select
+  dos_jaar,
+  dos_number,
+  dos_soc_dos,
+  dos_naam,
+  dos_voornaam,
+  dos_voornaam2,
+  dos_straat,
+  dos_huisnr,
+  dos_huisvlg,
+  dos_busnr,
+  dos_postcode,
+  dos_woonplaats,
+  dos_wijk,
+  dos_gebdatum,
+  dos_datedec,
+  dos_status,
+  dos_taal,
+  dos_nationaliteit,
+  dos_geslacht,
+  dos_burg_staat,
+  dos_nr_nat_reg,
+  dos_temp_soc
+from dossier
+where
+  dos_status in ('1','15','16','25','34','94','95','96','97')
+  and dos_soc_dos is not null
+  and trim(dos_soc_dos) <> ''
+
+-- my $query_di
+select
+  ds_number,
+  ds_number_old,
+  niss,
+  lastname,
+  firstname,
+  firstname2,
+  st_nationalite,
+  nationalite,
+  dtnaiss,
+  sexe,
+  etatcivil,
+  linguistique,
+  adresse_res,
+  cp_res,
+  localite_res,
+  di_status
+from cpas_di
+where di_year =".$dos_jaar."
+and di_number =".$dos_number  "
+
+-- my $query_dc
+select
+  dc_dc_number,
+  dc_id
+from cpas_dc
+where
+  dc_di_year=".$dos_jaar."
+  and dc_di_number=".$dos_number"
+
+-- my $query_rapport
+select
+  cpas_rsocial.id as max_id
+from cpas_rsocial, cpas_dc
+where
+  (dc_dc_number = ".$dbconnect_mysql->quote($sql_dc_number).")
+  and (CONCAT_WS('-',di_year,di_number)=CONCAT_WS('-',dc_di_year,dc_di_number))
+  and dtclose <> '0000-00-00'
+  and dtclose <> ''
+  and dtclose is not null
+  order by id DESC LIMIT 1
+
+-- $query_rapport
+select
+  cpas_rsocial.id as
+  min_id
+from cpas_rsocial,cpas_dc
+where
+  (cpas_rsocial.id > ".$max_id.")
+  and (dc_dc_number = ".$dbconnect_mysql->quote($sql_dc_number).")
+  and (CONCAT_WS('-',di_year,di_number)=CONCAT_WS('-',dc_di_year,dc_di_number))
+  and ((dtclose = '0000-00-00') or (dtclose = '') or (dtclose is null))
+  order by id ASC LIMIT 1
