@@ -39,5 +39,5 @@ delete from gestion_article where id_article in(
 )
 
 
-ALTER TABLE `cpas_dev`.`gestion_article` 
-ADD COLUMN `type_article` VARCHAR(50) NULL AFTER `order_article`;
+ALTER TABLE `gestion_article`
+ADD COLUMN `type_article` VARCHAR(50) NULL AFTER `description_n`;

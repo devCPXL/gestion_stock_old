@@ -14,12 +14,12 @@ $contentsFile = file_get_contents('ListProductsFinal.json');
 $products = json_decode($contentsFile, true);
 
 $results = array();
-
+$i = 0;
 foreach($products as $product) {
-
+$i++;
     $product = (object) $product;
 
-//    echo '<pre>' . print_r($product->code_barre, true) . '</pre>';
+    echo '<pre>'.$i. ' - ' . print_r($product, true) . '</pre>';
 
 //    $article = new stdClass();
 //

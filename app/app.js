@@ -111,6 +111,10 @@ app.config(['$routeProvider','$locationProvider',
             title: 'import Json File',
             templateUrl: 'partials/importJsonFile.php'
         })
+        .when('/RVA/importJsonFile', {
+            title: 'import Json File',
+            templateUrl: 'partials/RVA/importJsonFile.php'
+        })
         .otherwise({
             redirectTo: '/home'
         });
